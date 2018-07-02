@@ -19,7 +19,7 @@ $gray-dark: #292b2c !default;
 $gray: #464a4c !default;
 $gray-light: #636c72 !default;
 $gray-lighter: #eceeef !default;
-$gray-lightest: #f7f7f9 !default;
+$gray-lightest: #f2f2f2 !default;
 // Reassign color vars to semantic color scheme
 $brand-primary: $blue !default;
 $brand-success: $green !default;
@@ -136,7 +136,7 @@ $dropdown-box-shadow: 0 .5rem 1rem rgba($black, .175) !default;
 @import "../../bower_components/bootstrap/scss/bootstrap";
 @import "other/font-fix";
 body {
-    padding-top: 70px;
+    padding-top: 55px;
 }
 
 img.loading {
@@ -263,3 +263,21 @@ header {
     width: 100%;
     height: 100%;
 }
+//common scss
+.gray-background{
+    background-color: $gray-lightest;
+}
+//end of common scss
+
+//scss for banner
+//end of banner scss
+
+//scss for about
+.aboutus{
+    h2{
+        span{
+            color: #f5b500;
+        }
+    }
+}
+//end of about
