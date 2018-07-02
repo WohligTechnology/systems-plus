@@ -136,7 +136,7 @@ $dropdown-box-shadow: 0 .5rem 1rem rgba($black, .175) !default;
 @import "../../bower_components/bootstrap/scss/bootstrap";
 @import "other/font-fix";
 body {
-    padding-top: 55px;
+    padding-top: 115px;
 }
 
 img.loading {
@@ -263,21 +263,22 @@ header {
     width: 100%;
     height: 100%;
 }
+
 //common scss
-.gray-background{
+.gray-background {
     background-color: $gray-lightest;
 }
-//end of common scss
 
+//end of common scss
 //scss for banner
 //end of banner scss
-
 //scss for about
-.aboutus{
-    h2{
-        span{
+.aboutus {
+    h2 {
+        span {
             color: #f5b500;
         }
     }
 }
+
 //end of about
