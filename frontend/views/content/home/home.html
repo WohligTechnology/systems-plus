@@ -1,6 +1,13 @@
 <section>
-
-
+    <div class="home-swiper">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" ng-repeat="s in homeSwiper track by $index">
+                    <img src="{{s.img}}" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <section class="gray-background aboutus" id="aboutus">
     <div class="container">
