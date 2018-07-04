@@ -23,3 +23,281 @@
         align-items: center;
     }
 }
+
+//scss for contact Us
+.contact-bg {
+    background: #083e5f;
+    .contact-form-bg {
+        background: #01121c;
+        input {
+            background: transparent;
+            border-bottom: 1px solid white !important;
+            border: 0;
+            color: white;
+        }
+    }
+    .contact-Address-bg {
+        background: #032d46;
+        p {
+            line-height: 2;
+        }
+        span {
+            font-size: 0.75rem !important;
+        }
+    }
+}
+
+.social-icon {
+    .icon-font {
+        font-size: 1.5rem !important;
+    }
+}
+
+//scss for hover text
+.hover-anime-v .hover-text:hover {
+    opacity: 1;
+}
+
+.hover-anime-v .hover-text {
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    overflow: hidden;
+}
+
+.hover-text:hover {
+    opacity: 1;
+}
+
+.valign {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
+
+.hover-text a span {
+    display: block;
+}
+
+.hover-anime-v .hover-text:hover .icons,
+.hover-anime-v .hover-text:hover .disc {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.hover-anime-v .icons {
+    -webkit-transform: translateY(-200px);
+    -moz-transform: translateY(-200px);
+    -ms-transform: translateY(-200px);
+    -o-transform: translateY(-200px);
+    transform: translateY(-200px);
+}
+
+.hover-anime-v .disc {
+    -webkit-transform: translateY(200px);
+    .hover-text a .cta:after {
+        content: '';
+        width: 16px;
+        height: 16px;
+        background: url(/themes/ttnd/images/sprite.png) no-repeat -112px 0;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 8px;
+    }
+    -moz-transform: translateY(200px);
+    -ms-transform: translateY(200px);
+    -o-transform: translateY(200px);
+    transform: translateY(200px);
+}
+
+.hover-anime-v .icons,
+.hover-anime-v .disc {
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.hover-text a:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 75, 160, .95);
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 8;
+}
+
+///
+.hover-anime .hover-text:hover {
+    opacity: 1;
+}
+
+.hover-anime .hover-text {
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    overflow: hidden;
+}
+
+.hover-text:hover {
+    opacity: 1;
+}
+
+.hover-text {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    text-align: center;
+    z-index: 3;
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    -o-transition: all .8s ease;
+    transition: all .8s ease;
+}
+
+.hover-text a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+.hover-text a .valign {
+    left: 0;
+    padding: 0 15%;
+    width: 100%;
+    font-size: 16px;
+}
+
+.hover-text a span {
+    display: block;
+}
+
+.valign {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
+
+.hover-anime .hover-text:hover .name,
+.hover-anime .hover-text:hover .cta {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.hover-text:hover .name,
+.hover-text:hover .cta {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.hover-text a .name {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.hover-anime .name {
+    -webkit-transform: translateX(200px);
+    -moz-transform: translateX(200px);
+    -ms-transform: translateX(200px);
+    -o-transform: translateX(200px);
+    transform: translateX(200px);
+}
+
+.hover-anime .name,
+.hover-anime .cta,
+.hover-anime .desc {
+    font-size: 15px;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.hover-text a span {
+    display: block;
+}
+
+.hover-anime .hover-text:hover .name,
+.hover-anime .hover-text:hover .cta {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.hover-text:hover .name,
+.hover-text:hover .cta {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.hover-text a .cta {
+    display: inline-block;
+    font-size: 15px;
+    text-transform: uppercase;
+    position: relative;
+    margin-left: 8px;
+}
+
+.hover-anime .cta {
+    -webkit-transform: translateX(-200px);
+    -moz-transform: translateX(-200px);
+    -ms-transform: translateX(-200px);
+    -o-transform: translateX(-200px);
+    transform: translateX(-200px);
+}
+
+.hover-anime .name,
+.hover-anime .cta,
+.hover-anime .desc {
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.hover-text a .cta:after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background: url(/themes/ttnd/images/sprite.png) no-repeat -112px 0;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 8px;
+}

@@ -269,6 +269,12 @@ header {
     background-color: $gray-lightest;
 }
 
+.modal-close-icon {
+    position: absolute;
+    right: 3%;
+    top: 5%;
+}
+
 //end of common scss
 //scss for banner
 //end of banner scss
@@ -282,3 +288,13 @@ header {
 }
 
 //end of about
+//scss for header
+.navbar {
+    padding: 0rem 1rem;
+}
+
+.logo {
+    background: rgb(192, 200, 205);
+}
+
+//end of header

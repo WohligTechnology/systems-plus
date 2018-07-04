@@ -1,5 +1,5 @@
 var mySwiper;
-myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http) {
+myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http, $uibModal) {
     $scope.template = TemplateService.getHTML("content/home/home.html");
     TemplateService.title = "Home"; //This is the Title of the Website
     $scope.navigation = NavigationService.getNavigation();
@@ -13,7 +13,14 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         });
     };
 
-
+    $scope.openWhitepaper = function () {
+        $uibModal.open({
+            animation: true,
+            templateUrl: "views/modal/whitepaper.html",
+            scope: $scope,
+            size: 'md'
+        });
+    }
     $scope.rate = 7;
     $scope.max = 10;
     $scope.isReadonly = false;
@@ -44,22 +51,34 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
     ];
     $scope.homeSwiper = [{
             img: 'img/home/About Us.png',
-            desc: 'glyphicon-ok-circle'
+            desc: '“Streamline your Customer Journey with our Digital Services “',
+            para: '– Digital Service Screen'
         },
         {
             img: 'img/home/Big Data Analytics.png',
-            desc: 'glyphicon-ok-circle'
+            desc: '“Leverage the power of Big Data and Analytics to Improve/Increase your business”',
+            para: '– Big Data Analytics Screen'
         },
         {
             img: 'img/home/Digital Services.png',
-            desc: 'glyphicon-ok-circle'
+            desc: '“Expand your team hassle free with our proven and unique custodian model”',
+            para: ' – IRC Screen'
         },
         {
             img: 'img/home/IRC.png',
-            desc: 'glyphicon-ok-circle'
+            desc: '“We are a global boutique Information Technology Solution and Services Provider with technology disruptive technology solutions.”',
+            para: ' – About Us Screen'
         }
     ];
     $timeout(function () {
-        mySwiper = new Swiper('.swiper-container', {})
+        mySwiper = new Swiper('.swiper-container', {
+            // AutoPlay
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            // Loop
+            loop: true,
+        })
     }, 500);
 })
