@@ -9296,6 +9296,15 @@ header {
 .social-icon .icon-font {
   font-size: 1.5rem !important; }
 
+.service-title {
+  color: #272e6a; }
+
+.bi-height {
+  min-height: 2rem; }
+
+.insight-height {
+  min-height: 7rem; }
+
 .hover-anime-v .hover-text:hover {
   opacity: 1; }
 
