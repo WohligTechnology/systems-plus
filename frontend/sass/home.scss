@@ -22,6 +22,10 @@
         -webkit-align-items: center;
         align-items: center;
     }
+    .swiper-pagination-bullet {
+        width: 15px;
+        height: 15px;
+    }
 }
 
 //scss for contact Us
@@ -53,8 +57,22 @@
     }
 }
 
+.product-main {
+    top: 0;
+    .py-5 {
+        padding: 5rem 0 !important;
+    }
+}
+
 .service-title {
     color: #272e6a;
+}
+
+.product-title {
+    background: #2f3a42;
+    h5 {
+        color: #dd3e4e;
+    }
 }
 
 .bi-height {
@@ -63,6 +81,10 @@
 
 .insight-height {
     min-height: 7rem;
+}
+
+.service-bg {
+    background: #f7f7f7;
 }
 
 //scss for hover text

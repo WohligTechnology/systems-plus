@@ -70,11 +70,15 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         mySwiper = new Swiper('.swiper-container', {
             // AutoPlay
             autoplay: {
-                delay: 3000,
+                delay: 5000,
                 disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
             },
             // Loop
             loop: true,
         })
-    }, 500);
+    }, 1000);
 })
