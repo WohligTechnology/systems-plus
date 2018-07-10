@@ -28,6 +28,10 @@
     }
 }
 
+.about-bg {
+    background-color: #063e79
+}
+
 //scss for contact Us
 .contact-bg {
     background: #083e5f;
@@ -60,7 +64,7 @@
 .product-main {
     top: 0;
     .py-5 {
-        padding: 5rem 0 !important;
+        padding: 5rem 2rem !important;
     }
 }
 
@@ -73,6 +77,22 @@
     h5 {
         color: #dd3e4e;
     }
+}
+
+.learn-more {
+    color: #dd3e4e;
+    &:hover,
+    &:active {
+        color: #dd3e4e;
+    }
+}
+
+.whitepaper-main {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.whitepaper-color {
+    color: #dd3e4e;
 }
 
 .bi-height {
