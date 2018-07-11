@@ -135,8 +135,48 @@ $dropdown-box-shadow: 0 .5rem 1rem rgba($black, .175) !default;
 // @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "../../bower_components/bootstrap/scss/bootstrap";
 @import "other/font-fix";
+//font family
+@font-face {
+    src: url("../fonts/Open_Sans/OpenSans-Light.ttf");
+    font-family: 'OpenSans-Light';
+}
+
+@font-face {
+    src: url("../fonts/Open_Sans/OpenSans-Regular.ttf");
+    font-family: 'OpenSans-Regular';
+}
+
+@font-face {
+    src: url("../fonts/Quicksand/Quicksand-Regular.ttf");
+    font-family: 'Quicksand-Regular';
+}
+
+@font-face {
+    src: url("../fonts/Quicksand/Quicksand-Medium.ttf");
+    font-family: 'Quicksand-Medium';
+}
+
+@font-face {
+    src: url("../fonts/Quicksand/Quicksand-Bold.ttf");
+    font-family: 'Quicksand-Bold';
+}
+
+//font-family Classes
+.Quicksand-Medium {
+    font-family: 'Quicksand-Medium';
+}
+
+.Quicksand-Bold {
+    font-family: 'Quicksand-Bold';
+}
+
 body {
     padding-top: 115px;
+    font-family: 'OpenSans-Regular';
+}
+
+p {
+    font-family: 'OpenSans-Regular';
 }
 
 img.loading {
@@ -279,10 +319,6 @@ header {
 //scss for header
 .navbar {
     padding: 0rem 1rem;
-}
-
-.logo {
-    background: rgb(192, 200, 205);
 }
 
 //end of header

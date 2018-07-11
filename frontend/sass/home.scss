@@ -25,11 +25,15 @@
     .swiper-pagination-bullet {
         width: 15px;
         height: 15px;
+        border: 1px solid white !important;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: white
     }
 }
 
 .about-bg {
-    background-color: #063e79
+    background-color: #063e79e3;
 }
 
 //scss for contact Us
@@ -61,10 +65,17 @@
     }
 }
 
+.product-hover {
+    transition: all .4s ease-in-out;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
 .product-main {
     top: 0;
     .py-5 {
-        padding: 5rem 2rem !important;
+        padding: 3rem 2rem !important;
     }
 }
 
@@ -275,7 +286,6 @@
 
 .hover-text a .name {
     display: block;
-    font-size: 15px;
     margin-bottom: 12px;
 }
 
@@ -290,7 +300,6 @@
 .hover-anime .name,
 .hover-anime .cta,
 .hover-anime .desc {
-    font-size: 15px;
     -webkit-transition: all .5s ease;
     -moz-transition: all .5s ease;
     -ms-transition: all .5s ease;
@@ -322,7 +331,7 @@
 
 .hover-text a .cta {
     display: inline-block;
-    font-size: 15px;
+    font-size: 12px;
     text-transform: uppercase;
     position: relative;
     margin-left: 8px;
