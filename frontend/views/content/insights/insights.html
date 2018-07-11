@@ -8,8 +8,8 @@
 <section>
     <div class="container">
         <div class="row py-4">
-            <div class="col-3" ng-repeat="i in insights track by $index">
-                <div class="bg-white px-3 pt-3 hover-anime-v position-relative whitepaper-main" ng-click="openWhitepaper();">
+            <div class="col-3" ng-repeat="i in insights track by $index" ng-click="openWhitepaper();">
+                <div class="bg-white px-3 pt-3 hover-anime-v position-relative whitepaper-main">
                     <img ng-src="{{i.img}}" width="100%">
                     <h6 class="pt-3 whitepaper-color Quicksand-Bold">Whitepaper</h6>
                     <p class="insight-height pb-3">{{i.desc}}

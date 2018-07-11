@@ -20,7 +20,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             scope: $scope,
             size: 'md'
         });
-    }
+    };
     $scope.rate = 7;
     $scope.max = 10;
     $scope.isReadonly = false;
