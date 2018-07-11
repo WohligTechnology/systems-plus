@@ -27,7 +27,8 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             url: "/insights",
             templateUrl: tempateURL,
             controller: 'InsightsCtrl'
-        }).state('IRC', {
+        })
+        .state('IRC', {
             url: "/IRC",
             templateUrl: tempateURL,
             controller: 'IRCCtrl'
