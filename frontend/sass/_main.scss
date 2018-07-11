@@ -136,6 +136,12 @@ $dropdown-box-shadow: 0 .5rem 1rem rgba($black, .175) !default;
 @import "../../bower_components/bootstrap/scss/bootstrap";
 @import "other/font-fix";
 //font family
+//opensans
+@font-face {
+    src: url("../fonts/Open_Sans/OpenSans-Bold.ttf");
+    font-family: 'OpenSans-Bold';
+}
+
 @font-face {
     src: url("../fonts/Open_Sans/OpenSans-Light.ttf");
     font-family: 'OpenSans-Light';
@@ -146,6 +152,7 @@ $dropdown-box-shadow: 0 .5rem 1rem rgba($black, .175) !default;
     font-family: 'OpenSans-Regular';
 }
 
+//Quicksans
 @font-face {
     src: url("../fonts/Quicksand/Quicksand-Regular.ttf");
     font-family: 'Quicksand-Regular';
@@ -170,9 +177,17 @@ $dropdown-box-shadow: 0 .5rem 1rem rgba($black, .175) !default;
     font-family: 'Quicksand-Bold';
 }
 
+.OpenSans-Bold {
+    font-family: 'OpenSans-Bold';
+}
+
 body {
     padding-top: 115px;
     font-family: 'OpenSans-Regular';
+}
+
+.body-mt {
+    margin-top: -115px;
 }
 
 p {
@@ -322,3 +337,25 @@ header {
 }
 
 //end of header
+//scss for footer
+.contact-bg {
+    background: #083e5f;
+    .contact-form-bg {
+        background: #01121c;
+        input {
+            background: transparent;
+            border-bottom: 1px solid white !important;
+            border: 0;
+            color: white;
+        }
+    }
+    .contact-Address-bg {
+        background: #032d46;
+        p {
+            line-height: 2;
+        }
+        span {
+            font-size: 0.75rem !important;
+        }
+    }
+}

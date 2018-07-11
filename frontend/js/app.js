@@ -23,6 +23,15 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             templateUrl: tempateURL,
             controller: 'HomeCtrl'
         })
+        .state('insights', {
+            url: "/insights",
+            templateUrl: tempateURL,
+            controller: 'InsightsCtrl'
+        }).state('IRC', {
+            url: "/IRC",
+            templateUrl: tempateURL,
+            controller: 'IRCCtrl'
+        })
         .state('links', {
             url: "/links",
             templateUrl: tempateURL,

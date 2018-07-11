@@ -9133,8 +9133,48 @@ a.text-dark:hover, a.text-dark:focus {
   src: url("../fonts/glyphicons-halflings-regular.eot");
   src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
 
+@font-face {
+  src: url("../fonts/Open_Sans/OpenSans-Bold.ttf");
+  font-family: 'OpenSans-Bold'; }
+
+@font-face {
+  src: url("../fonts/Open_Sans/OpenSans-Light.ttf");
+  font-family: 'OpenSans-Light'; }
+
+@font-face {
+  src: url("../fonts/Open_Sans/OpenSans-Regular.ttf");
+  font-family: 'OpenSans-Regular'; }
+
+@font-face {
+  src: url("../fonts/Quicksand/Quicksand-Regular.ttf");
+  font-family: 'Quicksand-Regular'; }
+
+@font-face {
+  src: url("../fonts/Quicksand/Quicksand-Medium.ttf");
+  font-family: 'Quicksand-Medium'; }
+
+@font-face {
+  src: url("../fonts/Quicksand/Quicksand-Bold.ttf");
+  font-family: 'Quicksand-Bold'; }
+
+.Quicksand-Medium {
+  font-family: 'Quicksand-Medium'; }
+
+.Quicksand-Bold {
+  font-family: 'Quicksand-Bold'; }
+
+.OpenSans-Bold {
+  font-family: 'OpenSans-Bold'; }
+
 body {
-  padding-top: 115px; }
+  padding-top: 115px;
+  font-family: 'OpenSans-Regular'; }
+
+.body-mt {
+  margin-top: -115px; }
+
+p {
+  font-family: 'OpenSans-Regular'; }
 
 img.loading {
   text-align: center;
@@ -9248,14 +9288,24 @@ header {
   right: 3%;
   top: 5%; }
 
-.aboutus h2 span {
-  color: #f5b500; }
-
 .navbar {
   padding: 0rem 1rem; }
 
-.logo {
-  background: #c0c8cd; }
+.contact-bg {
+  background: #083e5f; }
+  .contact-bg .contact-form-bg {
+    background: #01121c; }
+    .contact-bg .contact-form-bg input {
+      background: transparent;
+      border-bottom: 1px solid white !important;
+      border: 0;
+      color: white; }
+  .contact-bg .contact-Address-bg {
+    background: #032d46; }
+    .contact-bg .contact-Address-bg p {
+      line-height: 2; }
+    .contact-bg .contact-Address-bg span {
+      font-size: 0.75rem !important; }
 
 .home-swiper {
   margin-top: -115px; }
@@ -9276,34 +9326,59 @@ header {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
+  .home-swiper .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    border: 1px solid white !important; }
+  .home-swiper .swiper-pagination-bullet-active {
+    background-color: white; }
 
-.contact-bg {
-  background: #083e5f; }
-  .contact-bg .contact-form-bg {
-    background: #01121c; }
-    .contact-bg .contact-form-bg input {
-      background: transparent;
-      border-bottom: 1px solid white !important;
-      border: 0;
-      color: white; }
-  .contact-bg .contact-Address-bg {
-    background: #032d46; }
-    .contact-bg .contact-Address-bg p {
-      line-height: 2; }
-    .contact-bg .contact-Address-bg span {
-      font-size: 0.75rem !important; }
+.about-bg {
+  background-color: #063e79; }
 
 .social-icon .icon-font {
   font-size: 1.5rem !important; }
 
+.product-hover {
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out; }
+  .product-hover:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
+
+.product-main {
+  top: 0; }
+  .product-main .py-5 {
+    padding: 3rem 2rem !important; }
+
 .service-title {
   color: #272e6a; }
+
+.product-title {
+  background: #2f3a42; }
+  .product-title h5 {
+    color: #dd3e4e; }
+
+.learn-more {
+  color: #dd3e4e; }
+  .learn-more:hover, .learn-more:active {
+    color: #dd3e4e; }
+
+.whitepaper-main {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+
+.whitepaper-color {
+  color: #dd3e4e; }
 
 .bi-height {
   min-height: 2rem; }
 
 .insight-height {
   min-height: 7rem; }
+
+.service-bg {
+  background: #f7f7f7; }
 
 .hover-anime-v .hover-text:hover {
   opacity: 1; }
@@ -9423,7 +9498,6 @@ header {
 
 .hover-text a .name {
   display: block;
-  font-size: 15px;
   margin-bottom: 12px; }
 
 .hover-anime .name {
@@ -9433,7 +9507,6 @@ header {
 .hover-anime .name,
 .hover-anime .cta,
 .hover-anime .desc {
-  font-size: 15px;
   -webkit-transition: all .5s ease;
   transition: all .5s ease; }
 
@@ -9452,7 +9525,7 @@ header {
 
 .hover-text a .cta {
   display: inline-block;
-  font-size: 15px;
+  font-size: 12px;
   text-transform: uppercase;
   position: relative;
   margin-left: 8px; }
@@ -9475,6 +9548,19 @@ header {
   display: inline-block;
   vertical-align: middle;
   margin-left: 8px; }
+
+.insights-bg {
+  background-image: url("../img/home/IRC.png");
+  background-position: center center;
+  background-size: cover;
+  height: 75vh; }
+
+.common-heading {
+  top: 50%;
+  width: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
 
 #fancybox-loading,
 .fancybox-close,

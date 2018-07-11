@@ -33,30 +33,7 @@
 }
 
 .about-bg {
-    background-color: #063e79e3;
-}
-
-//scss for contact Us
-.contact-bg {
-    background: #083e5f;
-    .contact-form-bg {
-        background: #01121c;
-        input {
-            background: transparent;
-            border-bottom: 1px solid white !important;
-            border: 0;
-            color: white;
-        }
-    }
-    .contact-Address-bg {
-        background: #032d46;
-        p {
-            line-height: 2;
-        }
-        span {
-            font-size: 0.75rem !important;
-        }
-    }
+    background-color: #063e79;
 }
 
 .social-icon {
