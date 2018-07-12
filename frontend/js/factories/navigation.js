@@ -24,6 +24,12 @@ myApp.factory('NavigationService', function () {
             subnav: []
         },
         {
+            name: "Products",
+            classis: "active",
+            anchor: "products",
+            subnav: []
+        },
+        {
             name: "Partners",
             classis: "active",
             anchor: "partners",
@@ -35,6 +41,7 @@ myApp.factory('NavigationService', function () {
             anchor: "insights",
             subnav: []
         },
+
         {
             name: "Contact Us",
             classis: "active",

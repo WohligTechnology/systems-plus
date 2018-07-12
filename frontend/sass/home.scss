@@ -1,11 +1,13 @@
 .home-swiper {
+    h1 {
+        font-size: 4rem;
+    }
     margin-top: -115px;
     .swiper-container {
         width: 100%;
         height: 100%;
     }
     .swiper-slide {
-        text-align: center;
         font-size: 18px;
         background: #fff;
         height: 100vh;
@@ -22,6 +24,9 @@
         -ms-flex-align: center;
         -webkit-align-items: center;
         align-items: center;
+        .position-absolute {
+            left: 5%;
+        }
     }
     .swiper-pagination-bullet {
         width: 12px;
@@ -30,6 +35,14 @@
     }
     .swiper-pagination-bullet-active {
         background-color: white
+    }
+}
+
+.home-btn {
+    .btn-know-more {
+        background: transparent;
+        border: 1px solid #ccc;
+        font-size: 1.5rem;
     }
 }
 

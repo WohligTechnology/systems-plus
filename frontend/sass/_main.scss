@@ -152,33 +152,20 @@ $dropdown-box-shadow: 0 .5rem 1rem rgba($black, .175) !default;
     font-family: 'OpenSans-Regular';
 }
 
-//Quicksans
 @font-face {
-    src: url("../fonts/Quicksand/Quicksand-Regular.ttf");
-    font-family: 'Quicksand-Regular';
-}
-
-@font-face {
-    src: url("../fonts/Quicksand/Quicksand-Medium.ttf");
-    font-family: 'Quicksand-Medium';
-}
-
-@font-face {
-    src: url("../fonts/Quicksand/Quicksand-Bold.ttf");
-    font-family: 'Quicksand-Bold';
-}
-
-//font-family Classes
-.Quicksand-Medium {
-    font-family: 'Quicksand-Medium';
-}
-
-.Quicksand-Bold {
-    font-family: 'Quicksand-Bold';
-}
-
+    src: url("../fonts/calibril.ttf");
+    font-family: 'calibril';
+} //font-family Classes
 .OpenSans-Bold {
     font-family: 'OpenSans-Bold';
+}
+
+.OpenSans-Regular {
+    font-family: 'OpenSans-Regular';
+}
+
+.calibril {
+    font-family: 'calibril';
 }
 
 body {
@@ -338,6 +325,12 @@ header {
 
 .navbar-expand-md .navbar-nav .nav-link {
     padding: 1rem;
+}
+
+.navbar-nav>.active>a,
+.navbar-nav>.active>a:focus,
+.navbar-nav>.active>a:hover {
+    color: #dd3e4e !important;
 }
 
 //end of header
