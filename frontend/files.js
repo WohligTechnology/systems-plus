@@ -48,7 +48,7 @@ module.exports = [
   'frontend/js/controllers/controller.js',
   'frontend/views/content/home/home.js',
   'frontend/views/content/insights/insights.js',
-  'frontend/views/content/IRC/IRC.js',
+  'frontend/views/content/service/service.js',
   'frontend/js/controllers/header-controller.js',
   'frontend/js/controllers/language-controller.js',
 ];

@@ -12,7 +12,7 @@ myApp.controller('headerCtrl', function ($scope, TemplateService) {
         } else {
             $(".navbar").css("background", 'transparent');
             // $(".logo").css("width", 'auto');
-            $(".logo-img").css("width", '70%');
+            $(".logo-img").css("width", '50%');
         }
     });
     $.fancybox.close(true);

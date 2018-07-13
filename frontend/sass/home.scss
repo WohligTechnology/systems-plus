@@ -1,8 +1,7 @@
 .home-swiper {
     h1 {
         font-size: 4rem;
-    }
-    margin-top: -115px;
+    } // margin-top: -115px;
     .swiper-container {
         width: 100%;
         height: 100%;
@@ -10,7 +9,8 @@
     .swiper-slide {
         font-size: 18px;
         background: #fff;
-        height: 100vh;
+        height: 90vh;
+        overflow: hidden;
         /* Center slide text vertically */
         display: -webkit-box;
         display: -ms-flexbox;
@@ -46,10 +46,6 @@
     }
 }
 
-.about-bg {
-    background-color: rgba(31, 84, 164, 0.92);
-}
-
 .social-icon {
     .icon-font {
         font-size: 1.5rem !important;
@@ -75,8 +71,7 @@
 }
 
 .product-title {
-    background: #2f3a42;
-    h5 {
+    h4 {
         color: #dd3e4e;
     }
 }
