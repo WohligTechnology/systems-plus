@@ -28,6 +28,11 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             templateUrl: tempateURL,
             controller: 'InsightsCtrl'
         })
+        .state('about', {
+            url: "/about",
+            templateUrl: tempateURL,
+            controller: 'AboutCtrl'
+        })
         .state('service', {
             url: "/service/:serviceId",
             templateUrl: tempateURL,
