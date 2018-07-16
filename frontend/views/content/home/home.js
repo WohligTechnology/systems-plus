@@ -51,26 +51,26 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
     ];
     $scope.homeSwiper = [{
             img: 'img/home/About Us.png',
-            title: '1st Screen ',
-            subtitle: 'Delivering Superior customer experience  while reducing cost',
+            title: 'We are a global boutique Information Technology Solution and Services Provider with technology disruptive technology solutions.',
+            subtitle: 'Delivering Superior customer experience while reducing cost',
             link: ''
         },
         {
             img: 'img/home/Big Data Analytics.png',
-            title: 'Big Data & Analytics',
-            subtitle: ' Unlock the power of data through our efficient<br> Big Data and Analytics solution',
+            title: 'Leverage the power of Big Data and Analytics to Improve/Increase your business',
+            subtitle: 'Unlock the power of data through our efficient Big Data and Analytics solution',
             link: ''
 
         },
         {
             img: 'img/home/Digital Services.png',
-            title: 'Digital Service',
+            title: 'Streamline your Customer Journey with our Digital Services',
             subtitle: 'Focusing on spectacular solutions for next generation <br> innovative products.',
             link: ''
         },
         {
             img: 'img/home/IRC.png',
-            title: 'IRC Screen',
+            title: 'Expand your team hassle free with our proven and unique custodian model',
             subtitle: 'How a US customer in Financial security and <br>Fraud prevention domain ',
             link: ''
         }
