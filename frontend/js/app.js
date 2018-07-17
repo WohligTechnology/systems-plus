@@ -33,6 +33,11 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             templateUrl: tempateURL,
             controller: 'AboutCtrl'
         })
+        .state('contact', {
+            url: "/contact",
+            templateUrl: tempateURL,
+            controller: 'ContactCtrl'
+        })
         .state('service', {
             url: "/service/:serviceId",
             templateUrl: tempateURL,

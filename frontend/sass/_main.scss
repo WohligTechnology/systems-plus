@@ -313,6 +313,10 @@ header {
     top: 5%;
 }
 
+.common-bg {
+    background-image: url("../img/home/IRC.png");
+}
+
 //end of common scss
 //scss for header
 .navbar {
@@ -329,26 +333,65 @@ header {
     color: #dd3e4e !important;
 }
 
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: white !important;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: white !important;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: white !important;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: white !important;
+}
+
 //end of header
 //scss for footer
-.contact-bg {
-    background: #083e5f;
-    .contact-form-bg {
-        background: #01121c;
-        input {
-            background: transparent;
-            border-bottom: 1px solid white !important;
-            border: 0;
-            color: white;
-        }
+.footer-bg {
+    background: #032d46;
+}
+
+.footer-link {
+    a {
+        color: white !important;
     }
-    .contact-Address-bg {
-        background: #032d46;
-        p {
-            line-height: 2;
-        }
-        span {
-            font-size: 0.75rem !important;
-        }
+}
+
+.contact-bg {
+    background-image: url("../img/home/contact-bg.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contact-form-bg {
+    background: #0f1c24;
+    input {
+        background: transparent;
+        border-bottom: 1px solid white !important;
+        border: 0;
+        color: white;
+    }
+}
+
+.footer-location {
+    color: black !important;
+}
+
+.contact-Address-bg {
+    // background: #9999;
+    p {
+        line-height: 2;
+    }
+    span {
+        font-size: 0.75rem !important;
     }
 }

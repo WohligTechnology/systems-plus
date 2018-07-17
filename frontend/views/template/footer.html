@@ -1,102 +1,60 @@
-<section class="contact-bg text-white ng-scope" id="contact">
-    <div class="">
-        <div class="container-fluid">
-            <h2 class="text-center text-center m-0 py-2 calibril">Contact Us</h2>
-            <div class="px-4 pb-5">
-                <div class="row no-gutters">
-                    <div class="col-4">
-                        <div class="contact-form-bg p-5">
-                            <h4 class="text-center pb-3 calibril"> Drop Us A Line </h4>
-                            <div class="contact-form">
-                                <form class="ng-pristine ng-invalid ng-invalid-required">
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <input type="text" class="form-control" id="name" placeholder="Name">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <input type="text" class="form-control" id="company" placeholder="Company Name">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" id="email" placeholder="Email">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="message" placeholder="Message">
-                                    </div>
-                                    <div class="captch">
-                                        <div class="captch-div ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" on-create="setWidgetId(5)" ng-model="formData.myRecaptchaResponse"
-                                            vc-recaptcha="" key="captchaKey" required=""></div>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary mt-2">Submit</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-8">
-                        <div class="contact-Address-bg px-5 pt-5 pb-2">
-                            <div class="row">
-                                <div class="col">
-                                    <h5 class="pb-2 calibril">Pune</h5>
-                                    <p>
-                                        Tower 8, Magarpatta SEZ, Magarpatta City, Pune,
-                                        <br> Maharashtra 411013
-                                        <br>India
-                                    </p>
-                                    <p>
-                                        <a>Tel: +91 2067263500 </a>
-                                    </p>
-                                </div>
-                                <div class="col">
-                                    <h5 class="pb-2 calibril">Mumbai</h5>
-                                    <p>
-                                        A/30,Laxmi Nivas,
-                                        <br>Sion, Mumbai,
-                                        <br> Maharashtra 400022
-                                        <br>India
-                                    </p>
-                                    <p class="m-0">
-                                        <a>Tel: +91 222660 8201</a>
-                                    </p>
-                                    <p>
-                                        <a>fax: +91 222660 2706</a>
-                                    </p>
-                                </div>
-                                <div class="col">
-                                    <h5 class="pb-2 calibril">London</h5>
-                                    <p>
-                                        2 Churchill Court, 58
-                                        <br>Station Road
-                                        <br>North Harrow -HA2 7SA
-                                        <br>United Kingdom
-                                    </p>
-                                    <p>
-                                        <a>Tel:+44 208 427 6505 </a>
-                                    </p>
-                                    <div class="pl-5 ml-5">
-                                        <span>Connect With Us</span>
-                                        <div class="social-icon">
-                                            <a class="text-white" href="https://www.linkedin.com/company/systems-plus-transformations-limited/" target="_blank">
-                                                <svg class="svg-inline--fa fa-linkedin-in fa-w-14 icon-font m-2" aria-hidden="true" data-prefix="fab" data-icon="linkedin-in"
-                                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
-                                                    <path fill="currentColor" d="M100.3 480H7.4V180.9h92.9V480zM53.8 140.1C24.1 140.1 0 115.5 0 85.8 0 56.1 24.1 32 53.8 32c29.7 0 53.8 24.1 53.8 53.8 0 29.7-24.1 54.3-53.8 54.3zM448 480h-92.7V334.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V480h-92.8V180.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V480z"></path>
-                                                </svg>
-                                                <!-- <i class="fab fa-linkedin-in icon-font m-2"></i> -->
-                                            </a>
-                                            <a class="text-white" href="https://www.facebook.com/sptr.co/" target="_blank">
-                                                <svg class="svg-inline--fa fa-facebook-f fa-w-9 icon-font m-2" aria-hidden="true" data-prefix="fab" data-icon="facebook-f"
-                                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 512" data-fa-i2svg="">
-                                                    <path fill="currentColor" d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"></path>
-                                                </svg>
-                                                <!-- <i class="fab fa-facebook-f icon-font m-2"></i> -->
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+<section class="text-white footer-bg" id="contact">
+    <div class="container">
+        <div class="footer-link text-white py-4">
+            <div class="row align-items-center">
+                <div class="col-10">
+                    <ul class="list-inline m-0">
+                        <li ng-repeat="menu in navigation" ui-sref-active="active" class="list-inline-item px-3">
+                            <a ui-sref="{{menu.anchor}}" ng-if="menu.anchor" class="text-white">{{menu.name}}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <div class="d-flex justify-content-end">
+                        <!-- <div class="footer-location">
+                            <ul class="list-inline m-0">
+                                <li class="list-inline-item px-1">
+                                    <span class="px-2">
+                                        <i class="fas fa-map-marker-alt "></i>
+                                    </span>
+                                    Pune
+                                </li>
+                                <li class="list-inline-item px-1">
+                                    Mumbai
+                                </li>
+                                <li class="list-inline-item px-1">
+                                    London
+                                </li>
+                            </ul>
+                        </div> -->
+                        <div class="social-icon pl-3">
+                            <ul class="list-inline m-0">
+                                <li class="list-inline-item">
+                                    <a href="https://www.linkedin.com/company/systems-plus-transformations-limited/" target="_blank " class="icon-font">
+                                        <img src="img/facebook.png" class="img-fluid  w-75">
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://www.facebook.com/sptr.co/" target="_blank " class="icon-font">
+                                        <img src="img/twitter.png" class="img-fluid  w-75">
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
+            <div>
+                <div class="py-2">
+                    <p class="d-inline-block float-left m-0">
+                        Copyright © 2018
+                    </p>
+                    <p class="d-inline-block float-right m-0">
+                        Wohlig Transformations Pvt. Ltd.
+                    </p>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>

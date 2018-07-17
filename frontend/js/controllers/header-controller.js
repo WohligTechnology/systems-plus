@@ -16,9 +16,8 @@ myApp.controller('headerCtrl', function ($scope, TemplateService, $state, $timeo
         }
     });
     $.fancybox.close(true);
-    $scope.goToAnchor = function (anchor, id) {
+    $scope.goToAnchor = function (id) {
         console.log("inside anchor")
-        $state.go(anchor)
         if (id) {
             $timeout(function () {
                 $('html,body').animate({

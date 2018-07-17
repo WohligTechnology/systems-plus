@@ -48,6 +48,7 @@ module.exports = [
   'frontend/js/controllers/controller.js',
   'frontend/views/content/home/home.js',
   'frontend/views/content/about/about.js',
+  'frontend/views/content/contact/contact.js',
   'frontend/views/content/insights/insights.js',
   'frontend/views/content/service/service.js',
   'frontend/js/controllers/header-controller.js',
