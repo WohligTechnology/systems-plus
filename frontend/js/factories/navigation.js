@@ -21,6 +21,7 @@ myApp.factory('NavigationService', function () {
             name: "Services",
             classis: "active",
             anchor: "IRC",
+            id: 'service',
             subnav: []
         },
         {

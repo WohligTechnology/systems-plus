@@ -1,4 +1,4 @@
-myApp.controller('headerCtrl', function ($scope, TemplateService) {
+myApp.controller('headerCtrl', function ($scope, TemplateService, $state, $timeout) {
     $scope.template = TemplateService;
     $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
         $(window).scrollTop(0);
@@ -12,8 +12,19 @@ myApp.controller('headerCtrl', function ($scope, TemplateService) {
         } else {
             $(".navbar").css("background", 'transparent');
             // $(".logo").css("width", 'auto');
-            $(".logo-img").css("width", '50%');
+            $(".logo-img").css("width", '60%');
         }
     });
     $.fancybox.close(true);
+    $scope.goToAnchor = function (anchor, id) {
+        console.log("inside anchor")
+        $state.go(anchor)
+        if (id) {
+            $timeout(function () {
+                $('html,body').animate({
+                    scrollTop: $('#' + id).offset().top - 50
+                }, "slow");
+            }, 500);
+        }
+    };
 });
