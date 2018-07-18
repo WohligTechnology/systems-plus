@@ -51,7 +51,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
     ];
     $scope.homeSwiper = [{
             img: 'img/home/About Us.png',
-            title: 'We are a global boutique Information Technology Solution and Services Provider with technology disruptive technology solutions.',
+            title: 'Your Preferred digital transformation partner ',
             subtitle: 'Delivering Superior customer experience while reducing cost',
             link: ''
         },
