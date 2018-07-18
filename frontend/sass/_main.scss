@@ -386,6 +386,18 @@ header {
     color: black !important;
 }
 
+.footer-data {
+    font-size: 0.8rem;
+    font-family: 'OpenSans-Regular';
+    font-size: 0.9rem;
+    li {
+        padding-bottom: 0.5rem
+    }
+    h6 {
+        color: #4cbff3;
+    }
+}
+
 .contact-Address-bg {
     // background: #9999;
     p {

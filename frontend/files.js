@@ -51,6 +51,7 @@ module.exports = [
   'frontend/views/content/contact/contact.js',
   'frontend/views/content/insights/insights.js',
   'frontend/views/content/service/service.js',
+  'frontend/views/content/product/product.js',
   'frontend/js/controllers/header-controller.js',
   'frontend/js/controllers/language-controller.js',
 ];
