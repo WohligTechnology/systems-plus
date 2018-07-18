@@ -14,13 +14,14 @@ myApp.factory('NavigationService', function () {
         {
             name: "About Us",
             classis: "active",
-            anchor: "about",
+            anchor: "aboutus",
+            id: "aboutus",
             subnav: []
         },
         {
             name: "Services",
             classis: "active",
-            anchor: "IRC",
+            anchor: "services",
             id: 'service',
             subnav: []
         },
@@ -40,7 +41,8 @@ myApp.factory('NavigationService', function () {
         {
             name: "Insights",
             classis: "active",
-            anchor: "insights",
+            anchor: "insight",
+            id: "insight",
             subnav: []
         },
 

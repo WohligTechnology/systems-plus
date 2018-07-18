@@ -6,10 +6,10 @@
                     <img src="{{s.img}}" class="img-fluid">
                     <div class="position-absolute text-left px-5 text-light calibril">
                         <div>
-                            <h1 class="m-0">{{s.title}}</h1>
+                            <h1 class="m-0 text-capitalize">{{s.title}}</h1>
                         </div>
                         <div width="50">
-                            <h3 class="py-3 m-0 calibril" ng-bind-html="s.subtitle"></h3>
+                            <h3 class="py-3 m-0 calibril text-capitalize" ng-bind-html="s.subtitle"></h3>
                         </div>
                         <div class="home-btn my-3">
                             <a role="button" class="btn btn-know-more px-4">Know More</a>
@@ -26,13 +26,16 @@
         <h2 class="text-center pt-5 calibril">About Us
         </h2>
         <!-- <h6 class="text-center">Business Transformation Through Technology</h6> -->
-        <div class="pt-3 pb-5 px-5">
+        <div class="pt-3 pb-3 px-5">
             <div class="mx-5">
                 <p>Systems Plus Transformations is a global boutique Information Technology Solution and Services Provider with
                     customers in Europe, North America and Asia Pacific.Our presence in India, UK, US enable us to serve
                     our valued customer globally using near shore and offshore delivery models. We assist our customers through
                     digital services, Big Data & Analytics, Enterprise solutions and Managed services.</p>
             </div>
+        </div>
+        <div class="text-center pb-4">
+            <button type="button" class="btn btn-outline-danger" ui-sref="about">Read More</button>
         </div>
     </div>
 </section>
@@ -164,7 +167,7 @@
                         <div class="product-desc text-white  py-5">
                             <p class="mb-0">Complete end to end eCommerce Solution to grow your business online and on mobile. Expand your
                                 business in new geographies and open opportunities in up and coming market segments.</p>
-                            <a href="" class="learn-more text-right" ui-sref="product({type:'shopmyway'})">Read More</a>
+                            <a class="learn-more text-right " ui-sref="product({type:'shopmyway'})">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -172,7 +175,7 @@
         </div>
     </div>
 </section>
-<section class="">
+<section id="insight">
     <h2 class="text-center pt-4 calibril">Insights</h2>
     <!-- <h6 class="text-center">Lorem Ipsum is simply dummy text of the printing</h6> -->
     <div class="container">
