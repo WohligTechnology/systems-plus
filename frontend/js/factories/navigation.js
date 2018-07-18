@@ -27,7 +27,8 @@ myApp.factory('NavigationService', function () {
         {
             name: "Products",
             classis: "active",
-            anchor: "product",
+            anchor: "products",
+            id: "product",
             subnav: []
         },
         {
