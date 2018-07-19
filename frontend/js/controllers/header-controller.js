@@ -21,7 +21,7 @@ myApp.controller('headerCtrl', function ($scope, TemplateService, $state, $timeo
         if (id) {
             $timeout(function () {
                 $('html,body').animate({
-                    scrollTop: $('#' + id).offset().top - 50
+                    scrollTop: $('#' + id).offset().top - 70
                 }, "slow");
             }, 500);
         }

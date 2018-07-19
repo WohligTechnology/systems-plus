@@ -1,4 +1,4 @@
-<section class="text-white footer-bg" id="contact">
+<section class="text-white footer-bg" id="contact" ng-controller="headerCtrl">
     <div class="container">
         <div class="footer-data py-4">
             <div class="row ">
@@ -27,13 +27,13 @@
                         <h6>Who We are</h6>
                         <ul class="m-0 p-0 list-unstyled">
                             <li>
-                                <a ui-sref="home" class="text-white">Home</a>
+                                <a class="text-white" ng-click="goToAnchor('home')">Home</a>
                             </li>
                             <li>
-                                <a ui-sref="about" class="text-white">About Us</a>
+                                <a class="text-white" ng-click="goToAnchor('aboutus')">About Us</a>
                             </li>
                             <li>
-                                <a ui-sref="partner" class="text-white">Partners</a>
+                                <a class="text-white" ng-click="goToAnchor('partner')">Partners</a>
                             </li>
                         </ul>
                     </div>
@@ -43,10 +43,10 @@
                         <h6>What We Do</h6>
                         <ul class=" m-0 p-0 list-unstyled ">
                             <li>
-                                <a ui-sref="services" class="text-white">Services</a>
+                                <a class="text-white" ng-click="goToAnchor('service')">Services</a>
                             </li>
                             <li>
-                                <a ui-sref="product" class="text-white">Products</a>
+                                <a class="text-white" ng-click="goToAnchor('product')">Products</a>
                             </li>
                         </ul>
                     </div>
@@ -56,7 +56,7 @@
                         <h6>Knowledge</h6>
                         <ul class=" m-0 p-0 list-unstyled ">
                             <li>
-                                <a ui-sref="insights" class="text-white">Insights</a>
+                                <a class="text-white" ng-click="goToAnchor('insight')">Insights</a>
                             </li>
                         </ul>
                     </div>
