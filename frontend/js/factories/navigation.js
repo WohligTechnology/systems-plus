@@ -33,19 +33,19 @@ myApp.factory('NavigationService', function () {
             subnav: []
         },
         {
-            name: "Partners",
-            classis: "active",
-            anchor: "partners",
-            subnav: []
-        },
-        {
             name: "Insights",
             classis: "active",
             anchor: "insight",
             id: "insight",
             subnav: []
         },
-
+        {
+            name: "Partners",
+            classis: "active",
+            anchor: "partners",
+            id: "partners",
+            subnav: []
+        },
         {
             name: "Contact Us",
             classis: "active",

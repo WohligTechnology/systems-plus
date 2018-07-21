@@ -4,15 +4,15 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide" ng-repeat="s in homeSwiper track by $index">
                     <img src="{{s.img}}" class="img-fluid">
-                    <div class="position-absolute text-left px-5 text-light calibril">
+                    <div class="position-absolute text-left px-5 text-light ">
                         <div>
-                            <h1 class="m-0 text-capitalize">{{s.title}}</h1>
+                            <h1 class="m-0 text-capitalize calibril">{{s.title}}</h1>
                         </div>
                         <div width="50">
-                            <h3 class="py-3 m-0 calibril text-capitalize" ng-bind-html="s.subtitle"></h3>
+                            <h3 class="py-3 m-0 Lato-Light text-capitalize" ng-bind-html="s.subtitle"></h3>
                         </div>
                         <div class="home-btn my-3">
-                            <a role="button" class="btn btn-know-more px-4">Know More</a>
+                            <a role="button" class="btn btn-know-more px-5 Lato-Light">Know More</a>
                         </div>
                     </div>
                 </div>
@@ -21,12 +21,12 @@
         </div>
     </div>
 </section>
-<section class="gray-background aboutus" id="aboutus">
+<section class="gray-background aboutus section-padding" id="aboutus">
     <div class="container">
-        <h2 class="text-center pt-5 calibril">About Us
+        <h2 class="text-center calibril pb-5 m-0">About Us
         </h2>
         <!-- <h6 class="text-center">Business Transformation Through Technology</h6> -->
-        <div class="pt-3 pb-3 px-5">
+        <div class="">
             <div class="mx-5">
                 <p>Systems Plus Transformations is a global boutique Information Technology Solution and Services Provider with
                     customers in Europe, North America and Asia Pacific.Our presence in India, UK, US enable us to serve
@@ -34,14 +34,14 @@
                     digital services, Big Data & Analytics, Enterprise solutions and Managed services.</p>
             </div>
         </div>
-        <div class="text-center pb-4">
+        <div class="text-center pt-3">
             <button type="button" class="btn btn-outline-danger" ui-sref="about">Read More</button>
         </div>
     </div>
 </section>
-<section id="service">
+<section id="service" class="section-padding">
     <div class="container">
-        <h2 class="text-center  m-0 py-4 calibril">Services</h2>
+        <h2 class="text-center m-0 pb-5 calibril">Services</h2>
         <div class="row justify-items-center pb-4 mx-5">
             <div class="col text-center position-relative hover-anime  py-3 mx-3 service-bg" ui-sref="service({serviceId:'IRC'})">
                 <div class="">
@@ -96,7 +96,7 @@
                 </div>
             </div>
         </div>
-        <div class="row justify-content-md-center pb-4 mx-5">
+        <div class="row justify-content-md-center  mx-5">
             <div class="col-md-4 text-center position-relative hover-anime  py-3 mx-3 service-bg" ui-sref="service({serviceId:'digital-service'})">
                 <div class="pb-3">
                     <img src="img/home/service/service5.svg" class="img-fluid w-25 mx-auto">
@@ -133,41 +133,32 @@
         </div>
     </div>
 </section>
-<section class="gray-background " id="product">
-    <h2 class="text-center pt-4 calibril">Products</h2>
-    <div class="container pt-3 pb-5">
+<section class="gray-background section-padding" id="product">
+    <h2 class="text-center  calibril pb-5 m-0">Products</h2>
+    <div class="container">
         <div class="row">
             <div class="col product-hover">
-                <div class=" position-relative">
-                    <div class="">
-                        <img src="img/home/product1.jpg" class="img-fluid" width="100%">
-                    </div>
+                <div class="position-relative">
+                    <img src="img/home/product1.jpg" class="img-fluid" width="100%">
                     <div class="position-absolute product-main">
-                        <div class="product-title p-3">
-                            <h4 class="text-uppercase text-center m-0 OpenSans-Bold">isee : Retail Solution</h4>
-                        </div>
-                        <div class="product-desc text-white  py-5">
-                            <p class="mb-0">Increase your sales and reduce return frauds with Intelligence driven and analytics based return
+                        <div class="product-desc text-white text-center">
+                            <h4 class="text-uppercase text-center  OpenSans-Bold">isee : Retail Solution</h4>
+                            <p>Increase your sales and reduce return frauds with Intelligence driven and analytics based return
                                 fraud solution. </p>
-                            <a href="" class="learn-more" ui-sref="product({type:'isee'})">Read More</a>
-
+                            <a class="learn-more text-right p-2" role="button" ui-sref="product({type:'isee'})">Read More</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col product-hover">
                 <div class="position-relative">
-                    <div class="">
-                        <img src="img/home/product2.jpg" class="img-fluid" width="100%">
-                    </div>
+                    <img src="img/home/product2.jpg" class="img-fluid" width="100%">
                     <div class="position-absolute product-main">
-                        <div class="product-title p-3">
-                            <h4 class="text-uppercase text-center m-0 OpenSans-Bold">Shopmyway</h4>
-                        </div>
-                        <div class="product-desc text-white  py-5">
-                            <p class="mb-0">Complete end to end eCommerce Solution to grow your business online and on mobile. Expand your
+                        <div class="product-desc text-white text-center">
+                            <h4 class="text-uppercase text-center  OpenSans-Bold">Shopmyway</h4>
+                            <p class="">Complete end to end eCommerce Solution to grow your business online and on mobile. Expand your
                                 business in new geographies and open opportunities in up and coming market segments.</p>
-                            <a class="learn-more text-right " ui-sref="product({type:'shopmyway'})">Read More</a>
+                            <a class="learn-more text-right p-2" role="button" ui-sref="product({type:'shopmyway'})">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -175,11 +166,11 @@
         </div>
     </div>
 </section>
-<section id="insight">
-    <h2 class="text-center pt-4 calibril">Insights</h2>
+<section id="insight" class="section-padding">
+    <h2 class="text-center  calibril m-0 pb-5">Insights</h2>
     <!-- <h6 class="text-center">Lorem Ipsum is simply dummy text of the printing</h6> -->
     <div class="container">
-        <div class="row py-4">
+        <div class="row">
             <div class="col-3">
                 <div class="bg-white px-3 pt-3 hover-anime-v position-relative whitepaper-main" ng-click="openWhitepaper();">
                     <img src="img/home/wallpaper1.jpg" width="100%">
@@ -251,86 +242,103 @@
                 </div>
             </div>
         </div>
-        <div class="text-center pb-4">
+        <div class="text-center pt-5">
             <button type="button" class="btn btn-outline-danger" ui-sref="insights">Get More Insights</button>
         </div>
     </div>
 </section>
-<section class="contact-bg  text-white" id="contact">
-    <div class="">
-        <div class="container-fluid">
-            <h2 class="text-center text-center m-0 py-2 calibril">Contact Us</h2>
-            <div class="px-4 pb-5">
-                <div class="row no-gutters">
-                    <div class="col-4">
-                        <div class="contact-form-bg p-5">
-                            <h4 class="text-center pb-4 calibril font-weight-bold"> Drop Us A Line </h4>
-                            <div class="contact-form">
-                                <form class="ng-pristine ng-invalid ng-invalid-required">
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <input type="text" class="form-control" id="name" placeholder="Name">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <input type="text" class="form-control" id="company" placeholder="Company Name">
-                                        </div>
+<section class="gray-background section-padding" id="partners">
+    <h2 class="text-center  calibril m-0 pb-5">Partners</h2>
+    <div class="container pb-5">
+        <div class="row">
+            <div class="col text-center mx-5">
+                <div class="partner-bg bg-light p-3">
+                    <img src="img/home/partners/1.png" class="img-fluid" width="200">
+                </div>
+            </div>
+            <div class="col text-center mx-5">
+                <div class="partner-bg bg-light p-4">
+                    <img src="img/home/partners/2.png" class="img-fluid" width="225">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="contact-bg  section-padding text-white" id="contact">
+
+    <div class="container">
+        <h2 class="text-center text-center m-0 pb-5 calibril">Contact Us</h2>
+        <div class="">
+            <div class="row no-gutters">
+                <div class="col-4">
+                    <div class="contact-form-bg p-5">
+                        <h4 class="text-center pb-4 calibril font-weight-bold blue-footer-text"> Drop Us A Line </h4>
+                        <div class="contact-form">
+                            <form class="ng-pristine ng-invalid ng-invalid-required">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <input type="text" class="form-control" id="name" placeholder="Name">
                                     </div>
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" id="email" placeholder="Email">
+                                    <div class="form-group col-md-6">
+                                        <input type="text" class="form-control" id="company" placeholder="Company Name">
                                     </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="message" placeholder="Message">
-                                    </div>
-                                    <div class="captch">
-                                        <div class="captch-div ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" on-create="setWidgetId(5)" ng-model="formData.myRecaptchaResponse"
-                                            vc-recaptcha="" key="captchaKey" required=""></div>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary mt-2">Submit</button>
-                                </form>
-                            </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="message" placeholder="Message">
+                                </div>
+                                <div class="captch">
+                                    <div class="captch-div ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" on-create="setWidgetId(5)" ng-model="formData.myRecaptchaResponse"
+                                        vc-recaptcha="" key="captchaKey" required=""></div>
+                                </div>
+                                <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                            </form>
                         </div>
                     </div>
-                    <div class="col-8">
-                        <div class="contact-Address-bg p-5">
-                            <div class="row">
-                                <div class="col">
-                                    <h5 class="pb-2 calibril font-weight-bold">Pune</h5>
-                                    <p>
-                                        Tower 8, Magarpatta SEZ, Magarpatta City, Pune,
-                                        <br> Maharashtra 411013
-                                        <br>India
-                                    </p>
-                                    <p>
-                                        <a>Tel: +91 2067263500 </a>
-                                    </p>
-                                </div>
-                                <div class="col">
-                                    <h5 class="pb-2 calibril font-weight-bold">Mumbai</h5>
-                                    <p>
-                                        A/30,Laxmi Nivas,
-                                        <br>Sion, Mumbai,
-                                        <br> Maharashtra 400022
-                                        <br>India
-                                    </p>
-                                    <p class="m-0">
-                                        <a>Tel: +91 222660 8201</a>
-                                    </p>
-                                    <p>
-                                        <a>fax: +91 222660 2706</a>
-                                    </p>
-                                </div>
-                                <div class="col">
-                                    <h5 class="pb-2 calibril font-weight-bold">London</h5>
-                                    <p>
-                                        2 Churchill Court, 58
-                                        <br>Station Road
-                                        <br>North Harrow -HA2 7SA
-                                        <br>United Kingdom
-                                    </p>
-                                    <p>
-                                        <a>Tel:+44 208 427 6505 </a>
-                                    </p>
-                                    <!-- <div class="pl-5 ml-5">
+                </div>
+                <div class="col-8">
+                    <div class="contact-Address-bg p-5">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="pb-2 calibril font-weight-bold blue-footer-text">Pune</h5>
+                                <p>
+                                    Tower 8, Magarpatta SEZ, Magarpatta City, Pune,
+                                    <br> Maharashtra 411013
+                                    <br>India
+                                </p>
+                                <p>
+                                    <a>Tel: +91 2067263500 </a>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <h5 class="pb-2 calibril font-weight-bold blue-footer-text">Mumbai</h5>
+                                <p>
+                                    A/30,Laxmi Nivas,
+                                    <br>Sion, Mumbai,
+                                    <br> Maharashtra 400022
+                                    <br>India
+                                </p>
+                                <p class="m-0">
+                                    <a>Tel: +91 222660 8201</a>
+                                </p>
+                                <p>
+                                    <a>fax: +91 222660 2706</a>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <h5 class="pb-2 calibril font-weight-bold blue-footer-text">London</h5>
+                                <p>
+                                    2 Churchill Court, 58
+                                    <br>Station Road
+                                    <br>North Harrow -HA2 7SA
+                                    <br>United Kingdom
+                                </p>
+                                <p>
+                                    <a>Tel:+44 208 427 6505 </a>
+                                </p>
+                                <!-- <div class="pl-5 ml-5">
                                         <span>Connect With Us</span>
                                         <div class="social-icon">
                                             <a class="text-white" href="https://www.linkedin.com/company/systems-plus-transformations-limited/" target="_blank">
@@ -347,7 +355,6 @@
                                             </a>
                                         </div>
                                     </div> -->
-                                </div>
                             </div>
                         </div>
                     </div>

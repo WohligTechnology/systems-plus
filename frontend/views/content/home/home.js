@@ -56,14 +56,14 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             link: ''
         },
         {
-            img: 'img/home/Big Data Analytics.png',
+            img: 'img/home/Big-Data-Analytics.png',
             title: 'Leverage the power of Big Data and Analytics to Improve/Increase your business',
             subtitle: 'Unlock the power of data through our efficient Big Data and Analytics solution',
             link: ''
 
         },
         {
-            img: 'img/home/Digital Services.png',
+            img: 'img/home/Digital-Services.png',
             title: 'Streamline your Customer Journey with our Digital Services',
             subtitle: 'Focusing on spectacular solutions for next generation <br> innovative products.',
             link: ''
