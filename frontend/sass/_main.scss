@@ -434,3 +434,39 @@ h2 {
         font-size: 0.75rem !important;
     }
 }
+
+//contact page scss
+.contact-content {
+    input {
+        border: none;
+        border-bottom: 1px solid;
+        &:focus {
+            border-bottom: 1px solid black;
+            background: transparent;
+        }
+    }
+    .form-group {
+        margin-bottom: 2.5rem;
+    }
+}
+
+.contact-card {
+    .card {
+        background: transparent;
+        border: none;
+    }
+    .card-header {
+        background: transparent;
+        a {
+            color: black;
+            text-decoration: none;
+        }
+    }
+    .card-open {
+        h5 {
+            a {
+                color: #dd3e4e !important;
+            }
+        }
+    }
+}
