@@ -53,26 +53,28 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             img: 'img/home/About Us.png',
             title: 'Your Preferred digital transformation partner ',
             subtitle: 'Delivering Superior customer experience while reducing cost',
-            link: ''
+            link: 'about'
         },
         {
             img: 'img/home/Big-Data-Analytics.png',
             title: 'Leverage the power of Big Data and Analytics to Improve/Increase your business',
             subtitle: 'Unlock the power of data through our efficient Big Data and Analytics solution',
-            link: ''
-
+            link: 'bi-analytics',
+            cat: 'service'
         },
         {
             img: 'img/home/Digital-Services.png',
             title: 'Streamline your Customer Journey with our Digital Services',
             subtitle: 'Focusing on spectacular solutions for next generation <br> innovative products.',
-            link: ''
+            link: 'digital-service',
+            cat: 'service'
         },
         {
             img: 'img/home/IRC.png',
             title: 'Expand your team hassle free with our proven and unique custodian model',
             subtitle: 'How a US customer in Financial security and <br>Fraud prevention domain ',
-            link: ''
+            link: 'IRC',
+            cat: 'service'
         }
     ];
     $timeout(function () {

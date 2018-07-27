@@ -40,7 +40,7 @@ myApp.factory('NavigationService', function () {
             subnav: []
         },
         {
-            name: "Partners",
+            name: "Sister Companies",
             classis: "active",
             anchor: "partners",
             id: "partners",

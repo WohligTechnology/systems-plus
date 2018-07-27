@@ -299,6 +299,7 @@ header {
 
 h2 {
     font-size: 2.625rem;
+    color: #043d76;
 }
 
 .section-padding {
@@ -326,7 +327,7 @@ h2 {
 
 //common scss
 .gray-background {
-    background-color: #e2e2e2;
+    background-color: #f5f5f5;
 }
 
 .modal-close-icon {
@@ -347,6 +348,10 @@ h2 {
 //scss for header
 .navbar {
     padding: 0rem 1rem;
+    box-shadow: rgba(0, 0, 0, 0.11) 0px 0px 12px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.11) 0px 0px 12px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.11) 0px 0px 12px;
+    -o-box-shadow: rgba(0, 0, 0, 0.11) 0px 0px 12px;
 }
 
 .navbar-expand-md .navbar-nav .nav-link {
@@ -383,13 +388,11 @@ h2 {
 } //end of header
 //scss for footer
 .footer-bg {
-    background: #2f2f2f;
-}
-
-.footer-link {
-    a {
-        color: white !important;
-    }
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.11) 0px 0px 12px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.11) 0px 0px 12px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.11) 0px 0px 12px;
+    -o-box-shadow: rgba(0, 0, 0, 0.11) 0px 0px 12px;
 }
 
 .contact-bg {
@@ -421,7 +424,24 @@ h2 {
         padding-bottom: 0.5rem
     }
     h6 {
-        color: #4a8cc7;
+        color: #043c77;
+    }
+}
+
+.footer-strip {
+    background: #043c77;
+    font-size: 0.8rem;
+}
+
+.scrolltotop {
+    bottom: 6%;
+    position: fixed;
+    right: 20px;
+    text-align: center;
+    z-index: 99;
+    .fa-arrow-alt-circle-up {
+        font-size: 1.8rem;
+        color: #3c5896;
     }
 }
 
@@ -440,6 +460,7 @@ h2 {
     input {
         border: none;
         border-bottom: 1px solid;
+        background: transparent;
         &:focus {
             border-bottom: 1px solid black;
             background: transparent;

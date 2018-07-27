@@ -4,10 +4,10 @@
             <div class="row ">
                 <div class="col">
                     <div>
-                        <!-- <img src="img/logo.png" class="img-fluid"> -->
-                        <h6 class="m-0 OpenSans-Regular py-1">Stay Connected</h6>
+                        <img src="img/logo.png" class="img-fluid" width="100">
+                        <!-- <h6 class="m-0 OpenSans-Regular pt-3 pb-1">Stay Connected</h6> -->
                         <div class="social-icon">
-                            <ul class="list-inline m-0 p-0 list-unstyled">
+                            <ul class="list-inline m-0  pt-3 list-unstyled">
                                 <li class="list-inline-item m-0 p-0">
                                     <a href="https://www.linkedin.com/company/systems-plus-transformations-limited/" target="_blank " class="icon-font">
                                         <img src="img/facebook.png" class="img-fluid  w-75">
@@ -27,13 +27,13 @@
                         <h6>Who We are</h6>
                         <ul class="m-0 p-0 list-unstyled">
                             <li>
-                                <a class="text-white" ng-click="goToAnchor('home')">Home</a>
+                                <a class="text-dark" ng-click="goToAnchor('home')">Home</a>
                             </li>
                             <li>
-                                <a class="text-white" ng-click="goToAnchor('aboutus')">About Us</a>
+                                <a class="text-dark" ng-click="goToAnchor('aboutus')">About Us</a>
                             </li>
                             <li>
-                                <a class="text-white" ng-click="goToAnchor('partner')">Partners</a>
+                                <a class="text-dark" ng-click="goToAnchor('partner')">Partners</a>
                             </li>
                         </ul>
                     </div>
@@ -43,10 +43,10 @@
                         <h6>What We Do</h6>
                         <ul class=" m-0 p-0 list-unstyled ">
                             <li>
-                                <a class="text-white" ng-click="goToAnchor('service')">Services</a>
+                                <a class="text-dark" ng-click="goToAnchor('service')">Services</a>
                             </li>
                             <li>
-                                <a class="text-white" ng-click="goToAnchor('product')">Products</a>
+                                <a class="text-dark" ng-click="goToAnchor('product')">Products</a>
                             </li>
                         </ul>
                     </div>
@@ -56,7 +56,7 @@
                         <h6>Knowledge</h6>
                         <ul class=" m-0 p-0 list-unstyled ">
                             <li>
-                                <a class="text-white" ng-click="goToAnchor('insight')">Insights</a>
+                                <a class="text-dark" ng-click="goToAnchor('insight')">Insights</a>
                             </li>
                         </ul>
                     </div>
@@ -68,7 +68,7 @@
                             <i class="fas fa-map-marker-alt"></i>
                         </h6>
                         <!-- <h6 class="d-inline-block">Contact Us</h6> -->
-                        <ul class="m-0 p-0 list-unstyled ">
+                        <ul class="m-0 p-0 list-unstyled text-dark  ">
                             <li>
                                 Pune
                             </li>
@@ -80,76 +80,25 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-            </div>
-            <div>
-                <div class="py-2">
-                    <p class="float-left m-0 ">
-                        © Systems Plus Transformations 2018. All rights Reserved.
-                    </p>
-                    <p class="float-right m-0 ">
-                        Designed & Developed By Wohlig Transformations Pvt. Ltd.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="footer-link text-white py-4 ">
-            <div class="row align-items-center ">
-                <div class="col-10 ">
-                    <ul>
-                        <li ng-repeat="menu in navigation " ui-sref-active="active " class="list-inline-item px-3 ">
-                            <a ui-sref="{{menu.anchor}} " ng-if="menu.anchor " class="text-white ">{{menu.name}}</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-2 ">
-                    <div class="d-flex justify-content-end ">
-                        
-                        <div class="social-icon pl-3 ">
-                            <ul class="list-inline m-0 ">
-                                <li class="list-inline-item ">
-                                    <a href="https://www.linkedin.com/company/systems-plus-transformations-limited/
-                    " target="_blank " class="icon-font ">
-                                        <img src="img/facebook.png " class="img-fluid w-75 ">
-                                    </a>
-                                </li>
-                                <li class="list-inline-item ">
-                                    <a href="https://www.facebook.com/sptr.co/ " target="_blank " class="icon-font ">
-                                        <img src="img/twitter.png " class="img-fluid w-75 ">
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="">
+                        <a class="scrolltotop" ng-click="scrollTop()">
+                            <i class="far fa-arrow-alt-circle-up"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div>
-                <div class="py-2 ">
-                    <p class= float-left m-0">
-                    Copyright © 2018
-                    </p>
-                    <p class=f loat-right m-0 ">
-                        Wohlig Transformations Pvt. Ltd.
-                    </p>
-                </div>
+        </div>
+    </div>
+    <div class="footer-strip p-2">
+        <div class="container-fluid">
+            <div class="row text-white">
+                <p class="col text-left m-0 ">
+                    © Systems Plus Transformations 2018. All rights Reserved.
+                </p>
+                <p class="col text-right m-0 ">
+                    Designed & Developed By Wohlig Transformations Pvt. Ltd.
+                </p>
             </div>
-
-        </div> -->
-        <!-- <div class="footer-location ">
-                            <ul class="list-inline m-0 ">
-                                <li class="list-inline-item px-1 ">
-                                    <span class="px-2 ">
-                                        <i class="fas fa-map-marker-alt "></i>
-                                    </span>
-                                    Pune
-                                </li>
-                                <li class="list-inline-item px-1 ">
-                                    Mumbai
-                                </li>
-                                <li class="list-inline-item px-1 ">
-                                    London
-                                </li>
-                            </ul>
-                        </div> -->
+        </div>
     </div>
 </section>

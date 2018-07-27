@@ -27,4 +27,9 @@ myApp.controller('headerCtrl', function ($scope, TemplateService, $state, $timeo
             }, 500);
         }
     };
+    $scope.scrollTop = function () {
+        $('html, body').animate({
+            scrollTop: $('body,html').offset().top - 100
+        }, 3000);
+    }
 });
