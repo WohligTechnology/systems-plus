@@ -10,4 +10,8 @@ myApp.controller('ServiceCtrl', function ($scope, TemplateService, NavigationSer
             size: 'md'
         });
     };
+    $scope.contactSubmit = function (data) {
+        console.log("contact data-----------", data);
+        $scope.data = null;
+    }
 });

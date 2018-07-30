@@ -92,4 +92,8 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             loop: true,
         })
     }, 1000);
+    $scope.contactSubmit = function (data) {
+        console.log("contact data-----------", data);
+        $scope.data = null;
+    }
 })

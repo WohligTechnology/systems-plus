@@ -9,46 +9,34 @@
 </div>
 <div class="modal-body p-4" id="modal-body">
     <form>
-        <div class="form-group">
-            <input class="form-control" placeholder="First Name" type="text" required="">
-        </div>
-        <div class="form-group">
-            <input class="form-control" placeholder="Last Name" type="email" required="">
-        </div>
-        <div class="form-group">
-            <input class="form-control" placeholder="Business Email" type="email" required="">
-        </div>
-        <div class="form-group">
-            <input class="form-control" placeholder="Company" type=" text " required=" ">
-        </div>
-        <!-- <div class="form-group ">
-            <select class="form-control">
-                <option value="" selected="selected">Select Job Role</option>
-                <option value="199">C-Suite</option>
-                <option value="200">VP / Director</option>
-                <option value="201">Team Lead / Head</option>
-                <option value="202">Sr Manager / Manager</option>
-                <option value="203">Engineer</option>
-                <option value="204">Staff</option>
-            </select>
-        </div> -->
-        <!-- <div class="form-group">
-            <select class="form-control">
-                <option value="" selected="selected">Select Department</option>
-                <option value="209">Engineering &amp; Research</option>
-                <option value="208">Finance &amp; Administration</option>
-                <option value="206">Human Resource</option>
-                <option value="211">IT&amp;IS</option>
-                <option value="212">Management</option>
-                <option value="205">Marketing</option>
-                <option value="210">Operations</option>
-                <option value="198">Sales</option>
-                <option value="207">Support</option>
-            </select>
-        </div> -->
-        <div class="text-center ">
-            <button class="reminder-btn ">Download Now</button>
-        </div>
-    </form>
+        <form class="text-dark" name="contact">
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <input type="text" id="edit-fname" name="fname" value="" class="form-control" placeholder="First Name *" only-letters-input
+                            ng-model="data.fname" required>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <input type="text" id="edit-lname" name="lname" value="" placeholder="Last Name *" class="form-control" only-letters-input
+                            ng-model="data.lname" required>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="email" id="edit-email" name="email" value="" class="form-control" placeholder="Business Email *" required ng-model="data.email">
+            </div>
+
+
+            <div class="form-group">
+                <input type="text" id="edit-company" name="company" value="" class="form-control" placeholder="Company *" required ng-model="data.company">
+            </div>
+
+            <div class="text-center ">
+                <button type="submit" class="btn btn-outline-danger reminder-btn" ng-click="contactSubmit(data)">Download Now</button>
+            </div>
+        </form>
+
 </div>
 </div>

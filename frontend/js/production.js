@@ -43501,7 +43501,7 @@ d.push(n.start());c.all(d,function(a){e.complete(a)});var e=new c({end:a(),cance
  * ui-bootstrap4
  * http://morgul.github.io/ui-bootstrap4/
 
- * Version: 3.0.3 - 2018-03-12
+ * Version: 3.0.2 - 2018-02-12
  * License: MIT
  */angular.module("ui.bootstrap", ["ui.bootstrap.collapse","ui.bootstrap.tabindex","ui.bootstrap.accordion","ui.bootstrap.alert","ui.bootstrap.buttons","ui.bootstrap.carousel","ui.bootstrap.dateparser","ui.bootstrap.isClass","ui.bootstrap.datepicker","ui.bootstrap.position","ui.bootstrap.datepickerPopup","ui.bootstrap.debounce","ui.bootstrap.multiMap","ui.bootstrap.dropdown","ui.bootstrap.stackedMap","ui.bootstrap.modal","ui.bootstrap.paging","ui.bootstrap.pager","ui.bootstrap.pagination","ui.bootstrap.tooltip","ui.bootstrap.popover","ui.bootstrap.progressbar","ui.bootstrap.rating","ui.bootstrap.tabs","ui.bootstrap.timepicker","ui.bootstrap.typeahead"]);
 angular.module('ui.bootstrap.collapse', [])
@@ -45609,12 +45609,12 @@ angular.module('ui.bootstrap.datepicker', ['ui.bootstrap.dateparser', 'ui.bootst
 
 angular.module('ui.bootstrap.position', [])
 
-  /**
-   * A set of utility methods for working with the DOM.
-   * It is meant to be used where we need to absolute-position elements in
-   * relation to another element (this is the case for tooltips, popovers,
-   * typeahead suggestions etc.).
-   */
+/**
+ * A set of utility methods for working with the DOM.
+ * It is meant to be used where we need to absolute-position elements in
+ * relation to another element (this is the case for tooltips, popovers,
+ * typeahead suggestions etc.).
+ */
   .factory('$uibPosition', ['$document', '$window', function($document, $window) {
     /**
      * Used by scrollbarWidth() function to cache scrollbar's width.
@@ -45749,7 +45749,7 @@ angular.module('ui.bootstrap.position', [])
           heightOverflow: scrollParent.scrollHeight > scrollParent.clientHeight,
           bottom: paddingBottom + scrollbarWidth,
           originalBottom: paddingBottom
-        };
+         };
       },
 
       /**
@@ -45872,27 +45872,16 @@ angular.module('ui.bootstrap.position', [])
        *     <li>**right**: distance to bottom edge of viewport</li>
        *   </ul>
        */
-      offset: function(elem, includeMargins) {
+      offset: function(elem) {
         elem = this.getRawNode(elem);
 
         var elemBCR = elem.getBoundingClientRect();
-        var offset = {
+        return {
           width: Math.round(angular.isNumber(elemBCR.width) ? elemBCR.width : elem.offsetWidth),
           height: Math.round(angular.isNumber(elemBCR.height) ? elemBCR.height : elem.offsetHeight),
           top: Math.round(elemBCR.top + ($window.pageYOffset || $document[0].documentElement.scrollTop)),
           left: Math.round(elemBCR.left + ($window.pageXOffset || $document[0].documentElement.scrollLeft))
         };
-
-        if (includeMargins) {
-          var styles = window.getComputedStyle(elem);
-          var verticalMargin = this.parseStyle(styles.marginTop) + this.parseStyle(styles.marginBottom);
-          var horisontalMargin = this.parseStyle(styles.marginLeft) + this.parseStyle(styles.marginRight);
-
-          offset.height += verticalMargin;
-          offset.width += horisontalMargin;
-        }
-
-        return offset;
       },
 
       /**
@@ -46043,8 +46032,6 @@ angular.module('ui.bootstrap.position', [])
        *   </ul>
        * @param {boolean=} [appendToBody=false] - Should the top and left values returned
        *   be calculated from the body element, default is false.
-       * @param {boolean=} [includeMargins=false] - Should margins count into targetElem width
-       *    in position claculation
        *
        * @returns {object} An object with the following properties:
        *   <ul>
@@ -46053,22 +46040,13 @@ angular.module('ui.bootstrap.position', [])
        *     <li>**placement**: The resolved placement.</li>
        *   </ul>
        */
-      positionElements: function(hostElem, targetElem, placement, appendToBody, includeMargins) {
+      positionElements: function(hostElem, targetElem, placement, appendToBody) {
         hostElem = this.getRawNode(hostElem);
         targetElem = this.getRawNode(targetElem);
 
         // need to read from prop to support tests.
         var targetWidth = angular.isDefined(targetElem.offsetWidth) ? targetElem.offsetWidth : targetElem.prop('offsetWidth');
         var targetHeight = angular.isDefined(targetElem.offsetHeight) ? targetElem.offsetHeight : targetElem.prop('offsetHeight');
-
-        if (includeMargins) {
-          var styles = window.getComputedStyle(targetElem);
-          var verticalMargin = this.parseStyle(styles.marginTop) + this.parseStyle(styles.marginBottom);
-          var horisontalMargin = this.parseStyle(styles.marginLeft) + this.parseStyle(styles.marginRight);
-
-          targetHeight += verticalMargin;
-          targetWidth += horisontalMargin;
-        }
 
         placement = this.parsePlacement(placement);
 
@@ -46085,16 +46063,16 @@ angular.module('ui.bootstrap.position', [])
           };
 
           placement[0] = placement[0] === 'top' && adjustedSize.height > viewportOffset.top && adjustedSize.height <= viewportOffset.bottom ? 'bottom' :
-            placement[0] === 'bottom' && adjustedSize.height > viewportOffset.bottom && adjustedSize.height <= viewportOffset.top ? 'top' :
-              placement[0] === 'left' && adjustedSize.width > viewportOffset.left && adjustedSize.width <= viewportOffset.right ? 'right' :
-                placement[0] === 'right' && adjustedSize.width > viewportOffset.right && adjustedSize.width <= viewportOffset.left ? 'left' :
-                  placement[0];
+                         placement[0] === 'bottom' && adjustedSize.height > viewportOffset.bottom && adjustedSize.height <= viewportOffset.top ? 'top' :
+                         placement[0] === 'left' && adjustedSize.width > viewportOffset.left && adjustedSize.width <= viewportOffset.right ? 'right' :
+                         placement[0] === 'right' && adjustedSize.width > viewportOffset.right && adjustedSize.width <= viewportOffset.left ? 'left' :
+                         placement[0];
 
           placement[1] = placement[1] === 'top' && adjustedSize.height - hostElemPos.height > viewportOffset.bottom && adjustedSize.height - hostElemPos.height <= viewportOffset.top ? 'bottom' :
-            placement[1] === 'bottom' && adjustedSize.height - hostElemPos.height > viewportOffset.top && adjustedSize.height - hostElemPos.height <= viewportOffset.bottom ? 'top' :
-              placement[1] === 'left' && adjustedSize.width - hostElemPos.width > viewportOffset.right && adjustedSize.width - hostElemPos.width <= viewportOffset.left ? 'right' :
-                placement[1] === 'right' && adjustedSize.width - hostElemPos.width > viewportOffset.left && adjustedSize.width - hostElemPos.width <= viewportOffset.right ? 'left' :
-                  placement[1];
+                         placement[1] === 'bottom' && adjustedSize.height - hostElemPos.height > viewportOffset.top && adjustedSize.height - hostElemPos.height <= viewportOffset.bottom ? 'top' :
+                         placement[1] === 'left' && adjustedSize.width - hostElemPos.width > viewportOffset.right && adjustedSize.width - hostElemPos.width <= viewportOffset.left ? 'right' :
+                         placement[1] === 'right' && adjustedSize.width - hostElemPos.width > viewportOffset.left && adjustedSize.width - hostElemPos.width <= viewportOffset.right ? 'left' :
+                         placement[1];
 
           if (placement[1] === 'center') {
             if (PLACEMENT_REGEX.vertical.test(placement[0])) {
@@ -46214,7 +46192,7 @@ angular.module('ui.bootstrap.position', [])
 
         placement = this.parsePlacement(placement);
         if (placement[1] === 'center') {
-          var arrowElemOffset = this.offset(arrowElem, true);
+          var arrowElemOffset = this.offset(arrowElem);
           if (PLACEMENT_REGEX.vertical.test(placement[0])) {
             var aHW = arrowElemOffset.width / 2;
             var eHW = this.offset(elem).width / 2;
@@ -46240,21 +46218,19 @@ angular.module('ui.bootstrap.position', [])
         borderRadiusProp += '-radius';
         var borderRadius = $window.getComputedStyle(isTooltip ? innerElem : elem)[borderRadiusProp];
 
-        if (isTooltip) {
-          switch (placement[0]) {
-            case 'top':
-              arrowCss.bottom = '0';
-              break;
-            case 'bottom':
-              arrowCss.top = '0';
-              break;
-            case 'left':
-              arrowCss.right = '0';
-              break;
-            case 'right':
-              arrowCss.left = '0';
-              break;
-          }
+        switch (placement[0]) {
+          case 'top':
+            arrowCss.bottom = isTooltip ? '0' : '-' + borderWidth;
+            break;
+          case 'bottom':
+            arrowCss.top = isTooltip ? '0' : '-' + borderWidth;
+            break;
+          case 'left':
+            arrowCss.right = isTooltip ? '0' : '-' + borderWidth;
+            break;
+          case 'right':
+            arrowCss.left = isTooltip ? '0' : '-' + borderWidth;
+            break;
         }
 
         arrowCss[placement[1]] = borderRadius;
@@ -47127,9 +47103,8 @@ angular.module('ui.bootstrap.dropdown', ['ui.bootstrap.multiMap', 'ui.bootstrap.
 
       self.dropdownMenu.css(css);
     }
-      
-    // find openContainer by uib-dropdown-menu directive
-    var openContainer = appendTo ? appendTo : angular.element($element[0].querySelector("[uib-dropdown-menu]"));
+
+    var openContainer = appendTo ? appendTo : $element.find('div');
     var dropdownOpenClass = appendTo ? appendToOpenClass : openClass;
     var hasOpenClass = openContainer.hasClass(dropdownOpenClass);
     var isOnlyOpen = uibDropdownService.isOnlyOpen($scope, appendTo);
@@ -47141,10 +47116,6 @@ angular.module('ui.bootstrap.dropdown', ['ui.bootstrap.multiMap', 'ui.bootstrap.
       } else {
         toggleClass = isOpen ? 'addClass' : 'removeClass';
       }
-        
-      // original Bootstrap 4 dropdown sets openClass on both dropdownMenu and element
-      $animate[toggleClass]($element, dropdownOpenClass);
-      
       $animate[toggleClass](openContainer, dropdownOpenClass).then(function() {
         if (angular.isDefined(isOpen) && isOpen !== wasOpen) {
           toggleInvoker($scope, { open: !!isOpen });
@@ -48596,25 +48567,21 @@ angular.module('ui.bootstrap.tooltip', ['ui.bootstrap.position', 'ui.bootstrap.s
 
               if (!positionTimeout) {
                 positionTimeout = $timeout(function() {
-                  var placementClasses = $position.parsePlacement(ttScope.placement);
-                  var placement = placementClasses[1] === 'center' ? placementClasses[0] : placementClasses[0] + '-' + placementClasses[1];
-				  
-                  // need to add classes prior to placement to allow correct tooltip width calculations
+                  var ttPosition = $position.positionElements(element, tooltip, ttScope.placement, appendToBody);
+                  var initialHeight = angular.isDefined(tooltip.offsetHeight) ? tooltip.offsetHeight : tooltip.prop('offsetHeight');
+                  var elementPos = appendToBody ? $position.offset(element) : $position.position(element);
+                  tooltip.css({ top: ttPosition.top + 'px', left: ttPosition.left + 'px' });
+                  var placementClasses = ttPosition.placement.split('-');
+
                   if (!tooltip.hasClass(placementClasses[0])) {
                     tooltip.removeClass(lastPlacement.split('-')[0]);
                     tooltip.addClass(placementClasses[0]);
                   }
 
-                  if (!tooltip.hasClass(options.placementClassPrefix + placement)) {
+                  if (!tooltip.hasClass(options.placementClassPrefix + ttPosition.placement)) {
                     tooltip.removeClass(options.placementClassPrefix + lastPlacement);
-                    tooltip.addClass(options.placementClassPrefix + placement);
+                    tooltip.addClass(options.placementClassPrefix + ttPosition.placement);
                   }
-                  
-                  // Take into account tooltup margins, since boostrap css draws tooltip arrow inside margins
-                  var ttPosition = $position.positionElements(element, tooltip, ttScope.placement, appendToBody, true);
-                  var initialHeight = angular.isDefined(tooltip.offsetHeight) ? tooltip.offsetHeight : tooltip.prop('offsetHeight');
-                  var elementPos = appendToBody ? $position.offset(element) : $position.position(element);
-                  tooltip.css({ top: ttPosition.top + 'px', left: ttPosition.left + 'px' });
 
                   adjustmentTimeout = $timeout(function() {
                     var currentHeight = angular.isDefined(tooltip.offsetHeight) ? tooltip.offsetHeight : tooltip.prop('offsetHeight');
@@ -49299,8 +49266,7 @@ angular.module('ui.bootstrap.progressbar', [])
     require: '^uibProgress',
     scope: {
       value: '=',
-      type: '@',
-      striped: '=?'
+      type: '@'
     },
     templateUrl: 'uib/template/progressbar/bar.html',
     link: function(scope, element, attrs, progressCtrl) {
@@ -49317,8 +49283,7 @@ angular.module('ui.bootstrap.progressbar', [])
     scope: {
       value: '=',
       maxParam: '=?max',
-      type: '@',
-      striped: '=?'
+      type: '@'
     },
     templateUrl: 'uib/template/progressbar/progressbar.html',
     link: function(scope, element, attrs, progressCtrl) {
@@ -50967,7 +50932,7 @@ angular.module('ui.bootstrap.typeahead').run(function() {!angular.$$csp().noInli
  * ui-bootstrap4
  * http://morgul.github.io/ui-bootstrap4/
 
- * Version: 3.0.3 - 2018-03-12
+ * Version: 3.0.2 - 2018-02-12
  * License: MIT
  */angular.module("ui.bootstrap", ["ui.bootstrap.tpls", "ui.bootstrap.collapse","ui.bootstrap.tabindex","ui.bootstrap.accordion","ui.bootstrap.alert","ui.bootstrap.buttons","ui.bootstrap.carousel","ui.bootstrap.dateparser","ui.bootstrap.isClass","ui.bootstrap.datepicker","ui.bootstrap.position","ui.bootstrap.datepickerPopup","ui.bootstrap.debounce","ui.bootstrap.multiMap","ui.bootstrap.dropdown","ui.bootstrap.stackedMap","ui.bootstrap.modal","ui.bootstrap.paging","ui.bootstrap.pager","ui.bootstrap.pagination","ui.bootstrap.tooltip","ui.bootstrap.popover","ui.bootstrap.progressbar","ui.bootstrap.rating","ui.bootstrap.tabs","ui.bootstrap.timepicker","ui.bootstrap.typeahead"]);
 angular.module("ui.bootstrap.tpls", ["uib/template/accordion/accordion-group.html","uib/template/accordion/accordion.html","uib/template/alert/alert.html","uib/template/carousel/carousel.html","uib/template/carousel/slide.html","uib/template/datepicker/datepicker.html","uib/template/datepicker/day.html","uib/template/datepicker/month.html","uib/template/datepicker/year.html","uib/template/datepickerPopup/popup.html","uib/template/modal/window.html","uib/template/pager/pager.html","uib/template/pagination/pagination.html","uib/template/tooltip/tooltip-html-popup.html","uib/template/tooltip/tooltip-popup.html","uib/template/tooltip/tooltip-template-popup.html","uib/template/popover/popover-html.html","uib/template/popover/popover-template.html","uib/template/popover/popover.html","uib/template/progressbar/bar.html","uib/template/progressbar/progress.html","uib/template/progressbar/progressbar.html","uib/template/rating/rating.html","uib/template/tabs/tab.html","uib/template/tabs/tabset.html","uib/template/timepicker/timepicker.html","uib/template/typeahead/typeahead-match.html","uib/template/typeahead/typeahead-popup.html"]);
@@ -53076,12 +53041,12 @@ angular.module('ui.bootstrap.datepicker', ['ui.bootstrap.dateparser', 'ui.bootst
 
 angular.module('ui.bootstrap.position', [])
 
-  /**
-   * A set of utility methods for working with the DOM.
-   * It is meant to be used where we need to absolute-position elements in
-   * relation to another element (this is the case for tooltips, popovers,
-   * typeahead suggestions etc.).
-   */
+/**
+ * A set of utility methods for working with the DOM.
+ * It is meant to be used where we need to absolute-position elements in
+ * relation to another element (this is the case for tooltips, popovers,
+ * typeahead suggestions etc.).
+ */
   .factory('$uibPosition', ['$document', '$window', function($document, $window) {
     /**
      * Used by scrollbarWidth() function to cache scrollbar's width.
@@ -53216,7 +53181,7 @@ angular.module('ui.bootstrap.position', [])
           heightOverflow: scrollParent.scrollHeight > scrollParent.clientHeight,
           bottom: paddingBottom + scrollbarWidth,
           originalBottom: paddingBottom
-        };
+         };
       },
 
       /**
@@ -53339,27 +53304,16 @@ angular.module('ui.bootstrap.position', [])
        *     <li>**right**: distance to bottom edge of viewport</li>
        *   </ul>
        */
-      offset: function(elem, includeMargins) {
+      offset: function(elem) {
         elem = this.getRawNode(elem);
 
         var elemBCR = elem.getBoundingClientRect();
-        var offset = {
+        return {
           width: Math.round(angular.isNumber(elemBCR.width) ? elemBCR.width : elem.offsetWidth),
           height: Math.round(angular.isNumber(elemBCR.height) ? elemBCR.height : elem.offsetHeight),
           top: Math.round(elemBCR.top + ($window.pageYOffset || $document[0].documentElement.scrollTop)),
           left: Math.round(elemBCR.left + ($window.pageXOffset || $document[0].documentElement.scrollLeft))
         };
-
-        if (includeMargins) {
-          var styles = window.getComputedStyle(elem);
-          var verticalMargin = this.parseStyle(styles.marginTop) + this.parseStyle(styles.marginBottom);
-          var horisontalMargin = this.parseStyle(styles.marginLeft) + this.parseStyle(styles.marginRight);
-
-          offset.height += verticalMargin;
-          offset.width += horisontalMargin;
-        }
-
-        return offset;
       },
 
       /**
@@ -53510,8 +53464,6 @@ angular.module('ui.bootstrap.position', [])
        *   </ul>
        * @param {boolean=} [appendToBody=false] - Should the top and left values returned
        *   be calculated from the body element, default is false.
-       * @param {boolean=} [includeMargins=false] - Should margins count into targetElem width
-       *    in position claculation
        *
        * @returns {object} An object with the following properties:
        *   <ul>
@@ -53520,22 +53472,13 @@ angular.module('ui.bootstrap.position', [])
        *     <li>**placement**: The resolved placement.</li>
        *   </ul>
        */
-      positionElements: function(hostElem, targetElem, placement, appendToBody, includeMargins) {
+      positionElements: function(hostElem, targetElem, placement, appendToBody) {
         hostElem = this.getRawNode(hostElem);
         targetElem = this.getRawNode(targetElem);
 
         // need to read from prop to support tests.
         var targetWidth = angular.isDefined(targetElem.offsetWidth) ? targetElem.offsetWidth : targetElem.prop('offsetWidth');
         var targetHeight = angular.isDefined(targetElem.offsetHeight) ? targetElem.offsetHeight : targetElem.prop('offsetHeight');
-
-        if (includeMargins) {
-          var styles = window.getComputedStyle(targetElem);
-          var verticalMargin = this.parseStyle(styles.marginTop) + this.parseStyle(styles.marginBottom);
-          var horisontalMargin = this.parseStyle(styles.marginLeft) + this.parseStyle(styles.marginRight);
-
-          targetHeight += verticalMargin;
-          targetWidth += horisontalMargin;
-        }
 
         placement = this.parsePlacement(placement);
 
@@ -53552,16 +53495,16 @@ angular.module('ui.bootstrap.position', [])
           };
 
           placement[0] = placement[0] === 'top' && adjustedSize.height > viewportOffset.top && adjustedSize.height <= viewportOffset.bottom ? 'bottom' :
-            placement[0] === 'bottom' && adjustedSize.height > viewportOffset.bottom && adjustedSize.height <= viewportOffset.top ? 'top' :
-              placement[0] === 'left' && adjustedSize.width > viewportOffset.left && adjustedSize.width <= viewportOffset.right ? 'right' :
-                placement[0] === 'right' && adjustedSize.width > viewportOffset.right && adjustedSize.width <= viewportOffset.left ? 'left' :
-                  placement[0];
+                         placement[0] === 'bottom' && adjustedSize.height > viewportOffset.bottom && adjustedSize.height <= viewportOffset.top ? 'top' :
+                         placement[0] === 'left' && adjustedSize.width > viewportOffset.left && adjustedSize.width <= viewportOffset.right ? 'right' :
+                         placement[0] === 'right' && adjustedSize.width > viewportOffset.right && adjustedSize.width <= viewportOffset.left ? 'left' :
+                         placement[0];
 
           placement[1] = placement[1] === 'top' && adjustedSize.height - hostElemPos.height > viewportOffset.bottom && adjustedSize.height - hostElemPos.height <= viewportOffset.top ? 'bottom' :
-            placement[1] === 'bottom' && adjustedSize.height - hostElemPos.height > viewportOffset.top && adjustedSize.height - hostElemPos.height <= viewportOffset.bottom ? 'top' :
-              placement[1] === 'left' && adjustedSize.width - hostElemPos.width > viewportOffset.right && adjustedSize.width - hostElemPos.width <= viewportOffset.left ? 'right' :
-                placement[1] === 'right' && adjustedSize.width - hostElemPos.width > viewportOffset.left && adjustedSize.width - hostElemPos.width <= viewportOffset.right ? 'left' :
-                  placement[1];
+                         placement[1] === 'bottom' && adjustedSize.height - hostElemPos.height > viewportOffset.top && adjustedSize.height - hostElemPos.height <= viewportOffset.bottom ? 'top' :
+                         placement[1] === 'left' && adjustedSize.width - hostElemPos.width > viewportOffset.right && adjustedSize.width - hostElemPos.width <= viewportOffset.left ? 'right' :
+                         placement[1] === 'right' && adjustedSize.width - hostElemPos.width > viewportOffset.left && adjustedSize.width - hostElemPos.width <= viewportOffset.right ? 'left' :
+                         placement[1];
 
           if (placement[1] === 'center') {
             if (PLACEMENT_REGEX.vertical.test(placement[0])) {
@@ -53681,7 +53624,7 @@ angular.module('ui.bootstrap.position', [])
 
         placement = this.parsePlacement(placement);
         if (placement[1] === 'center') {
-          var arrowElemOffset = this.offset(arrowElem, true);
+          var arrowElemOffset = this.offset(arrowElem);
           if (PLACEMENT_REGEX.vertical.test(placement[0])) {
             var aHW = arrowElemOffset.width / 2;
             var eHW = this.offset(elem).width / 2;
@@ -53707,21 +53650,19 @@ angular.module('ui.bootstrap.position', [])
         borderRadiusProp += '-radius';
         var borderRadius = $window.getComputedStyle(isTooltip ? innerElem : elem)[borderRadiusProp];
 
-        if (isTooltip) {
-          switch (placement[0]) {
-            case 'top':
-              arrowCss.bottom = '0';
-              break;
-            case 'bottom':
-              arrowCss.top = '0';
-              break;
-            case 'left':
-              arrowCss.right = '0';
-              break;
-            case 'right':
-              arrowCss.left = '0';
-              break;
-          }
+        switch (placement[0]) {
+          case 'top':
+            arrowCss.bottom = isTooltip ? '0' : '-' + borderWidth;
+            break;
+          case 'bottom':
+            arrowCss.top = isTooltip ? '0' : '-' + borderWidth;
+            break;
+          case 'left':
+            arrowCss.right = isTooltip ? '0' : '-' + borderWidth;
+            break;
+          case 'right':
+            arrowCss.left = isTooltip ? '0' : '-' + borderWidth;
+            break;
         }
 
         arrowCss[placement[1]] = borderRadius;
@@ -54594,9 +54535,8 @@ angular.module('ui.bootstrap.dropdown', ['ui.bootstrap.multiMap', 'ui.bootstrap.
 
       self.dropdownMenu.css(css);
     }
-      
-    // find openContainer by uib-dropdown-menu directive
-    var openContainer = appendTo ? appendTo : angular.element($element[0].querySelector("[uib-dropdown-menu]"));
+
+    var openContainer = appendTo ? appendTo : $element.find('div');
     var dropdownOpenClass = appendTo ? appendToOpenClass : openClass;
     var hasOpenClass = openContainer.hasClass(dropdownOpenClass);
     var isOnlyOpen = uibDropdownService.isOnlyOpen($scope, appendTo);
@@ -54608,10 +54548,6 @@ angular.module('ui.bootstrap.dropdown', ['ui.bootstrap.multiMap', 'ui.bootstrap.
       } else {
         toggleClass = isOpen ? 'addClass' : 'removeClass';
       }
-        
-      // original Bootstrap 4 dropdown sets openClass on both dropdownMenu and element
-      $animate[toggleClass]($element, dropdownOpenClass);
-      
       $animate[toggleClass](openContainer, dropdownOpenClass).then(function() {
         if (angular.isDefined(isOpen) && isOpen !== wasOpen) {
           toggleInvoker($scope, { open: !!isOpen });
@@ -56063,25 +55999,21 @@ angular.module('ui.bootstrap.tooltip', ['ui.bootstrap.position', 'ui.bootstrap.s
 
               if (!positionTimeout) {
                 positionTimeout = $timeout(function() {
-                  var placementClasses = $position.parsePlacement(ttScope.placement);
-                  var placement = placementClasses[1] === 'center' ? placementClasses[0] : placementClasses[0] + '-' + placementClasses[1];
-				  
-                  // need to add classes prior to placement to allow correct tooltip width calculations
+                  var ttPosition = $position.positionElements(element, tooltip, ttScope.placement, appendToBody);
+                  var initialHeight = angular.isDefined(tooltip.offsetHeight) ? tooltip.offsetHeight : tooltip.prop('offsetHeight');
+                  var elementPos = appendToBody ? $position.offset(element) : $position.position(element);
+                  tooltip.css({ top: ttPosition.top + 'px', left: ttPosition.left + 'px' });
+                  var placementClasses = ttPosition.placement.split('-');
+
                   if (!tooltip.hasClass(placementClasses[0])) {
                     tooltip.removeClass(lastPlacement.split('-')[0]);
                     tooltip.addClass(placementClasses[0]);
                   }
 
-                  if (!tooltip.hasClass(options.placementClassPrefix + placement)) {
+                  if (!tooltip.hasClass(options.placementClassPrefix + ttPosition.placement)) {
                     tooltip.removeClass(options.placementClassPrefix + lastPlacement);
-                    tooltip.addClass(options.placementClassPrefix + placement);
+                    tooltip.addClass(options.placementClassPrefix + ttPosition.placement);
                   }
-                  
-                  // Take into account tooltup margins, since boostrap css draws tooltip arrow inside margins
-                  var ttPosition = $position.positionElements(element, tooltip, ttScope.placement, appendToBody, true);
-                  var initialHeight = angular.isDefined(tooltip.offsetHeight) ? tooltip.offsetHeight : tooltip.prop('offsetHeight');
-                  var elementPos = appendToBody ? $position.offset(element) : $position.position(element);
-                  tooltip.css({ top: ttPosition.top + 'px', left: ttPosition.left + 'px' });
 
                   adjustmentTimeout = $timeout(function() {
                     var currentHeight = angular.isDefined(tooltip.offsetHeight) ? tooltip.offsetHeight : tooltip.prop('offsetHeight');
@@ -56766,8 +56698,7 @@ angular.module('ui.bootstrap.progressbar', [])
     require: '^uibProgress',
     scope: {
       value: '=',
-      type: '@',
-      striped: '=?'
+      type: '@'
     },
     templateUrl: 'uib/template/progressbar/bar.html',
     link: function(scope, element, attrs, progressCtrl) {
@@ -56784,8 +56715,7 @@ angular.module('ui.bootstrap.progressbar', [])
     scope: {
       value: '=',
       maxParam: '=?max',
-      type: '@',
-      striped: '=?'
+      type: '@'
     },
     templateUrl: 'uib/template/progressbar/progressbar.html',
     link: function(scope, element, attrs, progressCtrl) {
@@ -58725,7 +58655,7 @@ angular.module("uib/template/popover/popover.html", []).run(["$templateCache", f
 
 angular.module("uib/template/progressbar/bar.html", []).run(["$templateCache", function ($templateCache) {
   $templateCache.put("uib/template/progressbar/bar.html",
-    "<div class=\"progress-bar\" ng-class=\"[type ? 'bg-' + type : '', striped ? 'progress-bar-striped' : '']\" role=\"progressbar\" aria-valuenow=\"{{value}}\" aria-valuemin=\"0\" aria-valuemax=\"{{max}}\" ng-style=\"{width: (percent < 100 ? percent : 100) + '%'}\" aria-valuetext=\"{{percent | number:0}}%\" aria-labelledby=\"{{::title}}\" ng-transclude></div>\n" +
+    "<div class=\"progress-bar\" ng-class=\"type && 'progress-bar-' + type\" role=\"progressbar\" aria-valuenow=\"{{value}}\" aria-valuemin=\"0\" aria-valuemax=\"{{max}}\" ng-style=\"{width: (percent < 100 ? percent : 100) + '%'}\" aria-valuetext=\"{{percent | number:0}}%\" aria-labelledby=\"{{::title}}\" ng-transclude></div>\n" +
     "");
 }]);
 
@@ -58737,7 +58667,7 @@ angular.module("uib/template/progressbar/progress.html", []).run(["$templateCach
 angular.module("uib/template/progressbar/progressbar.html", []).run(["$templateCache", function ($templateCache) {
   $templateCache.put("uib/template/progressbar/progressbar.html",
     "<div class=\"progress\">\n" +
-    "  <div class=\"progress-bar\" ng-class=\"[type ? 'bg-' + type : '', striped ? 'progress-bar-striped' : '']\" role=\"progressbar\" aria-valuenow=\"{{value}}\" aria-valuemin=\"0\" aria-valuemax=\"{{max}}\" ng-style=\"{width: (percent < 100 ? percent : 100) + '%'}\" aria-valuetext=\"{{percent | number:0}}%\" aria-labelledby=\"{{::title}}\" ng-transclude></div>\n" +
+    "  <div class=\"progress-bar\" ng-class=\"type && 'progress-bar-' + type\" role=\"progressbar\" aria-valuenow=\"{{value}}\" aria-valuemin=\"0\" aria-valuemax=\"{{max}}\" ng-style=\"{width: (percent < 100 ? percent : 100) + '%'}\" aria-valuetext=\"{{percent | number:0}}%\" aria-labelledby=\"{{::title}}\" ng-transclude></div>\n" +
     "</div>\n" +
     "");
 }]);
@@ -58856,7 +58786,6 @@ angular.module("uib/template/typeahead/typeahead-match.html", []).run(["$templat
   $templateCache.put("uib/template/typeahead/typeahead-match.html",
     "<a href\n" +
     "   tabindex=\"-1\"\n" +
-    "   class=\"dropdown-item\"\n" +
     "   ng-bind-html=\"match.label | uibTypeaheadHighlight:query\"\n" +
     "   ng-attr-title=\"{{match.label}}\"></a>\n" +
     "");
@@ -81201,6 +81130,31 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             templateUrl: tempateURL,
             controller: 'HomeCtrl'
         })
+        .state('insights', {
+            url: "/insights",
+            templateUrl: tempateURL,
+            controller: 'InsightsCtrl'
+        })
+        .state('about', {
+            url: "/about",
+            templateUrl: tempateURL,
+            controller: 'AboutCtrl'
+        })
+        .state('contact', {
+            url: "/contact",
+            templateUrl: tempateURL,
+            controller: 'ContactCtrl'
+        })
+        .state('service', {
+            url: "/service/:serviceId",
+            templateUrl: tempateURL,
+            controller: 'ServiceCtrl'
+        })
+        .state('product', {
+            url: "/product/:type",
+            templateUrl: tempateURL,
+            controller: 'ProductCtrl'
+        })
         .state('links', {
             url: "/links",
             templateUrl: tempateURL,
@@ -81216,6 +81170,7 @@ myApp.config(function ($translateProvider) {
     $translateProvider.translations('hi', LanguageHindi);
     $translateProvider.preferredLanguage('en');
 });
+
 var LanguageEnglish = {
   "ABOUT": "About",
 };
@@ -81328,8 +81283,53 @@ myApp.directive('img', function ($compile, $parse) {
         };
     })
 
+    .directive('onlyDigits', function () {
+        return {
+            require: 'ngModel',
+            restrict: 'A',
+            link: function (scope, element, attr, ctrl) {
+                var digits;
 
-;
+                function inputValue(val) {
+                    if (val) {
+                        var otherVal = val + "";
+                        if (attr.type == "text") {
+                            digits = otherVal.replace(/[^0-9\-\.\\]/g, '');
+                        } else {
+                            digits = otherVal.replace(/[^0-9\-\.\\]/g, '');
+                        }
+
+
+                        if (digits !== val) {
+                            ctrl.$setViewValue(digits);
+                            ctrl.$render();
+                        }
+                        return parseInt(digits, 10);
+                    }
+                    return undefined;
+                }
+                ctrl.$parsers.push(inputValue);
+            }
+        };
+    })
+    .directive('onlyLettersInput', function () {
+        return {
+            require: 'ngModel',
+            restrict: 'A',
+            link: function (scope, element, attr, ngModelCtrl) {
+                function fromUser(text) {
+                    var transformedInput = text.replace(/[^a-zA-Z]/g, '');
+                    //console.log(transformedInput);
+                    if (transformedInput !== text) {
+                        ngModelCtrl.$setViewValue(transformedInput);
+                        ngModelCtrl.$render();
+                    }
+                    return transformedInput;
+                }
+                ngModelCtrl.$parsers.push(fromUser);
+            }
+        };
+    });
 // JavaScript Document
 myApp.filter('myFilter', function () {
     // In the return function, we must pass in a single parameter which will be the data we will work on.
@@ -81405,27 +81405,38 @@ myApp.factory('NavigationService', function () {
         {
             name: "About Us",
             classis: "active",
-            anchor: "Aboutus",
+            anchor: "aboutus",
+            id: "aboutus",
             subnav: []
         },
         {
             name: "Services",
             classis: "active",
             anchor: "services",
+            id: 'service',
             subnav: []
         },
         {
-            name: "Partners",
+            name: "Products",
             classis: "active",
-            anchor: "partners",
+            anchor: "products",
+            id: "product",
             subnav: []
         },
         {
             name: "Insights",
             classis: "active",
-            anchor: "insights",
+            anchor: "insight",
+            id: "insight",
             subnav: []
         },
+        // {
+        //     name: "Sister Companies",
+        //     classis: "active",
+        //     anchor: "partners",
+        //     id: "partners",
+        //     subnav: []
+        // },
         {
             name: "Contact Us",
             classis: "active",
@@ -81496,7 +81507,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             scope: $scope,
             size: 'md'
         });
-    }
+    };
     $scope.rate = 7;
     $scope.max = 10;
     $scope.isReadonly = false;
@@ -81527,19 +81538,30 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
     ];
     $scope.homeSwiper = [{
             img: 'img/home/About Us.png',
-            desc: '“We are a global boutique Information Technology Solution and Services Provider with technology disruptive technology solutions.”',
+            title: 'Your Preferred digital transformation partner ',
+            subtitle: 'Delivering Superior customer experience while reducing cost',
+            link: 'about'
         },
         {
-            img: 'img/home/Big Data Analytics.png',
-            desc: '“Leverage the power of Big Data and Analytics to Improve/Increase your business”',
+            img: 'img/home/Big-Data-Analytics.png',
+            title: 'Leverage the power of Big Data and Analytics to Improve/Increase your business',
+            subtitle: 'Unlock the power of data through our efficient Big Data and Analytics solution',
+            link: 'bi-analytics',
+            cat: 'service'
         },
         {
-            img: 'img/home/Digital Services.png',
-            desc: '“Streamline your Customer Journey with our Digital Services “',
+            img: 'img/home/Digital-Services.png',
+            title: 'Streamline your Customer Journey with our Digital Services',
+            subtitle: 'Focusing on spectacular solutions for next generation <br> innovative products.',
+            link: 'digital-service',
+            cat: 'service'
         },
         {
             img: 'img/home/IRC.png',
-            desc: '“Expand your team hassle free with our proven and unique custodian model”',
+            title: 'Expand your team hassle free with our proven and unique custodian model',
+            subtitle: 'How a US customer in Financial security and <br>Fraud prevention domain ',
+            link: 'IRC',
+            cat: 'service'
         }
     ];
     $timeout(function () {
@@ -81558,24 +81580,176 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         })
     }, 1000);
 })
-myApp.controller('headerCtrl', function ($scope, TemplateService) {
+myApp.controller('AboutCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http, $uibModal) {
+    $scope.template = TemplateService.getHTML("content/about/about.html");
+    TemplateService.title = "About Us"; // This is the Title of the Website
+    $scope.navigation = NavigationService.getNavigation();
+
+});
+myApp.controller('ContactCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http, $uibModal) {
+    $scope.template = TemplateService.getHTML("content/contact/contact.html");
+    TemplateService.title = "Contact"; // This is the Title of the Website
+    $scope.navigation = NavigationService.getNavigation();
+    $scope.oneAtATime = true;
+    $scope.data = {}
+    $scope.status = {
+        isCustomHeaderOpen: false,
+        isFirstOpen: true,
+        isFirstDisabled: false
+    };
+    console.log("contact data-----------yyyyyyyyyyyyyyyyyyyy")
+
+    $scope.contactSubmit = function (data) {
+        console.log("contact data-----------", data);
+        $scope.data = null;
+    }
+});
+myApp.controller('InsightsCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http, $uibModal) {
+    $scope.template = TemplateService.getHTML("content/insights/insights.html");
+    TemplateService.title = "Insights"; // This is the Title of the Website
+    $scope.navigation = NavigationService.getNavigation();
+    $scope.insights = [{
+            img: "img/home/wallpaper1.jpg",
+            desc: 'Run the Business’ and ‘Change the Business’ at will, without compromising on the quality of service delivery',
+            link: '',
+        },
+        {
+            img: "img/home/wallpaper2.jpg",
+            desc: 'Run the Business’ and ‘Change the Business’ at will, without compromising on the quality of service delivery',
+            link: '',
+        },
+        {
+            img: "img/home/wallpaper3.jpg",
+            desc: 'Run the Business’ and ‘Change the Business’ at will, without compromising on the quality of service delivery',
+            link: '',
+        },
+        {
+            img: "img/home/wallpaper4.jpg",
+            desc: 'Run the Business’ and ‘Change the Business’ at will, without compromising on the quality of service delivery',
+            link: '',
+        },
+        {
+            img: "img/home/wallpaper1.jpg",
+            desc: 'Run the Business’ and ‘Change the Business’ at will, without compromising on the quality of service delivery',
+            link: '',
+        }, {
+            img: "img/home/wallpaper1.jpg",
+            desc: 'Run the Business’ and ‘Change the Business’ at will, without compromising on the quality of service delivery',
+            link: '',
+        },
+        {
+            img: "img/home/wallpaper2.jpg",
+            desc: 'Run the Business’ and ‘Change the Business’ at will, without compromising on the quality of service delivery',
+            link: '',
+        },
+        {
+            img: "img/home/wallpaper3.jpg",
+            desc: 'Run the Business’ and ‘Change the Business’ at will, without compromising on the quality of service delivery',
+            link: '',
+        },
+        {
+            img: "img/home/wallpaper4.jpg",
+            desc: 'Run the Business’ and ‘Change the Business’ at will, without compromising on the quality of service delivery',
+            link: '',
+        },
+        {
+            img: "img/home/wallpaper1.jpg",
+            desc: 'Run the Business’ and ‘Change the Business’ at will, without compromising on the quality of service delivery',
+            link: '',
+        }, {
+            img: "img/home/wallpaper1.jpg",
+            desc: 'Run the Business’ and ‘Change the Business’ at will, without compromising on the quality of service delivery',
+            link: '',
+        },
+        {
+            img: "img/home/wallpaper2.jpg",
+            desc: 'Run the Business’ and ‘Change the Business’ at will, without compromising on the quality of service delivery',
+            link: '',
+        },
+        {
+            img: "img/home/wallpaper3.jpg",
+            desc: 'Run the Business’ and ‘Change the Business’ at will, without compromising on the quality of service delivery',
+            link: '',
+        },
+        {
+            img: "img/home/wallpaper4.jpg",
+            desc: 'Run the Business’ and ‘Change the Business’ at will, without compromising on the quality of service delivery',
+            link: '',
+        },
+        {
+            img: "img/home/wallpaper1.jpg",
+            desc: 'Run the Business’ and ‘Change the Business’ at will, without compromising on the quality of service delivery',
+            link: '',
+        },
+    ];
+    $scope.openWhitepaper = function () {
+        $uibModal.open({
+            animation: true,
+            templateUrl: "views/modal/whitepaper.html",
+            scope: $scope,
+            size: 'md'
+        });
+    };
+});
+myApp.controller('ServiceCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http, $uibModal, $stateParams) {
+    $scope.template = TemplateService.getHTML("content/service/" + $stateParams.serviceId + ".html");
+    TemplateService.title = "Services"; // This is the Title of the Website
+    $scope.navigation = NavigationService.getNavigation();
+    $scope.openWhitepaper = function () {
+        $uibModal.open({
+            animation: true,
+            templateUrl: "views/modal/whitepaper.html",
+            scope: $scope,
+            size: 'md'
+        });
+    };
+});
+myApp.controller('ProductCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http, $uibModal, $stateParams) {
+    $scope.template = TemplateService.getHTML("content/product/product.html");
+    TemplateService.title = "Products"; // This is the Title of the Website
+    $scope.navigation = NavigationService.getNavigation();
+
+    $scope.typeName = $stateParams.type;
+    if ($scope.typeName == '') {
+        $scope.typeName = 'isee'
+    }
+
+    console.log("inside product", $stateParams.type)
+});
+myApp.controller('headerCtrl', function ($scope, TemplateService, $state, $timeout) {
     $scope.template = TemplateService;
     $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
         $(window).scrollTop(0);
     });
     $(window).scroll(function () {
         if ($(document).scrollTop() > 100) {
-            $(".logo").css("width", '12%');
-            $(".logo-img").css("width", '100%');
+            // $(".logo").css("width", '12%');
+            $(".logo-img").css("width", '40%');
             $(".navbar").css("background", '#4475a7');
 
         } else {
             $(".navbar").css("background", 'transparent');
-            $(".logo").css("width", 'auto');
-            $(".logo-img").css("width", 'auto');
+            // $(".logo").css("width", 'auto');
+            $(".logo-img").css("width", '60%');
         }
     });
     $.fancybox.close(true);
+    $scope.goToAnchor = function (id) {
+        console.log("inside anchor")
+        $state.go('home');
+        if (id) {
+            $timeout(function () {
+                $('html,body').animate({
+                    scrollTop: $('#' + id).offset().top - 70
+                }, "slow");
+            }, 500);
+        }
+    };
+    $scope.scrollTop = function () {
+        $('html, body').animate({
+            scrollTop: $('body,html').offset().top - 100
+        }, 3000);
+    }
 });
 myApp.controller('languageCtrl', function ($scope, TemplateService, $translate, $rootScope) {
     $scope.changeLanguage = function () {
