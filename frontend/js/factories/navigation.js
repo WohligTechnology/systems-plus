@@ -39,13 +39,13 @@ myApp.factory('NavigationService', function () {
             id: "insight",
             subnav: []
         },
-        {
-            name: "Sister Companies",
-            classis: "active",
-            anchor: "partners",
-            id: "partners",
-            subnav: []
-        },
+        // {
+        //     name: "Sister Companies",
+        //     classis: "active",
+        //     anchor: "partners",
+        //     id: "partners",
+        //     subnav: []
+        // },
         {
             name: "Contact Us",
             classis: "active",
