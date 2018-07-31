@@ -4,15 +4,19 @@ myApp.controller('headerCtrl', function ($scope, TemplateService, $state, $timeo
         $(window).scrollTop(0);
     });
     $(window).scroll(function () {
-        if ($(document).scrollTop() > 100) {
+        if ($(document).scrollTop() > 400) {
             // $(".logo").css("width", '12%');
             $(".logo-img").css("width", '40%');
             $(".navbar").css("background", '#4475a7');
+         
+            $(".scrolltotop").css("display", 'block');
 
         } else {
             $(".navbar").css("background", 'transparent');
             // $(".logo").css("width", 'auto');
             $(".logo-img").css("width", '60%');
+            $(".scrolltotop").css("display", 'none');
+         
         }
     });
     $.fancybox.close(true);

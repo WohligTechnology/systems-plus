@@ -51,13 +51,13 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
     ];
     $scope.homeSwiper = [{
             img: 'img/home/About Us.png',
-            title: 'Your Preferred digital transformation partner ',
+            title: 'Your Preferred digital transformation partner  ',
             subtitle: 'Delivering Superior customer experience while reducing cost',
             link: 'about'
         },
         {
             img: 'img/home/Big-Data-Analytics.png',
-            title: 'Leverage the power of Big Data and Analytics to Improve/Increase your business',
+            title: 'Leverage the power of Big Data and Analytics to Increase your business',
             subtitle: 'Unlock the power of data through our efficient Big Data and Analytics solution',
             link: 'bi-analytics',
             cat: 'service'
@@ -65,14 +65,14 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         {
             img: 'img/home/Digital-Services.png',
             title: 'Streamline your Customer Journey with our Digital Services',
-            subtitle: 'Focusing on spectacular solutions for next generation <br> innovative products.',
+            subtitle: 'Focusing on spectacular solutions for next generation innovative products',
             link: 'digital-service',
             cat: 'service'
         },
         {
             img: 'img/home/IRC.png',
             title: 'Expand your team hassle free with our proven and unique custodian model',
-            subtitle: 'How a US customer in Financial security and <br>Fraud prevention domain ',
+            subtitle: 'How a European customer saved 34% of cost through our unique custodian model ',
             link: 'IRC',
             cat: 'service'
         }

@@ -47,10 +47,12 @@ h1 {
         border: 1px solid #ccc;
         font-size: 1rem;
         color: white !important;
-        &:focus {
+        &:focus,
+        &:hover {
             border: 1px solid #ccc;
-            font-size: 1rem;
-            color: white !important;
+            background: white;
+          
+            color: black !important;
         }
     }
 }
@@ -83,6 +85,11 @@ h1 {
 
 .sister-btn {
     border: 1px solid;
+    &:hover{
+   background: $gray-lighter;
+   border: 1px $gray-lighter;
+  
+    }
 }
 
 .sister-right-border {
@@ -98,6 +105,12 @@ h1 {
 .learn-more {
     color: white !important;
     border: 1px solid white;
+    &:hover{
+        // color: black !important;
+        background: #103d67;
+        border: 1px solid #103d67;
+   
+    }
 }
 
 .whitepaper-main {
