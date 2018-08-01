@@ -1,0 +1,67 @@
+{
+    "title": "Career",
+    "description": "List of Careers",
+    "pageType": "view",
+    "sendIdWithCreate": true,
+    "urlFields": ["_id"],
+    "fields": [{
+        "name": "Name",
+        "isSort": "",
+        "tableRef": "name"
+    }, {
+        "name": "Email",
+        "isSort": "",
+        "tableRef": "email"
+    }, {
+        "name": "Mobile",
+        "isSort": "",
+        "tableRef": "mobile"
+    }],
+    "action": [{
+        "name": "edit",
+        "icon": "fa-pencil",
+        "buttonClass": "btn-primary",
+        "type": "page",
+        "action": "editCareer",
+        "fieldsToSend": {
+            "_id": "_id"
+        }
+    }, {
+        "name": "delete",
+        "icon": "fa-trash",
+        "buttonClass": "btn-danger",
+        "type": "apiCallConfirm",
+        "title": "Delete Career",
+        "content": "Are you sure you want to delete Career?",
+        "api": "career/delete",
+        "fieldsToSend": {
+            "name": "_id",
+            "value": "_id"
+        }
+    }],
+    "button": [{
+        "name": "Excel Export",
+        "icon": "print",
+        "class": "btn-danger",
+        "type": "redirect",
+        "action": "Career/generateExcel",
+        "linkType": "admin"
+    }, {
+        "name": "Upload Excel",
+        "icon": "delete",
+        "class": "btn-warning",
+        "type": "redirect",
+        "action": "excel-upload/Career",
+        "linkType": "internal"
+    }, {
+        "name": "Create",
+        "icon": "plus",
+        "class": "btn-success",
+        "type": "page",
+        "action": "createCareer"
+    }],
+    "apiCall": {
+        "url": "Career/search",
+        "params": "_id"
+    }
+}
