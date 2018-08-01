@@ -48,6 +48,11 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             templateUrl: tempateURL,
             controller: 'ProductCtrl'
         })
+        .state('careers', {
+            url: "/careers",
+            templateUrl: tempateURL,
+            controller: 'CareersCtrl'
+        })
         .state('links', {
             url: "/links",
             templateUrl: tempateURL,

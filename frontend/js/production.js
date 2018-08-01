@@ -81644,13 +81644,13 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
     $scope.homeSwiper = [{
             img: 'img/home/About Us.png',
             title: 'Your Preferred digital transformation partner  ',
-            subtitle: 'Delivering Superior customer experience while reducing cost',
+            subtitle: 'Delivering superior customer experience while reducing cost',
             link: 'about'
         },
         {
             img: 'img/home/Big-Data-Analytics.png',
             title: 'Leverage the power of Big Data and Analytics to Increase your business',
-            subtitle: 'Unlock the power of data through our efficient Big Data and Analytics solution',
+            subtitle: 'Unlock the power of data through our efficient big data and analytics solution',
             link: 'bi-analytics',
             cat: 'service'
         },
@@ -81664,7 +81664,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         {
             img: 'img/home/IRC.png',
             title: 'Expand your team hassle free with our proven and unique custodian model',
-            subtitle: 'How a European customer saved 34% of cost through our unique custodian model ',
+            subtitle: 'How a european customer saved 34% of cost through our unique custodian model ',
             link: 'IRC',
             cat: 'service'
         }
