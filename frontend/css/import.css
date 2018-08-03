@@ -9803,6 +9803,98 @@ h1 {
   background-image: url("../img/Careers_Page.png");
   background-position: 50% 80% !important; }
 
+.w33 {
+  width: 33%;
+  background: rgba(65, 90, 101, 0.61); }
+
+.w67 {
+  width: 67%;
+  background: rgba(17, 45, 61, 0.73); }
+
+.category-content {
+  padding: 16px 27px 10px 20px; }
+
+.cat-left-content {
+  padding-left: 32px; }
+
+.tab-link h5 {
+  padding: 25px;
+  color: #fff;
+  border-bottom: solid 1px #000;
+  position: relative;
+  margin: 0;
+  cursor: pointer;
+  -webkit-transition: all .8s ease;
+  transition: all .8s ease; }
+  .tab-link h5:hover {
+    color: #db1f45;
+    padding-left: 30px;
+    font-weight: 500;
+    border-bottom: solid 1px #db1f45; }
+
+.tab-link h5:before {
+  content: ">";
+  color: #464a4c;
+  font-size: 20px;
+  font-weight: 300;
+  position: absolute;
+  left: 0;
+  -webkit-transition: all .8s ease;
+  transition: all .8s ease; }
+
+.tab-link h5 span {
+  color: #464a4c;
+  font-size: 40px;
+  font-weight: 100;
+  position: absolute;
+  right: 0;
+  top: 13px;
+  -webkit-transition: all .8s ease;
+  transition: all .8s ease; }
+
+.tab-link h5 span:before {
+  content: "+"; }
+
+.tab-link h5:after {
+  border-bottom: solid 1px #d9431e;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0;
+  -webkit-transition: all .8s ease;
+  transition: all .8s ease; }
+
+.category-right-content {
+  padding: 20px;
+  -webkit-transition: all .8s ease;
+  transition: all .8s ease; }
+  .category-right-content p {
+    padding-left: 40px;
+    padding-bottom: 40px; }
+  .category-right-content .content-hight {
+    height: 460px;
+    overflow: hidden; }
+  .category-right-content .learn-more {
+    letter-spacing: 2px;
+    font-size: 18px; }
+
+.cat-ul ul li {
+  padding: 10px 0px;
+  color: #fff;
+  font-size: 1.2em; }
+
+.cat-left-content h5:hover:before, .cat-left-content h5.current:before {
+  color: #ff5b77;
+  padding-left: 10px;
+  font-weight: 500; }
+
+.cat-left-content h5:hover span, .cat-left-content h5.current span {
+  color: #ff5b77; }
+
+.cat-left-content h5.current span:before {
+  content: "-"; }
+
 #fancybox-loading,
 .fancybox-close,
 .fancybox-next span,
