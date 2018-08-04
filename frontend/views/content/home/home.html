@@ -1,4 +1,5 @@
 <section>
+  <div class="position-relative">
     <div class="home-swiper" id="home">
         <div class="swiper-container">
             <div class="swiper-wrapper">
@@ -6,25 +7,47 @@
                     <img src="{{s.img}}" class="img-fluid">
                     <div class="position-absolute text-left px-5 text-light ">
                         <div>
-                            <h1 class="m-0 text-capitalize calibril">{{s.title}}</h1>
+                            <h1 class="m-0 text-capitalize  Merriweather-Regular">{{s.title}}</h1>
                         </div>
                         <div width="50">
-                            <h3 class="py-3 m-0 Lato-Light" ng-bind-html="s.subtitle"></h3>
+                            <h3 class="py-3 mt-3 Lato-Light" ng-bind-html="s.subtitle"></h3>
                         </div>
-                        <div class="home-btn my-3">
-                            <a ng-if="s.link && s.cat!='service'" role="button" class="btn btn-know-more px-5 Lato-Light" ui-sref="{{s.link}}">Know More</a>
-                            <a ng-if="s.link  && s.cat=='service'" role="button" class="btn btn-know-more px-5 Lato-Light" ui-sref="service({serviceId:'{{s.link}}'})">Know More</a>
+                        <div class="home-btn my-4 ">
+                            <a ng-if="s.link && s.cat!='service'" role="button" class="btn btn-know-more  Lato-Light" ui-sref="{{s.link}}">Know More</a>
+                            <a ng-if="s.link  && s.cat=='service'" role="button" class="btn btn-know-more  Lato-Light" ui-sref="service({serviceId:'{{s.link}}'})">Know More</a>
                         </div>
                     </div>
-                </div>
+                    <!-- <div class="scroll-cont position-absolute ">
+                        <a role="button" class="btn btn-scroll text-light Lato-Light">Scroll</a>
+                        <div class="scroll-marker-top">
+                        </div>
+                        <div class="scroll-marker-bot ">
+
+                            </div>
+                      
+                    </div> -->
+                    <div class="position-absolute">
+                 </div>
+              </div>
             </div>
             <div class="swiper-pagination"></div>
-        </div>
+            </div>
+            </div>
+    <div class=" position-absolute scroll-btn-pos text-center">
+            <a role="button" class="btn btn-scroll text-light Lato-Light">Scroll</a>
     </div>
+    <div class="scroll-cont position-absolute text-center">
+          <div class="scroll-marker-top">
+            </div>
+            <div class="scroll-marker-bot ">
+               </div>
+       </div>
+    </div>
+
 </section>
 <section class="gray-background aboutus section-padding" id="aboutus">
     <div class="container">
-        <h2 class="text-center calibril pb-5 m-0 subheading font-weight-bold">About Us
+        <h2 class="text-center Merriweather-Regular pt-50 pb-5 m-0 subheading font-weight-bold">About Us
         </h2>
         <!-- <h6 class="text-center">Business Transformation Through Technology</h6> -->
         <div class="">
@@ -43,16 +66,16 @@
         </div>
     </div>
 </section>
-<section id="service" class="section-padding">
+<section id="service" class="gray-background section-padding">
     <div class="container">
-        <h2 class="text-center m-0 pb-5 calibril font-weight-bold">Services</h2>
-        <div class="row justify-items-center pb-4 mx-5">
-            <div class="col text-center position-relative hover-anime  py-3 mx-3 service-bg" ui-sref="service({serviceId:'IRC'})">
+        <h2 class="text-center m-0 pb-5 Merriweather-Regular font-weight-bold">We assist our customers through Digital Services like</h2>
+        <div class="row justify-items-center  mx-5">
+            <div class="col text-center position-relative hover-anime  py-3 mx-0 bor-right " ui-sref="service({serviceId:'IRC'})">
                 <div class="">
                     <div class="pb-3">
                         <img src="img/home/service/service1.svg" class="img-fluid w-25 mx-auto">
                     </div>
-                    <h5 class="text-uppercase text-center service-title">INTERNATIONAL
+                    <h5 class="text-uppercase text-center service-title Merriweather-Regular">INTERNATIONAL
                         <br>RESOURCE CENTER (IRC)</h5>
                     <p>Open and fully transparent custodian model that provides an extended offshore team with total control
                         over the operations</p>
@@ -66,11 +89,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col text-center position-relative hover-anime  py-3 mx-3 service-bg" ui-sref="service({serviceId:'bi-analytics'})">
+            <div class="col text-center position-relative hover-anime  py-3 mx-0 bor-right" ui-sref="service({serviceId:'bi-analytics'})">
                 <div class="pb-3">
                     <img src="img/home/service/service3.svg" class="img-fluid w-25 mx-auto">
                 </div>
-                <h5 class="text-uppercase service-title bi-height">BI & ANALYTICS</h5>
+                <h5 class="text-uppercase service-title bi-height Merriweather-Regular">BI & ANALYTICS</h5>
                 <p>Analytics help enterprises get valuable business information and insights by analyzing a mixture of structured,
                     semi-structured and unstructured data</p>
                 <div class="hover-text">
@@ -82,11 +105,11 @@
                     </a>
                 </div>
             </div>
-            <div class="col text-center position-relative hover-anime  py-3 mx-3 service-bg" ui-sref="service({serviceId:'ADM'})">
+            <div class="col text-center position-relative hover-anime  py-3 mx-0 " ui-sref="service({serviceId:'ADM'})">
                 <div class="pb-3">
                     <img src="img/home/service/service2.svg" class="img-fluid w-25 mx-auto">
                 </div>
-                <h5 class="text-uppercase service-title">APPLICATION DEVELOPMENT
+                <h5 class="text-uppercase service-title Merriweather-Regular">APPLICATION DEVELOPMENT
                     <br>& MAINTENANCE</h5>
                 <p>We are focused on delivering the application based on the specifications with punches of innovation</p>
                 <div class="hover-text">
@@ -101,11 +124,11 @@
             </div>
         </div>
         <div class="row justify-content-md-center  mx-5">
-            <div class="col text-center position-relative hover-anime  py-3 mx-3 service-bg" ui-sref="service({serviceId:'digital-service'})">
+            <div class="col text-center position-relative hover-anime  py-3 mx-0 bor-right bor-top" ui-sref="service({serviceId:'digital-service'})">
                 <div class="pb-3">
                     <img src="img/home/service/service5.svg" class="img-fluid w-25 mx-auto">
                 </div>
-                <h5 class="text-uppercase service-title bi-height ">DIGITAL SERVICES</h5>
+                <h5 class="text-uppercase service-title bi-height Merriweather-Regular">DIGITAL SERVICES</h5>
                 <p>Changing the way enterprises are connecting with people and also about how efficiently managing their resources,
                     remotely
                 </p>
@@ -118,11 +141,11 @@
                     </a>
                 </div>
             </div>
-            <div class="col text-center position-relative hover-anime  py-3 mx-3 service-bg" ui-sref="service({serviceId:'enterprise-solutions'})">
+            <div class="col text-center position-relative hover-anime  py-3 mx-0 bor-right bor-top" ui-sref="service({serviceId:'enterprise-solutions'})">
                 <div class="pb-3">
                     <img src="img/home/service/service4.svg" class="img-fluid w-25 mx-auto">
                 </div>
-                <h5 class="text-uppercase service-title bi-height">Enterprise Solutions</h5>
+                <h5 class="text-uppercase service-title bi-height Merriweather-Regular">Enterprise Solutions</h5>
                 <p>Help our clients leverage their SAP investments for better returns through high quality, on-time & predictable
                     SAP delivery across the globe based on long term engagements</p>
                 <div class="hover-text">
@@ -134,11 +157,11 @@
                     </a>
                 </div>
             </div>
-            <div class="col text-center position-relative hover-anime  py-3 mx-3 service-bg" ui-sref="service({serviceId:'testing-qa'})">
+            <div class="col text-center position-relative hover-anime  py-3 mx-0 bor-top" ui-sref="service({serviceId:'testing-qa'})">
                 <div class="pb-3">
                     <img src="img/home/service/service6.svg" class="img-fluid w-25 mx-auto">
                 </div>
-                <h5 class="text-uppercase service-title bi-height">TESTING & QA</h5>
+                <h5 class="text-uppercase service-title bi-height Merriweather-Regular">TESTING & QA</h5>
                 <p>In keeping with the tradition of a systematic work approach, System Plus has very distinct Test Methods that
                     form the groundwork of our Managed Testing Services.</p>
                 <div class="hover-text">

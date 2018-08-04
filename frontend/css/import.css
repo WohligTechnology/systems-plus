@@ -9191,6 +9191,13 @@ a.text-dark:hover, a.text-dark:focus {
   src: url("../fonts/Lato/Lato-Light.ttf");
   font-family: 'Lato-Light'; }
 
+@font-face {
+  src: url("../fonts/merriweather/Merriweather-Regular.otf");
+  font-family: 'Merriweather-Regular'; }
+
+.Merriweather-Regular {
+  font-family: 'Merriweather-Regular'; }
+
 .OpenSans-Bold {
   font-family: 'OpenSans-Bold'; }
 
@@ -9306,7 +9313,7 @@ header {
 
 h2 {
   font-size: 2.625rem;
-  color: #043d76; }
+  color: #053d78; }
 
 .section-padding {
   padding: 3rem 0; }
@@ -9352,6 +9359,20 @@ h2 {
 
 .w-34 {
   width: 34px; }
+
+.bg-blue {
+  background: -webkit-gradient(linear, left top, right top, from(#053d78), to(#0379ef));
+  background: linear-gradient(90deg, #053d78, #0379ef);
+  height: 7px; }
+
+.pt-50 {
+  padding-top: 50px; }
+
+.bor-right {
+  border-right: 1px solid rgba(70, 69, 69, 0.439216); }
+
+.bor-top {
+  border-top: 1px solid rgba(70, 69, 69, 0.439216); }
 
 .navbar {
   padding: 0rem 1rem;
@@ -9422,7 +9443,7 @@ h2 {
     color: #043c77; }
 
 .footer-strip {
-  background: #043c77;
+  background: #053d78;
   font-size: 0.8rem; }
 
 .scrolltotop {
@@ -9472,7 +9493,7 @@ h2 {
 .home-swiper .swiper-slide {
   font-size: 18px;
   background: #fff;
-  height: 90vh;
+  height: 94vh;
   overflow: hidden;
   /* Center slide text vertically */
   display: -webkit-box;
@@ -9494,15 +9515,20 @@ h2 {
   opacity: 1; }
 
 .home-swiper .swiper-pagination-bullet-active {
-  background-color: #db1f45 !important; }
+  background-color: #db2147 !important; }
+
+.home-swiper .swiper-pagination {
+  text-align: right;
+  padding-right: 15%; }
 
 h1 {
-  font-size: 4rem; }
+  font-size: 3.5rem; }
 
 .home-btn .btn-know-more {
   background: transparent;
   border: 1px solid #ccc;
-  font-size: 1rem;
+  font-size: 1.3rem;
+  padding: 20px 80px;
   color: white !important; }
   .home-btn .btn-know-more:focus, .home-btn .btn-know-more:hover {
     border: 1px solid #ccc;
@@ -9539,7 +9565,7 @@ h1 {
   border-right: 1px solid #ccc; }
 
 .product-title h4 {
-  color: #db1f45; }
+  color: #db2147; }
 
 .learn-more {
   color: white !important;
@@ -9554,7 +9580,7 @@ h1 {
   border: 1px solid #e8f2f7; }
 
 .whitepaper-color {
-  color: #db1f45; }
+  color: #db2147; }
 
 .bi-height {
   min-height: 2rem; }
@@ -9733,6 +9759,30 @@ h1 {
   display: inline-block;
   vertical-align: middle;
   margin-left: 8px; }
+
+.scroll-cont {
+  bottom: -8.5%;
+  left: 50% !important;
+  z-index: 1; }
+
+.btn-scroll {
+  font-size: 20px;
+  letter-spacing: 1.5px; }
+
+.scroll-marker-top {
+  height: 60px;
+  width: 1px;
+  background: #fff; }
+
+.scroll-marker-bot {
+  height: 60px;
+  width: 1px;
+  background: #000; }
+
+.scroll-btn-pos {
+  width: 100%;
+  bottom: 10%;
+  z-index: 1; }
 
 .head-bg {
   background-position: center center;

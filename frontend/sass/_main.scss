@@ -14,6 +14,8 @@ $blue: #0275d8 !default;
 $teal: #5bc0de !default;
 $pink: #ff5b77 !default;
 $purple: #613d7c !default;
+$dark-blue:#053d78 !default;
+$dark-red:#db2147 !default;
 // Create grayscale
 $gray-dark: #292b2c !default;
 $gray: #464a4c !default;
@@ -161,11 +163,19 @@ $dropdown-box-shadow: 0 .5rem 1rem rgba($black, .175) !default;
     src: url("../fonts/Lato/Lato-Regular.ttf");
     font-family: 'Lato-Regular';
 }
-
 @font-face {
     src: url("../fonts/Lato/Lato-Light.ttf");
     font-family: 'Lato-Light';
-} //font-family Classes
+} 
+@font-face {
+    src: url("../fonts/merriweather/Merriweather-Regular.otf");
+    font-family: 'Merriweather-Regular';
+}
+//font-family Classes
+.Merriweather-Regular{
+    font-family: 'Merriweather-Regular';
+    
+}
 .OpenSans-Bold {
     font-family: 'OpenSans-Bold';
 }
@@ -189,6 +199,8 @@ $dropdown-box-shadow: 0 .5rem 1rem rgba($black, .175) !default;
 body {
     padding-top: 70px;
     font-family: 'OpenSans-Regular';
+    // background: linear-gradient(90deg, $dark-blue, #0379ef); 
+    // background: radial-gradient( #0379ef 0%, $dark-blue 100%);
 }
 
 p {
@@ -297,6 +309,7 @@ footer {
 
 header {
     transition: all 300ms ease;
+   
 }
 
 .nav-up {
@@ -305,7 +318,7 @@ header {
 
 h2 {
     font-size: 2.625rem;
-    color: #043d76;
+    color: $dark-blue;
 }
 
 .section-padding {
@@ -364,10 +377,24 @@ h2 {
 .w-34{
     width: 34px;
 }
+.bg-blue{
+    background: linear-gradient(90deg, $dark-blue, #0379ef); 
+    height: 7px;
+}
+.pt-50{
+    padding-top: 50px;
+}
+.bor-right{
+    border-right: 1px solid rgba(70, 69, 69, 0.4392156862745098);
+}
+.bor-top{
+    border-top: 1px solid rgba(70, 69, 69, 0.4392156862745098);
+}
 //end of common scss
 //scss for header
 .navbar {
     padding: 0rem 1rem;
+
     box-shadow: rgba(0, 0, 0, 0.11) 0px 0px 12px;
     -webkit-box-shadow: rgba(0, 0, 0, 0.11) 0px 0px 12px;
     -moz-box-shadow: rgba(0, 0, 0, 0.11) 0px 0px 12px;
@@ -449,7 +476,7 @@ h2 {
 }
 
 .footer-strip {
-    background: #043c77;
+    background: $dark-blue;
     font-size: 0.8rem;
 }
 

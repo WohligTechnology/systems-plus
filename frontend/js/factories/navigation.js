@@ -12,7 +12,7 @@ myApp.factory('NavigationService', function () {
             ]
         },
         {
-            name: "About Us",
+            name: "About",
             classis: "active",
             anchor: "aboutus",
             id: "aboutus",
@@ -39,15 +39,15 @@ myApp.factory('NavigationService', function () {
             id: "insight",
             subnav: []
         },
-        // {
-        //     name: "Sister Companies",
-        //     classis: "active",
-        //     anchor: "partners",
-        //     id: "partners",
-        //     subnav: []
-        // },
         {
-            name: "Contact Us",
+            name: "Careers",
+            classis: "active",
+            anchor: "careers",
+            id: "Careers",
+            subnav: []
+        },
+        {
+            name: "Contact",
             classis: "active",
             anchor: "contact",
             subnav: []

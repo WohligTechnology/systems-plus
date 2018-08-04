@@ -7,7 +7,7 @@
     .swiper-slide {
         font-size: 18px;
         background: #fff;
-        height: 90vh;
+        height: 94vh;
         overflow: hidden;
         /* Center slide text vertically */
         display: -webkit-box;
@@ -33,19 +33,26 @@
         opacity: 1;
     }
     .swiper-pagination-bullet-active {
-        background-color: #db1f45 !important
+        background-color: $dark-red !important
+    }
+  
+   
+    .swiper-pagination{
+        text-align: right;
+      padding-right: 15%;
     }
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
 }
 
 .home-btn {
     .btn-know-more {
         background: transparent;
         border: 1px solid #ccc;
-        font-size: 1rem;
+        font-size: 1.3rem;
+        padding: 20px 80px;
         color: white !important;
         &:focus,
         &:hover {
@@ -98,7 +105,7 @@ h1 {
 
 .product-title {
     h4 {
-        color: #db1f45;
+        color: $dark-red;
     }
 }
 
@@ -119,7 +126,7 @@ h1 {
 }
 
 .whitepaper-color {
-    color: #db1f45;
+    color: $dark-red;
 }
 
 .bi-height {
@@ -380,3 +387,31 @@ h1 {
     vertical-align: middle;
     margin-left: 8px;
 }
+//home banner scroll btn
+.scroll-cont{
+    bottom: -8.5%;
+    left: 50% !important;
+    // width: 100%;
+    z-index: 1;
+}
+.btn-scroll{
+font-size: 20px;
+letter-spacing: 1.5px;
+}
+.scroll-marker-top{
+    height:60px;
+    width: 1px;
+    background:$white;
+}
+.scroll-marker-bot{
+    height:60px;
+    width: 1px;
+    background:$black;
+}
+.scroll-btn-pos{
+//   left:50%;
+width: 100%;
+  bottom: 10%;
+  z-index: 1;
+}
+   
