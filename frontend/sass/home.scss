@@ -7,7 +7,7 @@
     .swiper-slide {
         font-size: 18px;
         background: #fff;
-        height: 94vh;
+        height: 90vh;
         overflow: hidden;
         /* Center slide text vertically */
         display: -webkit-box;
@@ -24,6 +24,8 @@
         align-items: center;
         .position-absolute {
             left: 5%;
+            // top:31%;
+            // transform: translateY(-31%,-66%);
         }
     }
     .swiper-pagination-bullet {
@@ -35,30 +37,27 @@
     .swiper-pagination-bullet-active {
         background-color: $dark-red !important
     }
-  
-   
-    .swiper-pagination{
+    .swiper-pagination {
         text-align: right;
-      padding-right: 15%;
+        padding-right: 15%;
     }
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 3.1rem;
 }
 
 .home-btn {
     .btn-know-more {
         background: transparent;
         border: 1px solid #ccc;
-        font-size: 1.3rem;
-        padding: 20px 80px;
+        font-size: 1rem;
+        padding: 13px 80px;
         color: white !important;
         &:focus,
         &:hover {
             border: 1px solid #ccc;
             background: white;
-          
             color: black !important;
         }
     }
@@ -92,10 +91,10 @@ h1 {
 
 .sister-btn {
     border: 1px solid;
-    &:hover{
-   background: $gray-lighter;
-   border: 1px $gray-lighter;
-  
+    &:hover {
+        background: $white;
+        border: 1px $dark-blue !important;
+        color: $dark-blue !important;
     }
 }
 
@@ -110,19 +109,28 @@ h1 {
 }
 
 .learn-more {
-    color: white !important;
-    border: 1px solid white;
-    &:hover{
+    padding: 14px 37px;
+    color: $white !important;
+    border: 1px solid $dark-blue;
+    background: $dark-blue;
+    font-family: 'OpenSans-Light';
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+    &:hover {
         // color: black !important;
-        background: #103d67;
-        border: 1px solid #103d67;
-   
+        background: #072340;
+        // color: $dark-blue !important;
+        // border: 1px solid $dark-blue;
     }
+}
+
+.product-desc {
+    padding: 0px 10px;
 }
 
 .whitepaper-main {
     box-shadow: 0 0 6px rgba(230, 230, 230, .34);
-    border: 1px solid #e8f2f7;
+    // border: 1px solid #e8f2f7;
 }
 
 .whitepaper-color {
@@ -228,6 +236,13 @@ h1 {
 }
 
 ///
+.whitepaper-main{
+    .hover-text a:after {
+        content: '';
+      
+        background:$white;
+    }
+}
 .hover-anime .hover-text:hover {
     opacity: 1;
 }
@@ -387,31 +402,105 @@ h1 {
     vertical-align: middle;
     margin-left: 8px;
 }
+
 //home banner scroll btn
-.scroll-cont{
+.scroll-cont {
     bottom: -8.5%;
-    left: 50% !important;
-    // width: 100%;
+    left: 50% !important; // width: 100%;
     z-index: 1;
 }
-.btn-scroll{
-font-size: 20px;
-letter-spacing: 1.5px;
+
+.btn-scroll {
+    font-size: 20px;
+    letter-spacing: 1.5px;
 }
-.scroll-marker-top{
-    height:60px;
+
+.scroll-marker-top {
+    height: 60px;
     width: 1px;
-    background:$white;
+    background: $white;
 }
-.scroll-marker-bot{
-    height:60px;
+
+.scroll-marker-bot {
+    height: 60px;
     width: 1px;
-    background:$black;
+    background: $black;
 }
-.scroll-btn-pos{
-//   left:50%;
-width: 100%;
-  bottom: 10%;
-  z-index: 1;
+
+.scroll-btn-pos {
+    //   left:50%;
+    width: 100%;
+    bottom: 10%;
+    z-index: 1;
 }
-   
+
+//our product
+.hori-line {
+    top: 50%;
+    right: 0;
+    .bor-gray {
+        width: 50px;
+        border-top: 1px solid $gray-light;
+        margin-right: -50px;
+    }
+    .bor-white {
+        width: 50px;
+        border-top: 1px solid rgb(189, 199, 204);
+        margin-right: 0px;
+    }
+}
+.hori-line-left{
+    top: 50%;
+    left: 0;
+    .bor-gray {
+        width: 50px;
+        border-top: 1px solid $gray-light;
+        margin-left: -50px;
+    }
+    .bor-white {
+        width: 50px;
+        border-top: 1px solid rgb(189, 199, 204);
+        margin-right: 0px;
+    }
+}
+.left-img-padd{
+   padding-right:60px;
+}
+.right-img-padd{
+    padding-left: 60px;
+}
+//insight
+
+.insight-bg{
+    background-image: url("../img/home/architecture.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.insight-overlay{
+    background: rgba(27, 25, 25, 0.47058823529411764);
+    width: 100%;
+    height: 100%;
+}
+
+//sisters company
+.sister-bg{
+    background-image: url("../img/home/blur.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.compy-overlay{
+    background:rgba(5, 51, 99, 0.9686274509803922);
+    width: 100%;
+    height: 100%;
+}
+.exponentia-logo{
+    margin-left: 34px;
+    margin-top: -12px; 
+}
+.wohlig-logo{
+    margin-left: 34%;
+    margin-bottom: 17%;
+}

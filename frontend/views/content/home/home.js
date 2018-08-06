@@ -54,7 +54,8 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             title: 'Your Preferred digital transformation partner  ',
             subtitle: 'Delivering superior customer experience while reducing cost',
             link: 'about'
-        },
+        }
+        ,
         {
             img: 'img/home/Big-Data-Analytics.png',
             title: 'Leverage the power of Big Data and Analytics to Increase your business',
