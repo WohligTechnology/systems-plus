@@ -1,0 +1,34 @@
+<div class="modal-header justify-content-center position-relative">
+        <a class="modal-close-icon" ng-click="$dismiss()">
+            <i class="far fa-times-circle"></i>
+        </a>
+        <div class="text-center">
+            <h6 class="Merriweather-Regular color-dark-red">Lets Talk</h6>
+            <p class="m-0 ">We are keen to know about your needs.</p>
+        </div>
+    </div>
+    <div class="modal-body p-4" id="modal-body">
+        <form>
+            <form class="text-dark" name="contact">
+                <div class="form-group">
+                    <input type="text" id="edit-fname" name="fname" value="" class="form-control down-form_input" placeholder="Name *" only-letters-input
+                        ng-model="data.fname" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="edit-email" name="email" value="" placeholder="Email Id*" class="form-control down-form_input" only-letters-input
+                        ng-model="data.email" required>
+                </div>
+               
+                <div class="form-group">
+                    <input type="text" id="edit-company" name="company" value="" class="form-control down-form_input" placeholder="Company *" required ng-model="data.company">
+                </div>
+                <div class="form-group">
+                        <input type="number" id="edit-number" name="number" value="" class="form-control down-form_input" placeholder="Contact Number *" required ng-model="data.email">
+                    </div>
+                <div class="text-center ">
+                    <button type="submit" class="btn btn-outline-danger reminder-btn" >Talk to our Experts</button>
+                </div>
+            </form>
+    
+    </div>
+    </div>

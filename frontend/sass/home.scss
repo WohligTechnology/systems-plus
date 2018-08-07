@@ -504,3 +504,11 @@ h1 {
     margin-left: 34%;
     margin-bottom: 17%;
 }
+//download form
+
+.down-form_input:focus{
+    padding: 5px 6px 10px;
+    border:1px solid $dark-red;
+    font-size: 12px;
+    outline: none;
+}

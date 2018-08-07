@@ -9357,6 +9357,9 @@ h2 {
 .mar-t {
   margin-top: 70px; }
 
+.color-dark-red {
+  color: #db2147; }
+
 .color-gray {
   color: #464a4c; }
 
@@ -9452,10 +9455,16 @@ h2 {
   -o-box-shadow: rgba(0, 0, 0, 0.11) 0px 0px 12px; }
 
 .contact-bg {
-  background-image: url("../img/home/contact-bg.png");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat; }
+  background-image: url("../img/contact.jpg");
+  background-position: 50% 80% !important; }
+
+.contact-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.57); }
+
+.contact-head {
+  z-index: 1; }
 
 .contact-form-bg {
   background: #0f1c24; }
@@ -9498,12 +9507,17 @@ h2 {
   font-size: 0.75rem !important; }
 
 .contact-content input {
+  padding: 25px;
   border: none;
-  border-bottom: 1px solid;
+  border: 1px solid #d2d5d6;
   background: transparent; }
   .contact-content input:focus {
-    border-bottom: 1px solid black;
-    background: transparent; }
+    padding: 15px 25px 30px 20px !important;
+    font-size: 12px;
+    border: 2px solid black;
+    background: transparent;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease; }
 
 .contact-content .form-group {
   margin-bottom: 2.5rem; }
@@ -9890,25 +9904,34 @@ h1 {
   margin-left: 34%;
   margin-bottom: 17%; }
 
+.down-form_input:focus {
+  padding: 5px 6px 10px;
+  border: 1px solid #db2147;
+  font-size: 12px;
+  outline: none; }
+
 .head-bg {
   background-position: center center;
   background-size: cover;
   height: 55vh; }
 
+.irc-bg {
+  background-image: url("../img/banner/irc.jpg"); }
+
 .adm-bg {
-  background-image: url("../img/headerimages/ADM.png"); }
+  background-image: url("../img/banner/ADM.jpg"); }
 
 .enterprise-bg {
-  background-image: url("../img/headerimages/Enterprise-Solutions.png"); }
+  background-image: url("../img/banner/Enterprise-Solutions.jpg"); }
 
 .bi-bg {
-  background-image: url("../img/home/Big-Data-Analytics.png"); }
+  background-image: url("../img/banner/Big-Data-Analytics.jpg"); }
 
 .digital-bg {
-  background-image: url("../img/home/Digital-Services.png"); }
+  background-image: url("../img/banner/Digital-Services.jpg"); }
 
 .testing-bg {
-  background-image: url("../img/home/Testing-bg.png"); }
+  background-image: url("../img/banner/Testing-bg.jpg"); }
 
 .common-heading {
   top: 50%;
@@ -9916,6 +9939,35 @@ h1 {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
+
+.connect-ppl-bg {
+  background-image: url("../img/connect-ppl.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 275px; }
+
+.get-in-touch {
+  padding-top: 4.6rem;
+  z-index: 1; }
+  .get-in-touch .btn-know-more {
+    background: transparent;
+    border: 2px solid #ccc;
+    font-size: 1.2rem;
+    padding: 13px 60px;
+    color: white !important; }
+  .get-in-touch .btn-know-more:hover {
+    border: 2px solid #ccc;
+    background: white;
+    color: black !important; }
+  .get-in-touch .btn-know-more:focus {
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+
+.service-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.71); }
 
 .product-isee-bg {
   background-image: url("../img/headerimages/iSee-product-page.png"); }
@@ -9956,7 +10008,7 @@ h1 {
     font-size: 13px; }
 
 .careers-bg {
-  background-image: url("../img/Careers_Page.png");
+  background-image: url("../img/Careers_Page.jpg");
   background-position: 50% 80% !important; }
 
 .w33 {

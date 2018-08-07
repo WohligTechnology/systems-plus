@@ -1,8 +1,10 @@
 <section>
-    <div class="head-bg about-bg position-relative">
-        <div class="common-heading container position-absolute  text-white  ">
-            <h1 class="calibril text-capitalize">Contact Us</h1>
+    <div class="head-bg contact-bg position-relative">
+        <div class="common-heading contact-head container position-absolute  text-white">
+            <h1 class="Merriweather-Regular text-capitalize mb-0">Contact Us</h1>
         </div>
+        <div class="contact-overlay position-absolute">
+     </div>
     </div>
 </section>
 <section id="contact">
@@ -12,7 +14,7 @@
                 <div class="col-4 ">
                     <div class="contact-card pr-5">
                         <uib-accordion close-others="oneAtATime">
-                            <div uib-accordion-group class="mt-1" heading="Pune">
+                            <div uib-accordion-group class="mt-1" heading="Pune" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
                                 <p class="text-dark">
                                     Tower 8, Magarpatta SEZ, Magarpatta City, Pune,
                                     <br> Maharashtra 411013
@@ -52,25 +54,20 @@
                         </uib-accordion>
                     </div>
                 </div>
-                <div class="col-5">
-                    <div class="contact-content pl-5 border-left">
-                        <div class="contact-form-heading  mb-4">
-                            <h4>We would love to hear from you</h4>
+                <div class="col-7">
+                    <div class="contact-content pl-5 border-left ">
+                        <div class="contact-form-heading  mb-4 text-center">
+                            <h4 class="Merriweather-Regular ">We would love to hear from you</h4>
                         </div>
                         <form class="text-dark" name="contact">
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <input type="text" id="edit-fname" name="fname" value="" class="form-control" placeholder="First Name *" only-letters-input
-                                            ng-model="data.fname" required>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <input type="text" id="edit-lname" name="lname" value="" placeholder="Last Name *" class="form-control" only-letters-input
-                                            ng-model="data.lname" required>
-                                    </div>
-                                </div>
+                            <div class="form-group">
+                                <input type="text" id="edit-fname" name="fname" value="" class="form-control" placeholder="First Name *" only-letters-input
+                                    ng-model="data.fname" required>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" id="edit-lname" name="lname" value="" placeholder="Last Name *" class="form-control" only-letters-input
+                                    ng-model="data.lname" required>
                             </div>
                             <div class="form-group">
                                 <input type="email" id="edit-email" name="email" value="" class="form-control" placeholder="Business Email *" required ng-model="data.email">
@@ -89,7 +86,7 @@
                                     required>
                             </div>
                             <div class="pt-3">
-                                <button type="submit" class="btn btn-outline-danger" ng-click="contactSubmit(data)">Submit</button>
+                                <button type="submit" class="btn btn-outline-danger w-100" ng-click="contactSubmit(data)">Submit</button>
                             </div>
                         </form>
                     </div>

@@ -10,6 +10,16 @@ myApp.controller('ServiceCtrl', function ($scope, TemplateService, NavigationSer
             size: 'md'
         });
     };
+    //connect us modal
+
+    $scope.connectppl = function () {
+        $uibModal.open({
+            animation: true,
+            templateUrl: "views/modal/connectppl.html",
+            scope: $scope,
+            size: 'md'
+        });
+    };
     $scope.contactSubmit = function (data) {
         console.log("contact data-----------", data);
         $scope.data = null;
