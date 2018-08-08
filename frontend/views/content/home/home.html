@@ -4,13 +4,13 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" ng-repeat="s in homeSwiper track by $index">
-                        <img src="{{s.img}}" class="img-fluid">
+                        <img src="{{s.img}}" class="img-fluid mob-img">
                         <div class="position-absolute text-left px-5 text-light ">
                             <div>
                                 <h1 class="m-0 text-capitalize  Merriweather-Regular">{{s.title}}</h1>
                             </div>
                             <div width="50">
-                                <h3 class="py-3 mt-3 Lato-Light" ng-bind-html="s.subtitle"></h3>
+                                <h3 class="py-sm-3  mt-sm-3 sub-heading Lato-Light" ng-bind-html="s.subtitle"></h3>
                             </div>
                             <div class="home-btn my-4 ">
                                 <!-- <a ng-if="s.link && s.cat!='service'" role="button" class="btn btn-know-more  Lato-Light" ui-sref="{{s.link}}">Know More</a>
@@ -21,26 +21,17 @@
                            
                             </div>
                         </div>
-                        <!-- <div class="scroll-cont position-absolute ">
-                        <a role="button" class="btn btn-scroll text-light Lato-Light">Scroll</a>
-                        <div class="scroll-marker-top">
-                        </div>
-                        <div class="scroll-marker-bot ">
-
-                            </div>
-                      
-                    </div> -->
-                        <div class="position-absolute">
+                      <div class="position-absolute">
                         </div>
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
         </div>
-        <div class=" position-absolute scroll-btn-pos text-center">
+        <div class=" position-absolute scroll-btn-pos text-center d-none  d-sm-block">
             <a role="button" class="btn btn-scroll text-light Lato-Light">Scroll</a>
         </div>
-        <div class="scroll-cont position-absolute text-center">
+        <div class="scroll-cont position-absolute text-center d-none  d-sm-block">
             <div class="scroll-marker-top">
             </div>
             <div class="scroll-marker-bot ">
@@ -49,13 +40,13 @@
     </div>
 
 </section>
-<section class="gray-background aboutus section-padding" id="aboutus">
+<section class=" aboutus section-padding" id="aboutus">
     <div class="container">
-        <h2 class="text-center Merriweather-Regular pt-50 pb-5 m-0 subheading font-weight-bold">About Us
+        <h2 class="text-center Merriweather-Regular pt-50 pb-5 m-0 subheading ">About Us
         </h2>
         <!-- <h6 class="text-center">Business Transformation Through Technology</h6> -->
       
-            <div class="mx-5 text-center">
+            <div class="mx-sm-5  text-center">
                 <p>Systems Plus Transformations is a global boutique Information Technology Solution and Services Provider with
                     customers in Europe, North America and Asia Pacific.Our presence in India, UK, US enable us to serve
                     our valued customer globally using near shore and offshore delivery models. We assist our customers through
@@ -72,9 +63,9 @@
 </section>
 <section id="service" class="gray-background section-padding">
     <div class="container">
-        <h2 class="text-center m-0 pb-5 Merriweather-Regular font-weight-bold">We assist our customers through Digital Services like</h2>
-        <div class="row justify-items-center  mx-5">
-            <div class="col text-center position-relative hover-anime  py-3 mx-0 bor-right " ui-sref="service({serviceId:'IRC'})">
+        <h2 class="text-center m-0 pb-5 Merriweather-Regular">We assist our customers through Digital Services like</h2>
+        <div class="row justify-items-center  mx-sm-5  comm-mar">
+            <div class="col-sm-4 col-xs-12 text-center position-relative hover-anime  py-3 mx-0 bor-right " ui-sref="service({serviceId:'IRC'})">
                 <div class="">
                     <div class="pb-3 pt-2">
                         <img src="img/home/service/service1.svg" class="img-fluid w-25 mx-auto">
@@ -93,7 +84,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col text-center position-relative hover-anime  py-3 mx-0 bor-right" ui-sref="service({serviceId:'bi-analytics'})">
+            <div class="col-sm-4 col-xs-12 text-center position-relative hover-anime  py-3 mx-0 bor-right" ui-sref="service({serviceId:'bi-analytics'})">
                 <div class="pb-3 pt-2">
                     <img src="img/home/service/service3.svg" class="img-fluid w-25 mx-auto">
                 </div>
@@ -109,7 +100,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col text-center position-relative hover-anime  py-3 mx-0 " ui-sref="service({serviceId:'ADM'})">
+            <div class="col-sm-4 col-xs-12 text-center position-relative hover-anime  py-3 mx-0 " ui-sref="service({serviceId:'ADM'})">
                 <div class="pb-3 pt-2">
                     <img src="img/home/service/service2.svg" class="img-fluid w-25 mx-auto">
                 </div>
@@ -127,8 +118,8 @@
                 </div>
             </div>
         </div>
-        <div class="row justify-content-md-center  mx-5">
-            <div class="col text-center position-relative hover-anime  py-3 mx-0 bor-right bor-top" ui-sref="service({serviceId:'digital-service'})">
+        <div class="row justify-content-md-center  mx-sm-5 comm-mar">
+            <div class="col-sm-4 col-xs-12 text-center position-relative hover-anime  py-3 mx-0 bor-right bor-top" ui-sref="service({serviceId:'digital-service'})">
                 <div class="pb-3 pt-3">
                     <img src="img/home/service/service5.svg" class="img-fluid w-25 mx-auto">
                 </div>
@@ -145,7 +136,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col text-center position-relative hover-anime  py-3 mx-0 bor-right bor-top" ui-sref="service({serviceId:'enterprise-solutions'})">
+            <div class="col-sm-4 col-xs-12 text-center position-relative hover-anime  py-3 mx-0 bor-right bor-top" ui-sref="service({serviceId:'enterprise-solutions'})">
                 <div class="pb-3 pt-3">
                     <img src="img/home/service/service4.svg" class="img-fluid w-25 mx-auto">
                 </div>
@@ -161,7 +152,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col text-center position-relative hover-anime  py-3 mx-0 bor-top" ui-sref="service({serviceId:'testing-qa'})">
+            <div class="col-sm-4 col-xs-12 text-center position-relative hover-anime  py-3 mx-0 bor-top" ui-sref="service({serviceId:'testing-qa'})">
                 <div class="pb-3 pt-3">
                     <img src="img/home/service/service6.svg" class="img-fluid w-25 mx-auto">
                 </div>
@@ -180,12 +171,12 @@
         </div>
     </div>
 </section>
-<section class=" section-padding" id="product">
-    <h2 class="text-center  Merriweather-Regular pb-3 m-0 font-weight-bold">Our Products</h2>
+<section class="section-padding" id="product">
+    <h2 class="text-center  Merriweather-Regular pb-3 m-0 ">Our Products</h2>
     <h4 class="text-center pb-5 OpenSans-Italic color-gray f-2">Quality, service, excellence, and value. </h4>
     <div class="container">
         <div class="row text-center">
-            <div class="col-sm-7 product-hover">
+            <div class="col-sm-7 col-xs-12 product-hover">
                 <div class="left-img-padd">
                     <div class="position-relative ">
                         <img src="img/home/barcode.jpg" class="img-fluid" width="100%">
@@ -196,7 +187,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-5  my-auto px-4">
+            <div class="col-sm-5 col-xs-12  my-auto px-4">
                 <div class="product-desc text-center">
                     <h4 class="text-uppercase text-center  Merriweather-Regular blue-footer-text">isee : Retail Solution</h4>
                     <p class="py-2 mb-4">Increase your sales and reduce return frauds with Intelligence driven and analytics based return fraud
@@ -206,8 +197,8 @@
                 </div>
             </div>
         </div>
-        <div class="row text-center mar-t">
-            <div class="col-sm-5   my-auto ">
+        <div class="row text-center mar-t70">
+            <div class="col-sm-5 col-xs-12  my-auto">
                 <div class="product-desc ">
                     <h4 class="text-uppercase text-center  Merriweather-Regular blue-footer-text">Shopmyway</h4>
                     <p class="py-2 mb-4">Complete end to end eCommerce Solution to grow your business online and on mobile. Expand your business
@@ -215,7 +206,7 @@
                     <a class="learn-more text-right  no-underline" role="button" ui-sref="product({type:'shopmyway'})">Discover More</a>
                 </div>
             </div>
-            <div class="col-sm-7 product-hover">
+            <div class="col-sm-7 col-xs-12 product-hover">
                 <div class="right-img-padd">
                     <div class="position-relative ">
                         <img src="img/home/banking.jpg" class="img-fluid" width="100%">
@@ -229,7 +220,7 @@
         </div>
     </div>
 </section>
-<section id="insight" class="padd-t3 ">
+<section id="insight" class="sec-padd-tp ">
     <div class="insight-bg position-relative">
         <div class="position-absolute insight-overlay"></div>
 
@@ -237,12 +228,12 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h2 class="text-center  Merriweather-Regular text-white mt-3 mb-0 pb-3 pt-4 font-weight-bold">Insights</h2>
+                    <h2 class="text-center  Merriweather-Regular text-white mt-3 mb-0 pb-3 pt-4 ">Insights</h2>
                     <h4 class="text-center pb-5 OpenSans-Italic mb-3 text-white f-2">Quality, service, excellence, and value. </h4>
                 </div>
             </div>
             <div class="row">
-                <div class="col-3">
+                <div class="col-sm-3 col-xs-12">
                     <div class="bg-white  hover-anime-v position-relative whitepaper-main" ng-click="openWhitepaper();">
                         <img src="img/home/wallpaper1.jpg" width="100%">
                         <h6 class="pt-3 text-uppercase  px-3 whitepaper-color Merriweather-Regular">Whitepaper</h6>
@@ -261,7 +252,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-sm-3 col-xs-12">
                     <div class="bg-white  hover-anime-v position-relative whitepaper-main" ng-click="openWhitepaper();">
                         <img src="img/home/wallpaper2.jpg" width="100%">
                         <h6 class="pt-3 px-3 text-uppercase  whitepaper-color Merriweather-Regular">Whitepaper</h6>
@@ -278,7 +269,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-sm-3 col-xs-12">
                     <div class="bg-white  hover-anime-v position-relative whitepaper-main" ng-click="openWhitepaper();">
                         <img src="img/home/wallpaper3.jpg" width="100%">
                         <h6 class="pt-3 text-uppercase  px-3 whitepaper-color Merriweather-Regular">Whitepaper</h6>
@@ -295,7 +286,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-sm-3 col-xs-12">
                     <div class="bg-white   hover-anime-v position-relative whitepaper-main" ng-click="openWhitepaper();">
                         <img src="img/home/wallpaper4.jpg" width="100%">
                         <h6 class="pt-3 text-uppercase  px-3 whitepaper-color Merriweather-Regular">Whitepaper</h6>
@@ -315,7 +306,7 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <div class="text-center pt-5 pb-4 mt-3 mb-4">
+                    <div class="text-center pt-5 pb-4 mt-3 mb-3">
                         <button type="button" class="btn btn-outline-light text-gray py-3 px-4 mb-3" ui-sref="insights">Get More Insights</button>
                     </div>
                 </div>
@@ -331,13 +322,13 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h2 class="text-center   Merriweather-Regular text-white mt-4 mb-0 pb-3 pt-4 font-weight-bold">Sister Companies</h2>
+                    <h2 class="text-center   Merriweather-Regular text-white mt-4 mb-0 pb-3 pt-4">Sister Companies</h2>
                     <h4 class="text-center pb-5 OpenSans-Italic mb-3 text-white f-2">Our beloved partners</h4>
                 </div>
             </div>
             <div class="row">
                 <div class="col ">
-                    <div class="partner-bg pb-4 mb-4 ">
+                    <div class="partner-bg  mb-4 ">
                         <div class="text-right  wohlig-logo w-50">
                         <img src="img/home/wohlig-white.png" class="img-fluid ">
                     </div>

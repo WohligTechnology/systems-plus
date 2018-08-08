@@ -368,8 +368,14 @@ h2 {
 }
 
 //common scss
+.line-h{
+    line-height: 37px;
+}
 .mar-t{
-    margin-top: 70px;
+    margin-top: 50px;
+}
+.ptb{
+    padding: 13px 0px;
 }
 .color-dark-red{
     color:$dark-red;
@@ -383,6 +389,13 @@ h2 {
 .padd-t3{
     padding-top: 3rem;
 }
+.sec-padd-tp{
+    padding-top: 2rem;
+}
+   .mar-t70{
+         margin-top: 70px;
+   } 
+
 .modal-close-icon {
     position: absolute;
     right: 3%;
@@ -400,7 +413,8 @@ h2 {
     padding: 0em 6em;
 }
 .about-contain-padd{
-    padding: 0em 8em;
+    // padding: 0em 8em;
+    padding: 0em 13.5em;
 }
 .w-34{
     width: 34px;
@@ -429,6 +443,9 @@ h2 {
 }
 .f-2{
     font-size: 1.3rem !important;
+}
+.f-15{
+    font-size: 15px;
 }
 //end of common scss
 //scss for header
@@ -563,8 +580,8 @@ h2 {
         border: 1px solid #d2d5d6;
         background: transparent;
         &:focus {
-            padding: 15px 25px 30px 20px !important;
-            font-size: 12px;
+            // padding: 15px 25px 30px 20px !important;
+            // font-size: 12px;
             border: 2px solid black;
             background: transparent;
             -webkit-transition: all .3s ease;

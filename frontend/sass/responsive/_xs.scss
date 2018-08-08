@@ -1,3 +1,56 @@
 /* Breakpoint for medium viewport */
 
-@include media-breakpoint-up(xs) {}
+@include media-breakpoint-down(xs) {
+    h1 {
+        font-size: 1.4rem;
+        line-height: 31px;
+    }
+    h3 {
+        font-size: 1.1rem;
+    }
+    .pb-5 {
+        padding-bottom: 2rem !important;
+    }
+    .pt-50 {
+        padding-top: 20px;
+    }
+    .section-padding {
+        padding: 2rem 0;
+    }
+    .comm-mar{
+        margin: 0px 15px;
+    }
+   
+
+    
+    .mob-img{
+        max-width: none !important;
+        width: auto !important;
+        height: 100% !important;
+    }
+    .home-swiper .swiper-slide {
+        height: 49vh;
+    }
+    .home-swiper .swiper-slide .position-absolute {
+        left: -3%;
+        top: 20%;
+    }
+    .sub-heading{
+        margin-top: 10px;
+    }
+
+    .home-btn .btn-know-more {
+     
+        font-size: 0.7rem;
+        padding: 7px 23px;
+   
+    }
+    .bor-right {
+        border-bottom: 1px solid rgba(70, 69, 69, 0.439216) !important;
+        border-right: 0px solid !important;
+    }
+    .bor-top {
+        border-top: 1px solid rgba(70, 69, 69, 0.439216);
+        border-bottom: 0px solid  !important;
+    }
+}

@@ -50,6 +50,7 @@ myApp.factory('NavigationService', function () {
             name: "Contact",
             classis: "active",
             anchor: "contact",
+            id: "contact",
             subnav: []
         },
         //  {
