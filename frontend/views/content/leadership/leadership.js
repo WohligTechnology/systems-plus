@@ -5,5 +5,4 @@ myApp.controller('LeadershipCtrl', function ($scope, TemplateService, Navigation
  
 
 
-    
 });

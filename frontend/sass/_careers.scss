@@ -4,17 +4,19 @@
 }
 
 .mr-b {
-    margin-bottom: 35px;
+    margin-bottom: 45px;
 }
 
 .w33 {
     // width: 33%;
-    width: 27%;
+    width: 30%;
     background: $white;
+    padding-right: 37px;
+    padding-left: 15px;
 }
 
 .w67 {
-    width: 67%;
+    width: 70%;
     background: $white;
 }
 
@@ -28,18 +30,19 @@
 
 .tab-link {
     h5 {
-        padding: 10px;
-        color: $dark-blue; // border-bottom: solid 1px $black;
+        padding: 20px 10px;
+        color: $dark-blue; 
+        border-bottom: solid 1px $black;
         position: relative;
         margin: 0;
         cursor: pointer;
     }
     h5 span {
-        color: $gray; // display: none;
+        color: $dark-blue; // display: none;
         font-weight: normal;
         position: absolute;
-        right: 13%;
-        top: 11px;
+        right: 4%;
+        top: 19px;
     }
     h5:after {
         border-bottom: solid 1px #d9431e;
@@ -53,8 +56,8 @@
 
 .category-right-content {
     .content-hight {
-        height: 334px;
-        margin-bottom: 20px;
+        height: 470px;
+         margin: 8px 0px;
     }
     .learn-more {
         letter-spacing: 2px;
@@ -68,8 +71,8 @@
 .cat-ul ul li {
     padding: 7px 22px;
     color: $gray-light;
-    padding: 5px 27px;
-    font-size: 1.1em;
+    padding: 10px 27px;
+    font-size: 1.2rem;
     font-family: 'OpenSans-Regular' !important;
     position: relative;
 }
@@ -85,7 +88,7 @@
     position: absolute;
     color: #db1f45;
     left: 0;
-    top: 13px;
+    top: 19px;
 }
 
 .cat-left-content h5:hover:before,
@@ -95,7 +98,11 @@
     font-weight: 500;
 }
 
-.cat-left-content h5:hover span,
-.cat-left-content h5.current span {
-    color: $pink;
+.current{
+  color:$dark-red !important;
+  border-bottom: 1px solid $dark-red !important;
+  span{
+    color:$dark-red !important;
+  }
 }
+ 
