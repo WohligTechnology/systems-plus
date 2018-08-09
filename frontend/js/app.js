@@ -57,6 +57,11 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             url: "/links",
             templateUrl: tempateURL,
             controller: 'LinksCtrl'
+        })
+        .state('leadership', {
+            url: "/leadership",
+            templateUrl: tempateURL,
+            controller: 'LeadershipCtrl'
         });
     $urlRouterProvider.otherwise("/");
     $locationProvider.html5Mode(isproduction);

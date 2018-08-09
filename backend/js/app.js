@@ -1,4 +1,4 @@
-// JavaScript Document
+    // JavaScript Document
 var myApp = angular.module('myApp', [
     'ui.router',
     'pascalprecht.translate',

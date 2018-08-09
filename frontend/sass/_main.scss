@@ -22,6 +22,7 @@ $gray: #464a4c !default;
 $gray-light: #636c72 !default;
 $gray-lighter: #eceeef !default;
 $gray-lightest: #f2f2f2 !default;
+$gray-light-dark:#f5f5f5 !default;
 // Reassign color vars to semantic color scheme
 $brand-primary: $blue !default;
 $brand-success: $green !default;
@@ -158,25 +159,30 @@ $dropdown-box-shadow: 0 .5rem 1rem rgba($black, .175) !default;
 }
 
 @font-face {
-    src: url("../fonts/calibril.ttf");
     font-family: 'calibril';
+    src: url("../fonts/calibril.ttf");
+   
 }
 
 @font-face {
-    src: url("../fonts/Lato/Lato-Regular.ttf");
     font-family: 'Lato-Regular';
+    src: url("../fonts/Lato/Lato-Regular.ttf");
+
 }
 @font-face {
-    src: url("../fonts/Lato/Lato-Light.ttf");
     font-family: 'Lato-Light';
+    src: url("../fonts/Lato/Lato-Light.ttf");
+ 
 } 
 @font-face {
-    src: url("../fonts/merriweather/Merriweather-Regular.otf");
     font-family: 'Merriweather-Regular';
+    src: url("../fonts/merriweather/Merriweather-Regular.otf");
+  
 }
 @font-face {
-    src: url("../fonts/merriweather/Merriweather-Italic.otf");
     font-family: 'Merriweather-Italic';
+    src: url("../fonts/merriweather/Merriweather-Italic.otf");
+
 }
 //font-family Classes
 .Merriweather-Regular{

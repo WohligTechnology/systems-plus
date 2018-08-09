@@ -2,12 +2,14 @@
     background-image: url("../img/Careers_Page.jpg");
     background-position: 50% 80% !important;
 }
-.mr-b{
+
+.mr-b {
     margin-bottom: 35px;
 }
 
 .w33 {
-    width: 33%;
+    // width: 33%;
+    width: 27%;
     background: $white;
 }
 
@@ -26,52 +28,19 @@
 
 .tab-link {
     h5 {
-        padding: 25px;
-        color: $dark-blue;
-        border-bottom: solid 1px $black;
+        padding: 10px;
+        color: $dark-blue; // border-bottom: solid 1px $black;
         position: relative;
         margin: 0;
         cursor: pointer;
-        -webkit-transition: all .8s ease;
-        -moz-transition: all .8s ease;
-        -ms-transition: all .8s ease;
-        -o-transition: all .8s ease;
-        transition: all .8s ease;
-        &:hover {
-            // color: $red;
-            padding-left: 30px;
-            font-weight: 500;
-            // border-bottom: solid 1px $red;
-        }
     }
-    //     h5:before{
-    //         content: ">";
-    //     color: $gray;
-    //    font-size: 20px;
-    //     font-weight: 300;
-    //     position: absolute;
-    //     left: 0;
-    //     -webkit-transition: all .8s ease;
-    //     -moz-transition: all .8s ease;
-    //     -ms-transition: all .8s ease;
-    //     -o-transition: all .8s ease;
-    //     transition: all .8s ease;
-    //     }
     h5 span {
         color: $gray; // display: none;
-        font-size: 40px;
         font-weight: normal;
         position: absolute;
-        right: 0;
-        top: 6px;
-        -webkit-transition: all .8s ease;
-        -moz-transition: all .8s ease;
-        -ms-transition: all .8s ease;
-        -o-transition: all .8s ease;
-        transition: all .8s ease;
-    } //  h5 span:before {
-    //     content: "+";
-    // }
+        right: 13%;
+        top: 11px;
+    }
     h5:after {
         border-bottom: solid 1px #d9431e;
         content: "";
@@ -79,53 +48,44 @@
         left: 0;
         bottom: -1px;
         width: 0;
-        -webkit-transition: all .8s ease;
-        -moz-transition: all .8s ease;
-        -ms-transition: all .8s ease;
-        -o-transition: all .8s ease;
-        transition: all .8s ease;
     }
 }
 
 .category-right-content {
-    padding: 20px;
-    -webkit-transition: all .8s ease;
-    -moz-transition: all .8s ease;
-    -ms-transition: all .8s ease;
-    -o-transition: all .8s ease;
-    transition: all .8s ease;
-    p {
-        // padding-left: 40px;
-        // padding-bottom: 40px;
-    }
     .content-hight {
-        height: 480px;
+        height: 334px;
         margin-bottom: 20px;
-        overflow-y: scroll;
     }
     .learn-more {
         letter-spacing: 2px;
         font-size: 18px;
+        border: 1px solid $dark-red;
+        // color:$dark-red !important;
+        background: $dark-red;
     }
 }
 
 .cat-ul ul li {
     padding: 7px 22px;
     color: $gray-light;
-    font-size: 1.2em;
+    padding: 5px 27px;
+    font-size: 1.1em;
     font-family: 'OpenSans-Regular' !important;
-  position: relative;
+    position: relative;
 }
 
 .cat-ul ul li:before {
-    content: '-';
+    content: '';
     width: 12px;
     height: 12px;
-    // background: url("../img/red-check.jpg") no-repeat -308px -5px;
+    background: url(../img/tick.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     position: absolute;
-    color:$red;
+    color: #db1f45;
     left: 0;
-    top: 7px;
+    top: 13px;
 }
 
 .cat-left-content h5:hover:before,
@@ -139,7 +99,3 @@
 .cat-left-content h5.current span {
     color: $pink;
 }
-
-// .cat-left-content h5.current span:before {
-//     content: "-";
-// }

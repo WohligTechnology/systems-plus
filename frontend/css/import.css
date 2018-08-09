@@ -9184,24 +9184,24 @@ a.text-dark:hover, a.text-dark:focus {
   font-family: 'OpenSans-Regular'; }
 
 @font-face {
-  src: url("../fonts/calibril.ttf");
-  font-family: 'calibril'; }
+  font-family: 'calibril';
+  src: url("../fonts/calibril.ttf"); }
 
 @font-face {
-  src: url("../fonts/Lato/Lato-Regular.ttf");
-  font-family: 'Lato-Regular'; }
+  font-family: 'Lato-Regular';
+  src: url("../fonts/Lato/Lato-Regular.ttf"); }
 
 @font-face {
-  src: url("../fonts/Lato/Lato-Light.ttf");
-  font-family: 'Lato-Light'; }
+  font-family: 'Lato-Light';
+  src: url("../fonts/Lato/Lato-Light.ttf"); }
 
 @font-face {
-  src: url("../fonts/merriweather/Merriweather-Regular.otf");
-  font-family: 'Merriweather-Regular'; }
+  font-family: 'Merriweather-Regular';
+  src: url("../fonts/merriweather/Merriweather-Regular.otf"); }
 
 @font-face {
-  src: url("../fonts/merriweather/Merriweather-Italic.otf");
-  font-family: 'Merriweather-Italic'; }
+  font-family: 'Merriweather-Italic';
+  src: url("../fonts/merriweather/Merriweather-Italic.otf"); }
 
 .Merriweather-Regular {
   font-family: 'Merriweather-Regular'; }
@@ -10018,6 +10018,19 @@ h1 {
   .leadership-imges span {
     font-size: 13px; }
 
+.leader-name-bg {
+  height: 20.5vh;
+  background: #fff; }
+
+.designation {
+  color: #464a4c;
+  font-size: 12px; }
+
+.sub-liner {
+  font-size: 13px;
+  font-family: 'OpenSans-Italic';
+  color: #053d78; }
+
 .careers-bg {
   background-image: url("../img/Careers_Page.jpg");
   background-position: 50% 80% !important; }
@@ -10026,7 +10039,7 @@ h1 {
   margin-bottom: 35px; }
 
 .w33 {
-  width: 33%;
+  width: 27%;
   background: #fff; }
 
 .w67 {
@@ -10040,27 +10053,18 @@ h1 {
   padding-left: 32px; }
 
 .tab-link h5 {
-  padding: 25px;
+  padding: 10px;
   color: #053d78;
-  border-bottom: solid 1px #000;
   position: relative;
   margin: 0;
-  cursor: pointer;
-  -webkit-transition: all .8s ease;
-  transition: all .8s ease; }
-  .tab-link h5:hover {
-    padding-left: 30px;
-    font-weight: 500; }
+  cursor: pointer; }
 
 .tab-link h5 span {
   color: #464a4c;
-  font-size: 40px;
   font-weight: normal;
   position: absolute;
-  right: 0;
-  top: 6px;
-  -webkit-transition: all .8s ease;
-  transition: all .8s ease; }
+  right: 13%;
+  top: 11px; }
 
 .tab-link h5:after {
   border-bottom: solid 1px #d9431e;
@@ -10068,37 +10072,38 @@ h1 {
   position: absolute;
   left: 0;
   bottom: -1px;
-  width: 0;
-  -webkit-transition: all .8s ease;
-  transition: all .8s ease; }
+  width: 0; }
 
-.category-right-content {
-  padding: 20px;
-  -webkit-transition: all .8s ease;
-  transition: all .8s ease; }
-  .category-right-content .content-hight {
-    height: 480px;
-    margin-bottom: 20px;
-    overflow-y: scroll; }
-  .category-right-content .learn-more {
-    letter-spacing: 2px;
-    font-size: 18px; }
+.category-right-content .content-hight {
+  height: 334px;
+  margin-bottom: 20px; }
+
+.category-right-content .learn-more {
+  letter-spacing: 2px;
+  font-size: 18px;
+  border: 1px solid #db2147;
+  background: #db2147; }
 
 .cat-ul ul li {
   padding: 7px 22px;
   color: #636c72;
-  font-size: 1.2em;
+  padding: 5px 27px;
+  font-size: 1.1em;
   font-family: 'OpenSans-Regular' !important;
   position: relative; }
 
 .cat-ul ul li:before {
-  content: '-';
+  content: '';
   width: 12px;
   height: 12px;
+  background: url(../img/tick.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   position: absolute;
   color: #db1f45;
   left: 0;
-  top: 7px; }
+  top: 13px; }
 
 .cat-left-content h5:hover:before,
 .cat-left-content h5.current:before {

@@ -1,12 +1,26 @@
 var schema = new Schema({
     name: {
         type: String,
-        required: true,
-        unique: true,
-        uniqueCaseInsensitive: true,
-        excel: {
-            name: "Name"
-        }
+        required: true
+    },
+    email: {
+        type: String,
+        validate: validators.isEmail(),
+        unique: true
+    },
+    mobile: {
+        type: String,
+        required: true
+    },
+    experience: {
+        type: Number,
+        required: true
+    },
+    location: {
+        type: String
+    },
+    resume: {
+        type: String
     }
 });
 
