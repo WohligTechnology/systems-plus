@@ -76,8 +76,8 @@
     "test": "jshint app.js",
     "ui": "grunt ui",
     "uiprod": "grunt uiprod",
-    "build": "docker build -t abosolute-upload .",
-    "serve": "docker run -p 80:80 abosolute-upload"
+    "build": "docker build -t systems-plus .",
+    "serve": "docker run -p 80:80 systems-plus"
   },
   "main": "app.js",
   "repository": {
