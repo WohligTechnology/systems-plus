@@ -59,7 +59,7 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             controller: 'LinksCtrl'
         })
         .state('leadership', {
-            url: "/leadership",
+            url: "/leadership/:id",
             templateUrl: tempateURL,
             controller: 'LeadershipCtrl'
         });

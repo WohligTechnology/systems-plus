@@ -33,6 +33,7 @@ myApp.controller('CareersCtrl', function ($scope, TemplateService, NavigationSer
     };
 
     $scope.userapply = function (data) {
+        console.log("$$$$$$$$$",data)
         NavigationService.CareerSave(data, function (data) {
         });
     };
