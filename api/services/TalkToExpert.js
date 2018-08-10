@@ -1,18 +1,18 @@
 var schema = new Schema({
     name: {
-        type: String
+        type: String,
+        required: true
     },
     email: {
         type: String,
-        validate: validators.isEmail()
+        validate: validators.isEmail(),
+        unique: true
     },
     mobile: {
-        type: String
+        type: String,
+        required: true
     },
     company: {
-        type: String
-    },
-    requirment: {
         type: String
     }
 });
@@ -20,7 +20,7 @@ var schema = new Schema({
 schema.plugin(deepPopulate, {});
 schema.plugin(uniqueValidator);
 schema.plugin(timestamps);
-module.exports = mongoose.model('ContactUs', schema);
+module.exports = mongoose.model('TalkToExpert', schema);
 
 var exports = _.cloneDeep(require("sails-wohlig-service")(schema));
 var model = {};
