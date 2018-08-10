@@ -72,7 +72,12 @@
   },
   "scripts": {
     "debug": "node debug app.js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "test": "jshint app.js",
+    "ui": "grunt ui",
+    "uiprod": "grunt uiprod",
+    "build": "docker build -t systems-plus .",
+    "serve": "docker run -p 80:80 systems-plus"
   },
   "main": "app.js",
   "repository": {
