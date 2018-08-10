@@ -1,4 +1,4 @@
-myApp.factory('NavigationService', function () {
+myApp.factory('NavigationService', function ($http) {
     var navigation = [{
             name: "Home",
             classis: "active",
@@ -65,5 +65,10 @@ myApp.factory('NavigationService', function () {
         getNavigation: function () {
             return navigation;
         },
+        CareerSave: function (formData, callback) {
+            $http.post(adminurl + 'Career/save', formData).then(function (data) {
+                callback(data);
+            });
+        }
     };
 });

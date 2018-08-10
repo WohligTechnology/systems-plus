@@ -1,7 +1,6 @@
 var schema = new Schema({
     name: {
         type: String,
-        required: true
     },
     email: {
         type: String,
@@ -9,12 +8,10 @@ var schema = new Schema({
         unique: true
     },
     mobile: {
-        type: String,
-        required: true
+        type: String
     },
     experience: {
-        type: Number,
-        required: true
+        type: Number
     },
     location: {
         type: String

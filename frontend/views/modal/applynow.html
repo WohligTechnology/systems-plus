@@ -11,21 +11,22 @@
     <form>
         <form class="text-dark" name="contact">
             <div class="form-group">
-                <input type="text" id="edit-name" name="name" value="" class="form-control" placeholder="Name*"  ng-model="data.name"
+                <input type="text" id="edit-name" name="name" value="" class="form-control" placeholder="Name*" ng-model="data.name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="edit-email" name="email" value="" placeholder="Email*" class="form-control " ng-model="data.email"
                     required>
             </div>
             <div class="form-group">
-                <input type="email" id="edit-email" name="email" value="" placeholder="Email*" class="form-control " only-letters-input ng-model="data.email"
+                <input type="number" id="edit-number" name="number" value="" class="form-control" placeholder="Contact Number*" ng-model="data.number"
                     required>
             </div>
             <div class="form-group">
-                <input type="number" id="edit-number" name="number" value="" class="form-control" placeholder="Contact Number*"only-letters-input  ng-model="data.number" required>
+                <input type="text" id="edit-experience" name="experience" value="" class="form-control" ng-model="data.experience" placeholder="Experiance*"
+                    required>
             </div>
             <div class="form-group">
-                <input type="text" id="edit-company" name="experience" value="" class="form-control" placeholder="Experiance*" required ng-model="data.experience">
-            </div>
-            <div class="form-group">
-                <input type="text" id="edit-cv" name="cv" value="" class="form-control" placeholder="Upload CV*" required >
+                <input type="text" id="edit-cv" name="cv" value="" class="form-control" placeholder="Upload CV*" required>
                 <upload-image ng-model="data.cv"></upload-image>
             </div>
             <div class="text-center ">
