@@ -81,10 +81,10 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
     $timeout(function () {
         mySwiper = new Swiper('.swiper-container', {
             // AutoPlay
-            // autoplay: {
-            //     delay: 5000,
-            //     disableOnInteraction: false,
-            // },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
