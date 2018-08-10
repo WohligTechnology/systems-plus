@@ -10128,6 +10128,20 @@ h1 {
   .current span {
     color: #db2147 !important; }
 
+.upload-btn {
+  position: absolute;
+  top: -58px;
+  left: -3px;
+  opacity: 0; }
+
+.career-upload .btn-primary {
+  border-color: #fff;
+  background: #fff; }
+
+.career-upload .btn-primary:not(:disabled):not(.disabled):active {
+  border-color: #fff;
+  background: #fff; }
+
 #fancybox-loading,
 .fancybox-close,
 .fancybox-next span,

@@ -105,4 +105,32 @@
     color:$dark-red !important;
   }
 }
+ .upload-btn{
+    //  border:1px solid $gray-light;
+    position: absolute;
+    top: -58px;
+    left: -3px;
+     opacity: 0;
+ }
+ .upload-cv-text{
+    // position: absolute;
+    // left: 6px;
+    // font-family: 'OpenSans-Regular';
+    // color: #636c72;
+    // padding: 3px 26px 6px 10px;
+    // background: white;
+ }
+ .career-upload{
+    .btn-primary{
+        border-color:$white;
+        background: $white;
+        // opacity: 0;
+    }
+    .btn-primary:not(:disabled):not(.disabled):active, {
+        border-color:$white;
+        background: $white;
+    }
+   
+ }
+
  
