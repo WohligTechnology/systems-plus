@@ -81260,10 +81260,20 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             templateUrl: tempateURL,
             controller: 'ProductCtrl'
         })
+        .state('careers', {
+            url: "/careers",
+            templateUrl: tempateURL,
+            controller: 'CareersCtrl'
+        })
         .state('links', {
             url: "/links",
             templateUrl: tempateURL,
             controller: 'LinksCtrl'
+        })
+        .state('leadership', {
+            url: "/leadership",
+            templateUrl: tempateURL,
+            controller: 'LeadershipCtrl'
         });
     $urlRouterProvider.otherwise("/");
     $locationProvider.html5Mode(isproduction);
@@ -81435,6 +81445,124 @@ myApp.directive('img', function ($compile, $parse) {
             }
         };
     });
+
+    myApp.directive('uploadImage', function ($http, $filter, $timeout) {
+        return {
+            templateUrl: 'views/directive/uploadFile.html',
+            scope: {
+                model: '=ngModel',
+                type: "@type",
+                callback: "&ngCallback"
+            },
+            link: function ($scope, element, attrs) {
+                console.log($scope.model);
+                $scope.showImage = function () {};
+                $scope.check = true;
+                if (!$scope.type) {
+                    $scope.type = "image";
+                }
+                $scope.isMultiple = false;
+                $scope.inObject = false;
+                if (attrs.multiple || attrs.multiple === "") {
+                    $scope.isMultiple = true;
+                    $("#inputImage").attr("multiple", "ADD");
+                }
+                if (attrs.noView || attrs.noView === "") {
+                    $scope.noShow = true;
+                }
+                // if (attrs.required) {
+                //     $scope.required = true;
+                // } else {
+                //     $scope.required = false;
+                // }
+    
+                $scope.$watch("image", function (newVal, oldVal) {
+                    console.log(newVal, oldVal);
+                    isArr = _.isArray(newVal);
+                    if (!isArr && newVal && newVal.file) {
+                        $scope.uploadNow(newVal);
+                    } else if (isArr && newVal.length > 0 && newVal[0].file) {
+    
+                        $timeout(function () {
+                            console.log(oldVal, newVal);
+                            console.log(newVal.length);
+                            _.each(newVal, function (newV, key) {
+                                if (newV && newV.file) {
+                                    $scope.uploadNow(newV);
+                                }
+                            });
+                        }, 100);
+    
+                    }
+                });
+    
+                if ($scope.model) {
+                    if (_.isArray($scope.model)) {
+                        $scope.image = [];
+                        _.each($scope.model, function (n) {
+                            $scope.image.push({
+                                url: n
+                            });
+                        });
+                    } else {
+                        if (_.endsWith($scope.model, ".pdf")) {
+                            $scope.type = "pdf";
+                        }
+                    }
+    
+                }
+                if (attrs.inobj || attrs.inobj === "") {
+                    $scope.inObject = true;
+                }
+                $scope.clearOld = function () {
+                    $scope.model = [];
+                };
+                $scope.uploadNow = function (image) {
+                    $scope.uploadStatus = "uploading";
+    
+                    var Template = this;
+                    image.hide = true;
+                    var formData = new FormData();
+                    formData.append('file', image.file, image.name);
+                    $http.post(uploadurl, formData, {
+                        headers: {
+                            'Content-Type': undefined
+                        },
+                        transformRequest: angular.identity
+                    }).then(function (data) {
+                        data = data.data;
+                        $scope.uploadStatus = "uploaded";
+                        if ($scope.isMultiple) {
+                            if ($scope.inObject) {
+                                $scope.model.push({
+                                    "image": data.data[0]
+                                });
+                            } else {
+                                if (!$scope.model) {
+                                    $scope.clearOld();
+                                }
+                                $scope.model.push(data.data[0]);
+                            }
+                        } else {
+                            if (_.endsWith(data.data[0], ".pdf")) {
+                                $scope.type = "pdf";
+                            } else {
+                                $scope.type = "image";
+                            }
+                            $scope.model = data.data[0];
+                            console.log($scope.model, 'model means blob');
+    
+                        }
+                        $timeout(function () {
+                            $scope.callback();
+                        }, 100);
+    
+                    });
+                };
+            }
+        };
+    });
+    
 // JavaScript Document
 myApp.filter('myFilter', function () {
     // In the return function, we must pass in a single parameter which will be the data we will work on.
@@ -81494,7 +81622,7 @@ myApp.service('TemplateService', function () {
     this.init();
 
 });
-myApp.factory('NavigationService', function () {
+myApp.factory('NavigationService', function ($http) {
     var navigation = [{
             name: "Home",
             classis: "active",
@@ -81508,14 +81636,14 @@ myApp.factory('NavigationService', function () {
             ]
         },
         {
-            name: "About Us",
+            name: "About",
             classis: "active",
             anchor: "aboutus",
             id: "aboutus",
             subnav: []
         },
         {
-            name: "Services",
+            name: "Solutions",
             classis: "active",
             anchor: "services",
             id: 'service',
@@ -81535,17 +81663,18 @@ myApp.factory('NavigationService', function () {
             id: "insight",
             subnav: []
         },
-        // {
-        //     name: "Sister Companies",
-        //     classis: "active",
-        //     anchor: "partners",
-        //     id: "partners",
-        //     subnav: []
-        // },
         {
-            name: "Contact Us",
+            name: "Careers",
+            classis: "active",
+            anchor: "careers",
+            id: "Careers",
+            subnav: []
+        },
+        {
+            name: "Contact",
             classis: "active",
             anchor: "contact",
+            id: "contact",
             subnav: []
         },
         //  {
@@ -81560,6 +81689,11 @@ myApp.factory('NavigationService', function () {
         getNavigation: function () {
             return navigation;
         },
+        CareerSave: function (formData, callback) {
+            $http.post(adminurl + 'Career/save', formData).then(function (data) {
+                callback(data);
+            });
+        }
     };
 });
 myApp.factory('apiService', function ($http, $q, $timeout) {
@@ -81642,27 +81776,28 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         }
     ];
     $scope.homeSwiper = [{
-            img: 'img/home/About Us.png',
+            img: 'img/home/banner/group.jpg',
             title: 'Your Preferred digital transformation partner  ',
             subtitle: 'Delivering superior customer experience while reducing cost',
             link: 'about'
-        },
+        }
+        ,
         {
-            img: 'img/home/Big-Data-Analytics.png',
+            img: 'img/home/banner/sp3.jpg',
             title: 'Leverage the power of Big Data and Analytics to Increase your business',
             subtitle: 'Unlock the power of data through our efficient big data and analytics solution',
             link: 'bi-analytics',
             cat: 'service'
         },
         {
-            img: 'img/home/Digital-Services.png',
+            img: 'img/home/banner/sp1.jpg',
             title: 'Streamline your Customer Journey with our Digital Services',
             subtitle: 'Focusing on spectacular solutions for next generation innovative products',
             link: 'digital-service',
             cat: 'service'
         },
         {
-            img: 'img/home/IRC.png',
+            img: 'img/home/banner/sp4.jpg',
             title: 'Expand your team hassle free with our proven and unique custodian model',
             subtitle: 'How a european customer saved 34% of cost through our unique custodian model ',
             link: 'IRC',
@@ -81693,6 +81828,70 @@ myApp.controller('AboutCtrl', function ($scope, TemplateService, NavigationServi
     $scope.template = TemplateService.getHTML("content/about/about.html");
     TemplateService.title = "About Us"; // This is the Title of the Website
     $scope.navigation = NavigationService.getNavigation();
+
+
+    //leadership
+
+    $scope.leadership = [{
+            "id":'1',
+            "img": "img/leadership/Vivek_Desai1.jpg",
+            "name": "Vivek Desai",
+            "designation": "CEO & Director",
+            "subliner": "To aspire, inspire and achieve against all odds, with transparency and integrity.",
+        },
+        {
+            "img": "img/leadership/Anand_Hosabettu1.jpg",
+            "name": "Anand Hosabettu",
+            "designation": "Director – Sales",
+            "subliner": "With positiveness, we can overcome challenges in a transparent and trustworthy fashion for our stakeholders.",
+        },
+        {
+            "img": "img/leadership/Atul_Nipankar1.jpg",
+            "name": "Atul Nipankar",
+            "designation": "Director – Operations",
+            "subliner": "To deliver value to the business in most efficient and transparent manner by building high performance teams.",
+        }
+        ,
+        {
+            "img": "img/leadership/Pinaki_Sengupta1.jpg",
+            "name": "Pinaki Sengupta",
+            "designation": "Practice Manager – Consulting Services",
+            "subliner": "Constant and never ending quest to consult practical, advance &amp; creative solutions for Business opportunities.",
+        },
+        
+    ]
+    $scope.leadership2 = [
+        
+          
+            {
+               
+                "img": "img/leadership/Chirag.jpeg",
+                "name": "Chirag Shah",
+                "designation": "Head – Digital Solutions",
+                "subliner": "Dynamic, innovative &amp; aggressive approach to new business development in Digital Solutions.",
+            },
+            {
+                "img": "img/leadership/Pandurang_Deoka1.jpg",
+                 "name": "Pandurang Deokar",
+                "designation": "Group Finance Controller",
+                "subliner": "Effective Implementation of All types of Controls makes Organisation Healthier by all Means.",
+            },
+            {
+                "img": "img/leadership/Ramendra_Shukla.jpg",
+                "name": "Ramendra Shukla",
+                "designation": "Director – Big Data & Analytics",
+                "subliner": "Conceptualising and delivering intelligent analytics / machine learning solutions.",
+            },
+            {
+                "img": "img/leadership/Rohit_Mathur.jpg",
+                "name": "Rohit Mathur",
+                "designation": "Director – AI & Data Sciences",
+                "subliner": "Developing technology / knowledge tie-ups, thought leadership across sectors with Machine Learning and Artificial Intelligence solutions.",
+            },
+        
+    ]
+
+    
 
 });
 myApp.controller('ContactCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http, $uibModal) {
@@ -81812,6 +82011,16 @@ myApp.controller('ServiceCtrl', function ($scope, TemplateService, NavigationSer
             size: 'md'
         });
     };
+    //connect us modal
+
+    $scope.connectppl = function () {
+        $uibModal.open({
+            animation: true,
+            templateUrl: "views/modal/connectppl.html",
+            scope: $scope,
+            size: 'md'
+        });
+    };
     $scope.contactSubmit = function (data) {
         console.log("contact data-----------", data);
         $scope.data = null;
@@ -81828,6 +82037,54 @@ myApp.controller('ProductCtrl', function ($scope, TemplateService, NavigationSer
     }
 
     console.log("inside product", $stateParams.type)
+});
+myApp.controller('CareersCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http, $uibModal) {
+    $scope.template = TemplateService.getHTML("content/careers/careers.html");
+    TemplateService.title = "Careers"; // This is the Title of the Website
+    $scope.navigation = NavigationService.getNavigation();
+    $scope.showdata = 'ba';
+
+    //tab
+    $scope.changetab = function (data) {
+        $scope.showdata = data;
+    }
+
+    $scope.career = [{
+            para1: "Systems Plus provides freedom at work & the opportunity to develop along with the organization. The work environment is filled with challenging and motivating projects and assignments to provide an evolving ecosystem in which individuals are able to realise their professional and personal aspirations."
+        },
+        {
+            para1: "We are always looking for people with talent, interest and the drive to excel. We invite you to be part of adiverse team of thinkers and doers and this is your chance to take your career to the next level."
+        },
+
+        {
+            para1: "We are always looking for people with talent, interest and the drive to excel. We invite you to be part of a diverse team of thinkers and doers and this is your chance to take your career to the next level."
+        }
+    ]
+
+    //apply now modal
+
+    $scope.applymodal = function () {
+        $uibModal.open({
+            animation: true,
+            templateUrl: "views/modal/applynow.html",
+            scope: $scope,
+            size: 'md'
+        });
+    };
+
+    $scope.userapply = function (data) {
+        NavigationService.CareerSave(data, function (data) {
+        });
+    };
+
+});
+myApp.controller('LeadershipCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http, $uibModal) {
+    $scope.template = TemplateService.getHTML("content/leadership/leadership.html");
+    TemplateService.title = "About Us"; // This is the Title of the Website
+    $scope.navigation = NavigationService.getNavigation();
+ 
+
+
 });
 myApp.controller('headerCtrl', function ($scope, TemplateService, $state, $timeout) {
     $scope.template = TemplateService;
