@@ -1,12 +1,12 @@
 {
-    "title": "Edit Career",
-    "name": "Career",
-    "jsonPage": "viewCareer",
+    "title": "Edit TalkToExpert",
+    "name": "TalkToExpert",
+    "jsonPage": "viewTalkToExpert",
     "desciption": "",
     "pageType": "edit",
     "urlFields": ["_id"],
     "fields": [{
-        "name": "Full Name",
+        "name": "Name",
         "type": "text",
         "tableRef": "name",
         "placeholder": "Enter Full Name",
@@ -30,21 +30,21 @@
         "validation": ["required", "trim", "unique"],
         "url": ""
     }, {
-        "name": "Experience",
-        "type": "number",
-        "tableRef": "experience",
-        "placeholder": "Enter Experience",
-        "id": "experience",
+        "name": "Company",
+        "type": "text",
+        "tableRef": "company",
+        "placeholder": "Enter Company",
+        "id": "company",
         "validation": ["required", "trim", "unique"],
         "url": ""
     }],
     "action": [{
         "name": "submit",
-        "action": "submitCareer",
+        "action": "submitTalkToExpert",
         "stateName": {
             "page": "page",
             "json": {
-                "id": "viewCareer"
+                "id": "viewTalkToExpert"
             }
         }
     }, {
@@ -53,16 +53,16 @@
         "stateName": {
             "page": "page",
             "json": {
-                "id": "viewCareer"
+                "id": "viewTalkToExpert"
             }
         }
     }],
     "apiCall": {
-        "url": "Career/save",
+        "url": "TalkToExpert/save",
         "params": "_id"
     },
     "preApi": {
-        "url": "Career/getOne",
+        "url": "TalkToExpert/getOne",
         "params": "_id"
     }
 

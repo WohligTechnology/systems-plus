@@ -17,14 +17,19 @@ myApp.factory('NavigationService', function ($http) {
         sref: "#!/page/viewCareer//",
         icon: "phone"
     }, {
-        name: "Users",
+        name: "WhitePaper",
         classis: "active",
-        sref: "#!/page/viewUser//",
+        sref: "#!/page/viewWhitePaper//",
         icon: "phone"
     }, {
-        name: "Users",
+        name: "TalkToExpert",
         classis: "active",
-        sref: "#!/page/viewUser//",
+        sref: "#!/page/viewTalkToExpert//",
+        icon: "phone"
+    }, {
+        name: "ContactUs",
+        classis: "active",
+        sref: "#!/page/viewContactUs//",
         icon: "phone"
     }];
 

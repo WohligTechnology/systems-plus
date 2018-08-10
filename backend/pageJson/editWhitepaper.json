@@ -1,7 +1,7 @@
 {
-    "title": "Edit Career",
-    "name": "Career",
-    "jsonPage": "viewCareer",
+    "title": "Edit Whitepaper",
+    "name": "Whitepaper",
+    "jsonPage": "viewWhitepaper",
     "desciption": "",
     "pageType": "edit",
     "urlFields": ["_id"],
@@ -14,7 +14,7 @@
         "validation": ["required", "trim", "unique"],
         "url": ""
     }, {
-        "name": "Email",
+        "name": "Business-Email",
         "type": "text",
         "tableRef": "email",
         "placeholder": "Enter Email",
@@ -30,21 +30,21 @@
         "validation": ["required", "trim", "unique"],
         "url": ""
     }, {
-        "name": "Experience",
-        "type": "number",
-        "tableRef": "experience",
-        "placeholder": "Enter Experience",
-        "id": "experience",
+        "name": "Company",
+        "type": "text",
+        "tableRef": "company",
+        "placeholder": "Enter Company",
+        "id": "company",
         "validation": ["required", "trim", "unique"],
         "url": ""
     }],
     "action": [{
         "name": "submit",
-        "action": "submitCareer",
+        "action": "submitWhitepaper",
         "stateName": {
             "page": "page",
             "json": {
-                "id": "viewCareer"
+                "id": "viewWhitepaper"
             }
         }
     }, {
@@ -53,16 +53,16 @@
         "stateName": {
             "page": "page",
             "json": {
-                "id": "viewCareer"
+                "id": "viewWhitepaper"
             }
         }
     }],
     "apiCall": {
-        "url": "Career/save",
+        "url": "Whitepaper/save",
         "params": "_id"
     },
     "preApi": {
-        "url": "Career/getOne",
+        "url": "Whitepaper/getOne",
         "params": "_id"
     }
 

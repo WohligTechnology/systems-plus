@@ -1,19 +1,29 @@
 var schema = new Schema({
     name: {
         type: String,
-        required: true,
-        unique: true,
-        uniqueCaseInsensitive: true,
-        excel: {
-            name: "Name"
-        }
+        required: true
+    },
+    email: {
+        type: String,
+        validate: validators.isEmail(),
+        unique: true
+    },
+    mobile: {
+        type: String,
+        required: true
+    },
+    company: {
+        type: String
+    },
+    whitePaperName: {
+        type: String
     }
 });
 
 schema.plugin(deepPopulate, {});
 schema.plugin(uniqueValidator);
 schema.plugin(timestamps);
-module.exports = mongoose.model('WhitePaper', schema);
+module.exports = mongoose.model('Whitepaper', schema);
 
 var exports = _.cloneDeep(require("sails-wohlig-service")(schema));
 var model = {};
