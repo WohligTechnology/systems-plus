@@ -1,6 +1,6 @@
 apps:
   - script: "app.js"
-    name: "Node Framework - 80"
+    name: "Systems Plus Website - 80"
     watch: false
     args: "--prod"
     exec_mode: "cluster"
