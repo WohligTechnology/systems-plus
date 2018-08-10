@@ -268,8 +268,13 @@ footer {
     padding: 10px 0;
     p {
         margin: 0;
+      
     }
+
 } 
+a:hover{
+    text-decoration: none !important;
+}
 .scrolltotop{
     display: none;
 }
@@ -348,7 +353,6 @@ h2 {
     padding: 3rem 0;
 }
 
-.sister-right-border {}
 
 .no-underline:hover {
     text-decoration: none;
@@ -374,6 +378,9 @@ h2 {
 }
 
 //common scss
+.text-deco{
+    text-decoration: none;
+}
 .line-h{
     line-height: 37px;
 }

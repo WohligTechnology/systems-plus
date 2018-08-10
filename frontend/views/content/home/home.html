@@ -1,11 +1,11 @@
 <section>
     <div class="position-relative">
-        <div class="home-swiper" id="home">
+        <div class="home-swiper position-relative" id="home">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" ng-repeat="s in homeSwiper track by $index">
-                        <img src="{{s.img}}" class="img-fluid mob-img">
-                        <div class="position-absolute text-left px-5 text-light ">
+                        <img src="{{s.img}}" class="w-100 mob-img">
+                        <div class="position-absolute text-left px-5 text-light contact-head">
                             <div>
                                 <h1 class="m-0 text-capitalize  Merriweather-Regular">{{s.title}}</h1>
                             </div>
@@ -21,12 +21,14 @@
                            
                             </div>
                         </div>
-                      <div class="position-absolute">
+                        <div class="service-overlay">
                         </div>
                     </div>
+                  
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
+           
         </div>
         <div class=" position-absolute scroll-btn-pos text-center d-none  d-sm-block">
             <a role="button" class="btn btn-scroll text-light Lato-Light">Scroll</a>
@@ -330,14 +332,14 @@
                 <div class="col ">
                     <div class="partner-bg  mb-4 ">
                         <div class="text-right  wohlig-logo w-50">
-                        <img src="img/home/wohlig-white.png" class="img-fluid ">
+                       <a href="https://www.wohlig.com/" target="_blank" > <img src="img/home/wohlig-white.png" class="img-fluid "></a>
                     </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="partner-bg pb-2">
                             <div class="exponentia-logo w-60">
-                        <img src="img/home/exponentia-white.png" class="img-fluid ">
+                       <a> <img src="img/home/exponentia-white.png" class="img-fluid "></a>
                         </div>
                   </div>
                 </div>
@@ -345,86 +347,3 @@
         </div>
     </div>
 </section>
-<!-- <section class="contact-bg  section-padding text-white" id="contact">
-
-        <div class="container">
-            <h2 class="text-center text-center m-0 pb-5 calibril">Contact Us</h2>
-            <div class="contact-main">
-                <div class="row no-gutters">
-                    <div class="col-5">
-                        <div class="contact-form-bg p-5">
-                            <h4 class="text-center pb-4 calibril font-weight-bold blue-footer-text"> Drop Us A Line </h4>
-                            <div class="contact-form">
-                                <form class="ng-pristine ng-invalid ng-invalid-required">
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <input type="text" class="form-control" id="name" placeholder="Name">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <input type="text" class="form-control" id="company" placeholder="Company Name">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" id="email" placeholder="Email">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="message" placeholder="Message">
-                                    </div>
-                                    <div class="captch">
-                                        <div class="captch-div ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" on-create="setWidgetId(5)" ng-model="formData.myRecaptchaResponse"
-                                            vc-recaptcha="" key="captchaKey" required=""></div>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary mt-2">Submit</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-7">
-                        <div class="contact-Address-bg p-5">
-                            <div class="row">
-                                <div class="col">
-                                    <h5 class="pb-2 calibril font-weight-bold blue-footer-text">Pune</h5>
-                                    <p>
-                                        Tower 8, Magarpatta SEZ, Magarpatta City, Pune,
-                                        <br> Maharashtra 411013
-                                        <br>India
-                                    </p>
-                                    <p>
-                                        <a>Tel: +91 2067263500 </a>
-                                    </p>
-                                </div>
-                                <div class="col">
-                                    <h5 class="pb-2 calibril font-weight-bold blue-footer-text">Mumbai</h5>
-                                    <p>
-                                        A/30,Laxmi Nivas,
-                                        <br>Sion, Mumbai,
-                                        <br> Maharashtra 400022
-                                        <br>India
-                                    </p>
-                                    <p class="m-0">
-                                        <a>Tel: +91 222660 8201</a>
-                                    </p>
-                                    <p>
-                                        <a>fax: +91 222660 2706</a>
-                                    </p>
-                                </div>
-                                <div class="col">
-                                    <h5 class="pb-2 calibril font-weight-bold blue-footer-text">London</h5>
-                                    <p>
-                                        2 Churchill Court, 58
-                                        <br>Station Road
-                                        <br>North Harrow -HA2 7SA
-                                        <br>United Kingdom
-                                    </p>
-                                    <p>
-                                        <a>Tel:+44 208 427 6505 </a>
-                                    </p>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->

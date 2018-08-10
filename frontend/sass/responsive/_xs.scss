@@ -1,6 +1,12 @@
 /* Breakpoint for medium viewport */
 
 @include media-breakpoint-down(xs) {
+    .navbar-brand{
+        margin-right: 0rem;
+    }
+    .navbar-nav{
+        text-align: center;
+    }
     h1 {
         font-size: 1.4rem;
         line-height: 31px;

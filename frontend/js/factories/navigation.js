@@ -19,7 +19,7 @@ myApp.factory('NavigationService', function () {
             subnav: []
         },
         {
-            name: "Services",
+            name: "Solutions",
             classis: "active",
             anchor: "services",
             id: 'service',

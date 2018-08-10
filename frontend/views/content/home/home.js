@@ -50,28 +50,28 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         }
     ];
     $scope.homeSwiper = [{
-            img: 'img/home/About Us.png',
+            img: 'img/home/banner/group.jpg',
             title: 'Your Preferred digital transformation partner  ',
             subtitle: 'Delivering superior customer experience while reducing cost',
             link: 'about'
         }
         ,
         {
-            img: 'img/home/Big-Data-Analytics.png',
+            img: 'img/home/banner/sp3.jpg',
             title: 'Leverage the power of Big Data and Analytics to Increase your business',
             subtitle: 'Unlock the power of data through our efficient big data and analytics solution',
             link: 'bi-analytics',
             cat: 'service'
         },
         {
-            img: 'img/home/Digital-Services.png',
+            img: 'img/home/banner/sp1.jpg',
             title: 'Streamline your Customer Journey with our Digital Services',
             subtitle: 'Focusing on spectacular solutions for next generation innovative products',
             link: 'digital-service',
             cat: 'service'
         },
         {
-            img: 'img/home/IRC.png',
+            img: 'img/home/banner/sp4.jpg',
             title: 'Expand your team hassle free with our proven and unique custodian model',
             subtitle: 'How a european customer saved 34% of cost through our unique custodian model ',
             link: 'IRC',
@@ -81,10 +81,10 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
     $timeout(function () {
         mySwiper = new Swiper('.swiper-container', {
             // AutoPlay
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
+            // autoplay: {
+            //     delay: 5000,
+            //     disableOnInteraction: false,
+            // },
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
