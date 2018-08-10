@@ -32,5 +32,9 @@ myApp.controller('CareersCtrl', function ($scope, TemplateService, NavigationSer
             size: 'md'
         });
     };
+
+    $scope.userapply = function(){
+        
+    }
    
 });
