@@ -39,8 +39,7 @@ myApp.controller('AboutCtrl', function ($scope, TemplateService, NavigationServi
     ]
     $scope.leadership2 = [
         
-          
-            {
+               {
                
                 "id":5,
                 "img": "img/leadership/Chirag.jpeg",

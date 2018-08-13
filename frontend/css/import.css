@@ -8469,7 +8469,7 @@ h2 {
   width: 60%; }
 
 .bg-blue {
-  background: linear-gradient(90deg, #053d78 100%, #0379ef 50%, #053d78 100%);
+  background: linear-gradient(90deg, #053b73 0%, #1774d0 50%, #063e78 100%);
   height: 5px; }
 
 .pt-50 {
@@ -9056,10 +9056,10 @@ h1 {
   background-image: url("../img/banner/Testing-bg.jpg"); }
 
 .common-heading {
-  top: 52%;
+  top: 54%;
   width: 100%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
+  left: 54%;
+  transform: translate(-54%, -54%); }
 
 .connect-ppl-bg {
   background-image: url("../img/connect-ppl.jpg");
@@ -9129,7 +9129,7 @@ h1 {
     font-size: 13px; }
 
 .leader-name-bg {
-  height: 20.5vh;
+  height: 10rem;
   background: #fff; }
 
 .designation {
@@ -9244,6 +9244,27 @@ h1 {
   border-color: #fff;
   background: #fff; }
 
+.leader-bg {
+  background: linear-gradient(90deg, #053b73 0%, #1774d0 50%, #063e78 100%);
+  padding-top: 35px;
+  height: 200px; }
+
+.leader-profile {
+  border: 7px solid white;
+  margin: 25px 20px;
+  display: inline-block;
+  width: 280px;
+  overflow: hidden;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.258824);
+  background-color: white; }
+
+.mt-120 {
+  margin-top: -120px; }
+
+.detail-sec-padd {
+  padding-top: 2rem;
+  padding-bottom: 3rem; }
+
 #fancybox-loading,
 .fancybox-close,
 .fancybox-next span,
@@ -9288,8 +9309,16 @@ h1 {
 /* Breakpoint for medium viewport */
 /* Breakpoint for medium viewport */
 /* Breakpoint for medium viewport */
+@media (max-width: 767.98px) {
+  .cont-mar-bot {
+    margin-bottom: 75px; } }
+
 /* Breakpoint for medium viewport */
 @media (max-width: 575.98px) {
+  .text-cen {
+    text-align: center; }
+  .mar-t20 {
+    margin-top: 20px; }
   .navbar-brand {
     margin-right: 0rem; }
   .navbar-nav {
@@ -9326,6 +9355,22 @@ h1 {
     border-right: 0px solid !important; }
   .bor-top {
     border-top: 1px solid rgba(70, 69, 69, 0.439216);
-    border-bottom: 0px solid  !important; } }
-
-/*# sourceMappingURL=import.css.map */
+    border-bottom: 0px solid !important; }
+  .hori-line {
+    top: 315px !important;
+    left: 39% !important; }
+  .hori-line-left {
+    top: 294px !important;
+    left: 50% !important; }
+  .left-img-padd {
+    padding-right: 0px; }
+  .right-img-padd {
+    padding-left: 0px; }
+  .about-contain-padd {
+    padding: 0em 1.6em 0em 2em; }
+  .head-bg {
+    height: 46vh; }
+  .exponentia-logo {
+    margin-top: -7px; }
+  .get-in-touch {
+    padding-top: 3.5rem; } }

@@ -1,10 +1,16 @@
 /* Breakpoint for medium viewport */
 
 @include media-breakpoint-down(xs) {
-    .navbar-brand{
+    .text-cen{
+       text-align: center;
+    }
+    .mar-t20{
+       margin-top: 20px;
+    }
+    .navbar-brand {
         margin-right: 0rem;
     }
-    .navbar-nav{
+    .navbar-nav {
         text-align: center;
     }
     h1 {
@@ -23,13 +29,10 @@
     .section-padding {
         padding: 2rem 0;
     }
-    .comm-mar{
+    .comm-mar {
         margin: 0px 15px;
     }
-   
-
-    
-    .mob-img{
+    .mob-img {
         max-width: none !important;
         width: auto !important;
         height: 100% !important;
@@ -41,15 +44,12 @@
         left: -3%;
         top: 20%;
     }
-    .sub-heading{
+    .sub-heading {
         margin-top: 10px;
     }
-
     .home-btn .btn-know-more {
-     
         font-size: 0.7rem;
         padding: 7px 23px;
-   
     }
     .bor-right {
         border-bottom: 1px solid rgba(70, 69, 69, 0.439216) !important;
@@ -57,6 +57,37 @@
     }
     .bor-top {
         border-top: 1px solid rgba(70, 69, 69, 0.439216);
-        border-bottom: 0px solid  !important;
+        border-bottom: 0px solid !important;
+    }
+    .hori-line {
+        top: 315px !important;
+        left: 39% !important;
+    }
+    .hori-line-left {
+        top: 294px !important;
+        left: 50% !important;
+    }
+    .left-img-padd {
+        padding-right: 0px;
+    }
+    .right-img-padd {
+        padding-left: 0px;
+    }
+    //about
+
+    .about-contain-padd {
+        padding: 0em 1.6em 0em 2em;
+    }
+    .head-bg {
+        
+        height: 46vh;
+    }
+    .exponentia-logo {
+      
+        margin-top: -7px;
+    }
+    .get-in-touch {
+        padding-top: 3.5rem;
+       
     }
 }

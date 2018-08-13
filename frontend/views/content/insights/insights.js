@@ -75,6 +75,11 @@ myApp.controller('InsightsCtrl', function ($scope, TemplateService, NavigationSe
             desc: 'Run the Business’ and ‘Change the Business’ at will, without compromising on the quality of service delivery',
             link: '',
         },
+        {
+            img: "img/home/wallpaper2.jpg",
+            desc: 'Run the Business’ and ‘Change the Business’ at will, without compromising on the quality of service delivery',
+            link: '',
+        },
     ];
     $scope.openWhitepaper = function () {
         $uibModal.open({
