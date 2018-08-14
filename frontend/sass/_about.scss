@@ -2,6 +2,13 @@
     background-image: url("../img/home/About Us.png");
     background-position: 50% 80% !important;
 }
+.comn-heading{
+    height: 417px;
+    display: flex;
+    align-items: center;
+//    padding-top: 34px;
+    padding-left: 19px;
+}
  .about-img{
     .hover-text a:after {
         content: '';

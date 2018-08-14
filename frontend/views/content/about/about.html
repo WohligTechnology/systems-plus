@@ -1,16 +1,20 @@
 <section>
-    <div class="head-bg about-bg position-relative">
-        <div class="common-heading container-fluid about-contain-padd position-absolute text-white  ">
-            <h1 class="Merriweather-Regular text-capitalize">About Us</h1>
-            <h3 class="py-sm-3 m-0 Lato-Light line-h ">We are a global boutique information technology solution and services provider with technology disruptive technology
-                solutions
-            </h3>
+    <div class="head-bg about-bg">
+        <div class="container">
+            <div class="comn-heading">
+                <div class=" text-white">
+                    <h1 class="Merriweather-Regular text-capitalize">About Us</h1>
+                    <h3 class="py-sm-3 m-0 Lato-Light line-h ">We are a global boutique information technology solution and services provider with technology disruptive
+                        technology solutions
+                    </h3>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 <section class="section-padding">
     <div class="container">
-        <div class="pb-2 px-4">
+        <div class="pb-2 px-4  text-cen">
             <p>Systems Plus Transformations is a global boutique Information Technology Solution and Services Provider with
                 customers in Europe, North America and Asia Pacific. Our presence in India, UK, US enable us to serve our
                 valued customer globally using near shore and offshore delivery models. We assist our customers through digital
@@ -19,7 +23,7 @@
                 the professional management of information security, including providing the highest level of control for risk
                 management and customer data protection.</p>
         </div>
-        <div class="irc-advantage ">
+        <div class="irc-advantage text-cen">
             <div class="px-4">
                 <h4 class="pb-2  Merriweather-Regular"> Vision</h4>
                 <p class="mb-0">Our aspiration is simple – to align ourselves to the business transformational objectives of our customers
@@ -28,72 +32,75 @@
         </div>
     </div>
 </section>
-<section  class="section-padding gray-background">
+<section class="section-padding gray-background">
     <div class=" position-relative">
-      <div class="container">
+        <div class="container">
             <div class="row">
                 <div class="col">
-                    <h2 class="text-center  Merriweather-Regular  mb-0 pb-5">Leadership</h2>
-              </div>
+                    <h2 class="text-center  Merriweather-Regular  mb-0 pb-sm-5 mpad-b">Leadership</h2>
+                </div>
             </div>
             <div class="row">
                 <div class="col-sm-3 col-xs-12" ng-repeat="leader in leadership">
-                    <div class="bg-white  hover-anime-v position-relative whitepaper-main" ui-sref="leadership({id:leader.id})">
+                    <div class="bg-white  hover-anime-v position-relative whitepaper-main m-mr" ui-sref="leadership({id:leader.id})">
                         <img src="{{leader.img}}" width="100%">
                         <div class="leader-name-bg px-3 py-3 text-cen">
-                        <h6 class="text-uppercase mb-1  whitepaper-color Merriweather-Regular">{{leader.name}}</h6>
-                        
-                        <p class="mb-0 designation">{{leader.designation}}
-                        </p>
-                        <p class="mb-0 pt-2 sub-liner">"{{leader.subliner}}"</p>
+                            <h6 class="text-uppercase mb-1  whitepaper-color Merriweather-Regular">{{leader.name}}</h6>
+
+                            <p class="mb-0 designation">{{leader.designation}}
+                            </p>
+                            <p class="mb-0 pt-2 sub-liner">"{{leader.subliner}}"</p>
                         </div>
-                   </div>
+                    </div>
                 </div>
-          </div>
-            <div class="row pt-5">
-                    <div class="col-sm-3 col-xs-12" ng-repeat="leader in leadership2">
-                            <div class="bg-white  hover-anime-v position-relative whitepaper-main" ui-sref="leadership({id:leader.id})">
-                                <img src="{{leader.img}}" width="100%">
-                                <div class="leader-name-bg px-3 py-3 text-cen">
-                                <h6 class="text-uppercase mb-1  whitepaper-color Merriweather-Regular d-inline">{{leader.name}}</h6>
-                              <p class="mb-0 designation">{{leader.designation}}
-                                </p>
-                                <p class="mb-0 pt-2 sub-liner">"{{leader.subliner}}"</p>
-                                </div>
-                           </div>
+            </div>
+            <div class="row pt-sm-5">
+                <div class="col-sm-3 col-xs-12" ng-repeat="leader in leadership2">
+                    <div class="bg-white  hover-anime-v position-relative whitepaper-main m-mr" ui-sref="leadership({id:leader.id})">
+                        <img src="{{leader.img}}" width="100%">
+                        <div class="leader-name-bg px-3 py-3 text-cen">
+                            <h6 class="text-uppercase mb-1  whitepaper-color Merriweather-Regular d-inline">{{leader.name}}</h6>
+                            <p class="mb-0 designation">{{leader.designation}}
+                            </p>
+                            <p class="mb-0 pt-2 sub-liner">"{{leader.subliner}}"</p>
                         </div>
-                 </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
-<section  id="partners">
-        <div class="sister-bg position-relative">
-            <div class="compy-overlay position-absolute">
+<section id="partners">
+    <div class="sister-bg position-relative">
+        <div class="compy-overlay position-absolute">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 class="text-center  Merriweather-Regular text-white mt-4 mb-0 pb-3 pt-4">Sister Companies</h2>
+                    <h4 class="text-center pb-5 OpenSans-Italic mb-0 text-white f-2">Our beloved partners.</h4>
+                </div>
             </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h2 class="text-center  Merriweather-Regular text-white mt-4 mb-0 pb-3 pt-4">Sister Companies</h2>
-                        <h4 class="text-center pb-5 OpenSans-Italic mb-0 text-white f-2">Our beloved partners.</h4>
+            <div class="row">
+                <div class="col ">
+                    <div class="partner-bg  mb-4 ">
+                        <div class="text-right  wohlig-logo w-50">
+                            <a href="https://www.wohlig.com/" target="_blank">
+                                <img src="img/home/wohlig-white.png" class="img-fluid ">
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col ">
-                        <div class="partner-bg  mb-4 ">
-                            <div class="text-right  wohlig-logo w-50">
-                           <a href="https://www.wohlig.com/" target="_blank"> <img src="img/home/wohlig-white.png" class="img-fluid "></a>
+                <div class="col">
+                    <div class="partner-bg pb-2">
+                        <div class="exponentia-logo w-60">
+                            <a href="http://exponentiadata.com/" target="_blank">
+                                <img src="img/home/exponentia-white.png" class="img-fluid ">
+                            </a>
                         </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="partner-bg pb-2">
-                                <div class="exponentia-logo w-60">
-                           <a href="http://exponentiadata.com/" target="_blank"> <img src="img/home/exponentia-white.png" class="img-fluid "></a>
-                            </div>
-                      </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
+    </div>
+</section>

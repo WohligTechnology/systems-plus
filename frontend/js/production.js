@@ -81250,8 +81250,8 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             templateUrl: tempateURL,
             controller: 'ContactCtrl'
         })
-        .state('service', {
-            url: "/service/:serviceId",
+        .state('solutions', {
+            url: "/solutions/:serviceId",
             templateUrl: tempateURL,
             controller: 'ServiceCtrl'
         })
@@ -81636,10 +81636,10 @@ myApp.factory('NavigationService', function ($http) {
             ]
         },
         {
-            name: "About",
+            name: "about",
             classis: "active",
-            anchor: "aboutus",
-            id: "aboutus",
+            anchor: "about",
+            id: "about",
             subnav: []
         },
         {
@@ -81691,6 +81691,11 @@ myApp.factory('NavigationService', function ($http) {
         },
         CareerSave: function (formData, callback) {
             $http.post(adminurl + 'Career/save', formData).then(function (data) {
+                callback(data);
+            });
+        },
+       ContactSave: function (formData, callback) {
+            $http.post(adminurl + 'Contact/save', formData).then(function (data) {
                 callback(data);
             });
         }
@@ -81799,7 +81804,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         {
             img: 'img/home/banner/sp4.jpg',
             title: 'Expand your team hassle free with our proven and unique custodian model',
-            subtitle: 'How a european customer saved 34% of cost through our unique custodian model ',
+            subtitle: 'How a European customer saved 34% of cost through our unique custodian model ',
             link: 'IRC',
             cat: 'service'
         }
@@ -81826,7 +81831,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
 })
 myApp.controller('AboutCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http, $uibModal) {
     $scope.template = TemplateService.getHTML("content/about/about.html");
-    TemplateService.title = "About Us"; // This is the Title of the Website
+    TemplateService.title = "about"; // This is the Title of the Website
     $scope.navigation = NavigationService.getNavigation();
 
 
@@ -81836,6 +81841,7 @@ myApp.controller('AboutCtrl', function ($scope, TemplateService, NavigationServi
             "id":1,
             "img": "img/leadership/Vivek_Desai1.jpg",
             "name": "Vivek Desai",
+            "link":"",
             "designation": "CEO & Director",
             "subliner": "To aspire, inspire and achieve against all odds, with transparency and integrity.",
         },
@@ -81883,6 +81889,7 @@ myApp.controller('AboutCtrl', function ($scope, TemplateService, NavigationServi
             {
                 "id":7,
                 "img": "img/leadership/Ramendra_Shukla.jpg",
+                "link":" https://www.linkedin.com/in/ramendrashukla/",
                 "name": "Ramendra Shukla",
                 "designation": "Director – Big Data & Analytics",
                 "subliner": "Conceptualising and delivering intelligent analytics / machine learning solutions.",
@@ -81911,11 +81918,13 @@ myApp.controller('ContactCtrl', function ($scope, TemplateService, NavigationSer
         isFirstOpen: true,
         isFirstDisabled: false
     };
-    console.log("contact data-----------yyyyyyyyyyyyyyyyyyyy")
+   
 
     $scope.contactSubmit = function (data) {
         console.log("contact data-----------", data);
-        $scope.data = null;
+        // $scope.data = null;
+        NavigationService.CareerSave(data, function (data) {
+        });
     }
 });
 myApp.controller('InsightsCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http, $uibModal) {
@@ -82012,7 +82021,7 @@ myApp.controller('InsightsCtrl', function ($scope, TemplateService, NavigationSe
 });
 myApp.controller('ServiceCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http, $uibModal, $stateParams) {
     $scope.template = TemplateService.getHTML("content/service/" + $stateParams.serviceId + ".html");
-    TemplateService.title = "Services"; // This is the Title of the Website
+    TemplateService.title = "Solutions"; // This is the Title of the Website
     $scope.navigation = NavigationService.getNavigation();
     $scope.openWhitepaper = function () {
         $uibModal.open({
@@ -82085,7 +82094,7 @@ myApp.controller('CareersCtrl', function ($scope, TemplateService, NavigationSer
 
     $scope.userapply = function (data) {
         console.log("$$$$$$$$$",data)
-        NavigationService.CareerSave(data, function (data) {
+        NavigationService.ContactSave(data, function (data) {
         });
     };
 
@@ -82100,6 +82109,7 @@ myApp.controller('LeadershipCtrl', function ($scope, TemplateService, Navigation
             "id": 1,
             "img": "img/leadership/Vivek_Desai1.jpg",
             "name": "Vivek Desai",
+            "link":"https://www.linkedin.com/in/vivek-desai-159a07/ ",
             "designation":"CEO & Director",
             "desc1": "Vivek, is the CEO & Director of Systems Plus Transformations, a global software services and consulting company. Vivek is focused on the growth markets which include UK, US , Far East and Asia-Pacific. Vivek has an extensive 26 years experience in the IT Industry.",
             "desc2": "Prior to his current role, Vivek was with Sonata Software for 24 years. Vivek has successfully spearheaded multiple portfolios within the organization and has enabled diversification in terms of industry verticals. Vivek was instrumental in establishing and successfully leading Sonata’s Europeans Operations. Vivek expanded Sonata’s footprint in Continental Europe and in the process established partnerships with Hybris and SAP. Under his leadership Sonata’s European’s operations contributed 50%+ to the International Services revenue. He played a key role in Sonata’s accelerated growth in Europe and key business lines.",
@@ -82112,6 +82122,7 @@ myApp.controller('LeadershipCtrl', function ($scope, TemplateService, Navigation
             "id": 2,
             "img": "img/leadership/Anand_Hosabettu1.jpg",
             "name": "Anand Hosabettu",
+            "link":"https://www.linkedin.com/in/anandhosabettu/ ",
             "designation":"Director – Sales",
             "desc1": "Anand is the Sales Director based out of UK. He drives new business development as well as relationships with existing customers in UK, Europe and APAC region. His 19 years of experience spans across industry verticals like Finance, Pharma, Travel and Public sector.",
             "desc2":"Prior to joining SystemsPlus, Anand was with Sonata Software for more than 16 years where he played multiple roles such as Technical Consultant, Project Manager, Pre-sales and Account Manager. His last assignment was to manage and grow one of the large account in the travel sector based in UK.",
@@ -82123,6 +82134,7 @@ myApp.controller('LeadershipCtrl', function ($scope, TemplateService, Navigation
             "id": 3,
             "img": "img/leadership/Atul_Nipankar1.jpg",
             "name": "Atul Nipankar",
+            "link":"https://www.linkedin.com/in/atulnipankar/",
             "designation":"Director – Operations",
             "desc1": "Atul is versatile professional with over 20 years’ experience in outsourcing services and software engineering. Is an inspirational leader who has effectively managed teams across business horizontals and verticals.            ",
             "desc2":"An expert in consulting, global delivery management, has successfully managed large and complex programs for several global organizations.",
@@ -82137,6 +82149,7 @@ myApp.controller('LeadershipCtrl', function ($scope, TemplateService, Navigation
             "id":4,
             "img": "img/leadership/Pinaki_Sengupta1.jpg",
             "name": "Pinaki Sengupta",
+            "link":"https://www.linkedin.com/in/pinakisengupta/ ",
             "designation":"Practice Manager – Consulting Services",
             "desc1":"Pinaki is Practice Manager – Consulting Services at Systems Plus Transformations. Pinaki is focused on bringing creative solutions with disciplined approach for introducing and managing change to organizations. Pinaki’s past experiences with business transformation services of – SAP/Oracle enables him to advocate “Strategic thinking” discipline throughout client organization, from strategy to implementation, and across multiple roles. ",
             "desc2":"Pinaki had extensively worked on Complex Strategy execution, Enterprise Performance Management, Governance, Risk and Compliance Programs. Pinaki’s passion now is to build strategic models for client organisations to realize the value of big data & analytics.",
@@ -82157,6 +82170,7 @@ myApp.controller('LeadershipCtrl', function ($scope, TemplateService, Navigation
             "id":6,
             "img":"img/leadership/Pandurang_Deoka1.jpg",
             "name":"Pandurang Deokar",
+            "link":"https://www.linkedin.com/in/pandurang-deokar-430094163/ ",
             "designation":"Group Finance Controller",
             "desc1":"Pandurang is Group Finance Controller and responsible for entire Finance Function of SPTR Group Companies, Globally. Pandurang also manages Procurement Function & oversee Administrative Function principally, for the Group.",
             "desc2":"In addition to that, he manages the organisation’s emerging business accelerator unit and other special initiatives dedicated to building new solutions for our clients.",
@@ -82169,6 +82183,7 @@ myApp.controller('LeadershipCtrl', function ($scope, TemplateService, Navigation
             "id":7,
             "img":"img/leadership/Ramendra_Shukla.jpg",
             "name":"Ramendra Shukla",
+            "link":"https://www.linkedin.com/in/ramendrashukla/",
             "designation":"Director – Big Data & Analytics",
             "desc1":"Ramendra has over 13 years of business consulting experience on strategy, analytics and technology in financial services, healthcare and infrastructure domains. At Systems Plus Transformations, Ramendra leads strategic engagements, machine learning solutions and big data analytics services. An avid problem solver, Ramendra has been instrumental in conceptualizing and delivering intelligent solutions for clients across sectors and geographies.",
             "desc2":"Prior to Systems Plus Transformations, Ramendra led India operations of PLUS Expressways and held senior positions in Infosys, i2 Technologies, FoA and Concept Consulting.",
@@ -82179,6 +82194,7 @@ myApp.controller('LeadershipCtrl', function ($scope, TemplateService, Navigation
             "id":8,
             "img":"img/leadership/Rohit_Mathur.jpg",
             "name":"Rohit Mathur",
+            "link":"https://in.linkedin.com/in/rohit-mathur-118366b6",
             "designation":"Director – AI & Data Sciences",
             "desc1":"Rohit has been in the area of technology development, investment banking for healthcare, pharmaceutical and life sciences sectors for over 10 years. With his distinct knowledge and experience, he has taken hold of responsibilities for developing technology / knowledge tie-ups, thought leadership across sectors. Prior to associating with Systems Plus Transformations, he was part of investment banking experts at Ernst & Young and Centrum Capital. ",
             "desc2":"At Systems Plus Transformations, Rohit has set up Machine Learning and Artificial Intelligence practice wherein multiple projects have been delivered to clients across sectors and geographies. He has been instrumental in developing Cingulariti which is an Omni channel bot and assistant platform for large enterprises.",

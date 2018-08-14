@@ -12,10 +12,10 @@ myApp.factory('NavigationService', function ($http) {
             ]
         },
         {
-            name: "About",
+            name: "about",
             classis: "active",
-            anchor: "aboutus",
-            id: "aboutus",
+            anchor: "about",
+            id: "about",
             subnav: []
         },
         {
@@ -67,6 +67,11 @@ myApp.factory('NavigationService', function ($http) {
         },
         CareerSave: function (formData, callback) {
             $http.post(adminurl + 'Career/save', formData).then(function (data) {
+                callback(data);
+            });
+        },
+       ContactSave: function (formData, callback) {
+            $http.post(adminurl + 'Contact/save', formData).then(function (data) {
                 callback(data);
             });
         }

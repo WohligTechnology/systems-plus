@@ -80,7 +80,7 @@ myApp.controller('LeadershipCtrl', function ($scope, TemplateService, Navigation
         },
         {
             "id":7,
-            "img":"img/leadership/Ram.jpg",
+            "img":"img/leadership/Ramendra_Shukla.jpg",
             "name":"Ramendra Shukla",
             "link":"https://www.linkedin.com/in/ramendrashukla/",
             "designation":"Director – Big Data & Analytics",

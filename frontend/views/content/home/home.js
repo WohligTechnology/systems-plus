@@ -73,7 +73,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         {
             img: 'img/home/banner/sp4.jpg',
             title: 'Expand your team hassle free with our proven and unique custodian model',
-            subtitle: 'How a european customer saved 34% of cost through our unique custodian model ',
+            subtitle: 'How a European customer saved 34% of cost through our unique custodian model ',
             link: 'IRC',
             cat: 'service'
         }

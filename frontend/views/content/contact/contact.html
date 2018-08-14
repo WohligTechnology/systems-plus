@@ -1,45 +1,51 @@
 <section>
     <div class="head-bg contact-bg position-relative">
-        <div class="common-heading contact-head container position-absolute  text-white">
-            <h1 class="Merriweather-Regular text-capitalize mb-0">Contact Us</h1>
+        <!-- <div class="common-heading contact-head container position-absolute  text-white">
+        </div> -->
+        <div class="container">
+            <div class="comn-heading">
+                <div class="contact-head text-white">
+                    <h1 class="Merriweather-Regular text-capitalize mb-0">Contact Us</h1>
+                </div>
+            </div>
         </div>
-        <div class="contact-overlay position-absolute">
-     </div>
+        <div class="service-overlay position-absolute">
+        </div>
     </div>
 </section>
 <section id="contact">
     <div class="section-padding gray-background">
         <div class="container">
             <div class="row">
-                <div class="col-4 ">
+                <div class="col-sm-4 col-xs-12">
                     <div class="contact-card pr-5">
                         <uib-accordion close-others="oneAtATime">
-                                <div uib-accordion-group class="mt-1" heading="London" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
-                                        <p class="text-dark">
-                                            2 Churchill Court, 58
-                                            <br>Station Road
-                                            <br>North Harrow -HA2 7SA
-                                            <br>United Kingdom
-                                        </p>
-                                        <p class="text-dark">
-                                            <a>Tel:+44 208 427 6505 </a>
-                                        </p>
-                                    </div>
-                                    
+                            <div uib-accordion-group class="mt-1" heading="London" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
+                                <p class="text-dark">
+                                    2 Churchill Court, 58
+                                    <br>Station Road
+                                    <br>North Harrow -HA2 7SA
+                                    <br>United Kingdom
+                                </p>
+                                <p class="text-dark">
+                                    <a>Tel:+44 208 427 6505 </a>
+                                </p>
+                            </div>
+
                             <div uib-accordion-group class="mt-1" heading="Mumbai">
-                                    <p class="text-dark">
-                                        A/30,Laxmi Nivas,
-                                        <br>Sion, Mumbai,
-                                        <br> Maharashtra 400022
-                                        <br>India
-                                    </p>
-                                    <p class="m-0 text-dark">
-                                        <a>Tel: +91 222660 8201</a>
-                                    </p>
-                                    <p class="text-dark">
-                                        <a>fax: +91 222660 2706</a>
-                                    </p>
-                                </div>
+                                <p class="text-dark">
+                                    A/30,Laxmi Nivas,
+                                    <br>Sion, Mumbai,
+                                    <br> Maharashtra 400022
+                                    <br>India
+                                </p>
+                                <p class="m-0 text-dark">
+                                    <a>Tel: +91 222660 8201</a>
+                                </p>
+                                <p class="text-dark">
+                                    <a>fax: +91 222660 2706</a>
+                                </p>
+                            </div>
                             <div uib-accordion-group class="mt-1" heading="Pune">
                                 <p class="text-dark">
                                     Tower 8, Magarpatta SEZ, Magarpatta City, Pune,
@@ -50,41 +56,41 @@
                                     <a>Tel: +91 2067263500 </a>
                                 </p>
                             </div>
-               </uib-accordion>
+                        </uib-accordion>
                     </div>
                 </div>
-                <div class="col-7">
-                    <div class="contact-content pl-5 border-left ">
+                <div class="col-sm-7 col-xs-12">
+                    <div class="contact-content pl-sm-5 m-pt border-left ">
                         <div class="contact-form-heading  mb-4 text-center">
                             <h4 class="Merriweather-Regular ">We would love to hear from you</h4>
                         </div>
                         <form class="text-dark" name="contact">
                             <div class="form-group">
-                                <input type="text" id="edit-fname" name="fname" value="" class="form-control" placeholder="First Name *" only-letters-input
+                                <input type="text" id="edit-fname" name="fname" value="" class="form-control" placeholder="First Name*" only-letters-input
                                     ng-model="data.fname" required>
                             </div>
 
                             <div class="form-group">
-                                <input type="text" id="edit-lname" name="lname" value="" placeholder="Last Name *" class="form-control" only-letters-input
+                                <input type="text" id="edit-lname" name="lname" value="" placeholder="Last Name*" class="form-control" only-letters-input
                                     ng-model="data.lname" required>
                             </div>
                             <div class="form-group">
-                                <input type="email" id="edit-email" name="email" value="" class="form-control" placeholder="Business Email *" required ng-model="data.email">
+                                <input type="email" id="edit-email" name="email" value="" class="form-control" placeholder="Business Email*" required ng-model="data.email">
                             </div>
 
                             <div class="form-group">
-                                <input type="text" id="edit-phone" name="phone" value="" class="form-control" placeholder="Phone *" only-digits required
+                                <input type="text" id="edit-phone" name="phone" value="" class="form-control" placeholder="Phone*" only-digits required
                                     ng-model="data.phone">
                             </div>
 
                             <div class="form-group">
-                                <input type="text" id="edit-company" name="company" value="" class="form-control" placeholder="Company *" required ng-model="data.company">
+                                <input type="text" id="edit-company" name="company" value="" class="form-control" placeholder="Company*" required ng-model="data.company">
                             </div>
                             <div class="form-group">
-                                <input type="text" id="edit-requirement" name="requirement" value="" class="form-control" placeholder="Requirement *" ng-model="data.requirement"
+                                <input type="text" id="edit-requirement" name="requirement" value="" class="form-control" placeholder="Requirement*" ng-model="data.requirement"
                                     required>
                             </div>
-                            <div class="pt-3">
+                            <div class="pt-sm-3">
                                 <button type="submit" class="btn btn-outline-danger w-100 ptb" ng-click="contactSubmit(data)">Submit</button>
                             </div>
                         </form>

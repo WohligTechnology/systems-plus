@@ -1,6 +1,12 @@
 /* Breakpoint for medium viewport */
 
 @include media-breakpoint-down(xs) {
+    //footer
+    .scrolltotop {
+      bottom: 19%;
+     right: 10px;
+      
+    }
     .text-cen{
        text-align: center;
     }
@@ -60,11 +66,11 @@
         border-bottom: 0px solid !important;
     }
     .hori-line {
-        top: 315px !important;
+        top: 286px  !important;
         left: 39% !important;
     }
     .hori-line-left {
-        top: 294px !important;
+        top: 272px  !important;
         left: 50% !important;
     }
     .left-img-padd {
@@ -74,7 +80,26 @@
         padding-left: 0px;
     }
     //about
-
+    .mpad-b{
+        padding-bottom: 16px;
+    }
+    .m-mr{
+        margin: 20px 0px;
+    }
+      .m-pt{
+          padding-top:30px;
+      }
+    .comn-heading {
+        height: 345px;
+        padding-top: 0px;
+      
+    }
+    .border-left{
+        border-left: none !important;
+    }
+    .line-h {
+        line-height: 27px;
+    }
     .about-contain-padd {
         padding: 0em 1.6em 0em 2em;
     }
@@ -89,5 +114,19 @@
     .get-in-touch {
         padding-top: 3.5rem;
        
+    }
+    .card-body{
+        padding: 1rem 1.25rem 0rem !important;
+    }
+    //career
+    .w67{
+        display: none;
+    }
+    .w33 {
+        width: 100%;
+    //    padding-right: 29px;
+    //     padding-left: 7px;
+    //     padding-bottom: 42px;
+        padding: 0px 29px 42px 7px;
     }
 }

@@ -9,10 +9,12 @@ myApp.controller('ContactCtrl', function ($scope, TemplateService, NavigationSer
         isFirstOpen: true,
         isFirstDisabled: false
     };
-    console.log("contact data-----------yyyyyyyyyyyyyyyyyyyy")
+   
 
     $scope.contactSubmit = function (data) {
         console.log("contact data-----------", data);
-        $scope.data = null;
+        // $scope.data = null;
+        NavigationService.CareerSave(data, function (data) {
+        });
     }
 });

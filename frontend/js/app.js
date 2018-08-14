@@ -38,8 +38,8 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             templateUrl: tempateURL,
             controller: 'ContactCtrl'
         })
-        .state('service', {
-            url: "/service/:serviceId",
+        .state('solutions', {
+            url: "/solutions/:serviceId",
             templateUrl: tempateURL,
             controller: 'ServiceCtrl'
         })
