@@ -10,6 +10,7 @@ myApp.controller('AboutCtrl', function ($scope, TemplateService, NavigationServi
             "id":1,
             "img": "img/leadership/Vivek_Desai1.jpg",
             "name": "Vivek Desai",
+            "link":"",
             "designation": "CEO & Director",
             "subliner": "To aspire, inspire and achieve against all odds, with transparency and integrity.",
         },
@@ -57,6 +58,7 @@ myApp.controller('AboutCtrl', function ($scope, TemplateService, NavigationServi
             {
                 "id":7,
                 "img": "img/leadership/Ramendra_Shukla.jpg",
+                "link":" https://www.linkedin.com/in/ramendrashukla/",
                 "name": "Ramendra Shukla",
                 "designation": "Director – Big Data & Analytics",
                 "subliner": "Conceptualising and delivering intelligent analytics / machine learning solutions.",

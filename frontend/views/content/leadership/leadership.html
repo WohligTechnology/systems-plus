@@ -7,8 +7,9 @@
                     <img src="{{leaderdata.img}}" class="img-fluid">
                 </div>
             </div>
-            <div>
-                <h4 class="Merriweather-Regular pb-2 ">{{leaderdata.name}}</h4>
+            <div class="leader-name">
+                <h4 class="Merriweather-Regular pb-2 d-inline">{{leaderdata.name}}</h4>
+                <a class="text-dark" ng-href="{{leaderdata.link}}" target="_blank"><i class="fab fa-linkedin ml-1"></i></a>
                 <h6 class="Merriweather-Regular">{{leaderdata.designation}}</h6>
             </div>
         </div>
