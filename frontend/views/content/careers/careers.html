@@ -1,15 +1,14 @@
 <section>
     <div class="careers-bg head-bg  position-relative">
         <!-- <div class="common-heading position-absolute  container-fluid about-contain-padd text-white  contact-head">
-           
-        </div> -->
+      </div> -->
         <div class="container">
-                <div class="comn-heading">
-                    <div class="contact-head text-white">
-                            <h1 class=" text-capitalize mb-0 Merriweather-Regular">Careers</h1>
-                    </div>
+            <div class="comn-heading">
+                <div class="contact-head text-white">
+                    <h1 class=" text-capitalize mb-0 Merriweather-Regular">Careers</h1>
                 </div>
             </div>
+        </div>
         <div class="service-overlay position-absolute">
         </div>
     </div>
@@ -26,16 +25,16 @@
         </div>
     </div>
 </section>
-<section class="gray-background section-padding">
+<section class="gray-background section-padding ">
     <div class="container">
         <div class="irc-advantage px-4">
             <div>
-                <h3 class="pb-5 mb-0 Merriweather-Regular">Current Opportunities
+                <h3 class="pb-sm-5 mb-0 Merriweather-Regular">Current Opportunities
                     <span></span>
                 </h3>
             </div>
         </div>
-        <div class="w-100 position-relative d-sm-flex px-4">
+        <div class="w-100 position-relative d-sm-flex px-4 m-none">
             <div class="w33 pt-3">
                 <div class="position-relative">
                     <div class="h-75 pl-3">
@@ -71,73 +70,32 @@
                         <div ng-if="showdata == 'ba'">
                             <div class="cat-ul">
                                 <ul class="list-unstyled">
-
-                                    <li>5+ Years of Hands on Experience as a Business Analyst.
+                                    <li ng-repeat="cardata in careerdetail">{{cardata.list}}
                                     </li>
-                                    <li>Conception and implementation of ad hoc analyses and definition of use cases
-                                    </li>
-                                    <li>Preparation of requirements analyses with the departments regarding data structures
-                                    </li>
-                                    <li>Communication of the technical requirements to the developers of C4C
-                                    </li>
-                                    <li>Knowledge of C4C desirable </li>
-                                    <li>Should be Scrum Certified.</li>
-                                    <li>Knowledge of C4C desirable </li>
-                                    <li>Should be Scrum Certified.</li>
-
-
                                 </ul>
                             </div>
                         </div>
                         <div ng-if="showdata == 'php'">
                             <div class="cat-ul">
                                 <ul class="list-unstyled">
-                                    <li>Conception and implementation of ad hoc analyses and definition of use cases
+                                    <li ng-repeat="cardata in careerdetail">{{cardata.list}}
                                     </li>
-                                    <li>Conception and implementation of ad hoc analyses and definition of use cases
-                                    </li>
-                                    <li>Preparation of requirements analyses with the departments regarding data structures
-                                    </li>
-                                    <li>Communication of the technical requirements to the developers of C4C
-                                    </li>
-                                    <li>Knowledge of C4C desirable </li>
-                                    <li>Should be Scrum Certified. </li>
-                                    <li>Should be Scrum Certified. </li>
                                 </ul>
                             </div>
                         </div>
                         <div ng-if="showdata == 'node'">
                             <div class="cat-ul">
                                 <ul class=" list-unstyled">
-                                    <li>Preparation of requirements analyses with the departments regarding data structures
+                                    <li ng-repeat="cardata in careerdetail">{{cardata.list}}
                                     </li>
-                                    <li>Conception and implementation of ad hoc analyses and definition of use cases
-                                    </li>
-                                    <li>Conception and implementation of ad hoc analyses and definition of use cases</li>
-
-                                    <li>Communication of the technical requirements to the developers of C4C
-                                    </li>
-                                    <li>Knowledge of C4C desirable </li>
-                                    <li>Should be Scrum Certified. </li>
-                                    <li>Should be Scrum Certified. </li>
-
                                 </ul>
                             </div>
                         </div>
                         <div ng-if="showdata == 'mongo'">
                             <div class="cat-ul">
                                 <ul class="list-unstyled ">
-                                    <li>Long term Onsite Opportunity Highly Competitive Compensation.
+                                    <li ng-repeat="cardata in careerdetail">{{cardata.list}}
                                     </li>
-                                    <li>Conception and implementation of ad hoc analyses and definition of use cases
-                                    </li>
-                                    <li>Conception and implementation of ad hoc analyses and definition of use cases
-                                    </li>
-                                    <li>Preparation of requirements analyses with the departments regarding data structures
-                                    </li>
-                                    <li>Communication of the technical requirements to the developers of C4C
-                                    </li>
-                                    <li>Should be Scrum Certified. </li>
                                 </ul>
                             </div>
                         </div>
@@ -150,6 +108,43 @@
                 </div>
             </div>
         </div>
-
+        <div class="row d-sm-none">
+            <div class="col-xs-12">
+                <div class="contact-card career-card px-4 mt-3">
+                    <uib-accordion close-others="oneAtATime">
+                        <div uib-accordion-group class="mt-1" heading="C4C Business Analyst" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
+                            <div class="cat-ul">
+                                <ul class="list-unstyled ">
+                                    <li ng-repeat="cardata in careerdetail">{{cardata.list}}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div uib-accordion-group class="mt-1" heading="C4C Business Analyst">
+                            <div class="cat-ul">
+                                <ul class="list-unstyled ">
+                                    <li ng-repeat="cardata in careerdetail">{{cardata.list}}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div uib-accordion-group class="mt-1" heading="C4C Business Analyst">
+                            <div class="cat-ul">
+                                <ul class="list-unstyled mb-0">
+                                    <li ng-repeat="cardata in careerdetail">{{cardata.list}}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </uib-accordion>
+                </div>
+                <div class="text-center mt-5">
+                        <p>
+                            <a class="learn-more text-right p-2 no-underline px-4" role="button" ng-click="applymodal()">APPLY NOW</a>
+                        </p>
+                    </div>
+            </div>
+        </div>
+       
     </div>
 </section>

@@ -74,6 +74,17 @@ myApp.factory('NavigationService', function ($http) {
             $http.post(adminurl + 'Contact/save', formData).then(function (data) {
                 callback(data);
             });
+        },
+       InsightSave: function (formData, callback) {
+            $http.post(adminurl + 'Insight/save', formData).then(function (data) {
+                callback(data);
+            });
+        },
+        
+        ConnectpplSave: function (formData, callback) {
+            $http.post(adminurl + 'Connectppl/save', formData).then(function (data) {
+                callback(data);
+            });
         }
     };
 });

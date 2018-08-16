@@ -89,4 +89,9 @@ myApp.controller('InsightsCtrl', function ($scope, TemplateService, NavigationSe
             size: 'md'
         });
     };
+
+    $scope.insightSubmit = function (data) {
+        NavigationService.InsightSave(data, function (data) {
+        });
+    }
 });

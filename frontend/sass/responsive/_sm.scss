@@ -1,8 +1,72 @@
 /* Breakpoint for medium viewport */
 
 @include media-breakpoint-down(sm) {
-    .cont-mar-bot{
+    .dis-none {
+        display: none;
+    }
+    .desk-dis-none {
+        display: block;
+    }
+    h1 {
+        font-size: 1.6rem; // line-height: 31px;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
+    .w100 {
+        height: auto !important;
+        width: 100% !important;
+    }
+    .scroll-cont {
+        bottom: -10.5%;
+    }
+    .scroll-marker-top {
+        height: 39px;
+    }
+    .insight-height {
+        min-height: 9rem;
+    }
+    .bor-right {
+        border-bottom: 1px solid rgba(70, 69, 69, .439216) !important;
+        border-right: 0 solid !important;
+    }
+    .bor-top {
+        border-top: 1px solid rgba(70, 69, 69, 0.439216);
+        border-bottom: 0px solid !important;
+    }
+    .hori-line {
+        top: 400px !important;
+        left: 39% !important;
+    }
+    .hori-line-left {
+        top: 375px !important;
+        left: 50% !important;
+    }
+    .cont-mar-top {
+        margin-top: 67px;
+    }
+    .left-img-padd {
+        padding-right: 0px;
+    }
+    .right-img-padd {
+        padding-left: 0px;
+    }
+    .scroll-marker-bot {
+        height: 35px;
+    }
+    .py-sm-3 {
+        padding-top: 0.1rem !important;
+    }
+    .py-sm-3 {
+        padding-bottom: 0rem !important;
+    }
+    .cont-mar-bot {
         margin-bottom: 75px;
     }
-    
+    .m-none {
+        display: none;
+    }
+    .navbar-expand-md .navbar-toggler {
+        display: block!important;
+    }
 }

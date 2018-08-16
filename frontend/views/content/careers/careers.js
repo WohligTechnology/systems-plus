@@ -3,7 +3,12 @@ myApp.controller('CareersCtrl', function ($scope, TemplateService, NavigationSer
     TemplateService.title = "Careers"; // This is the Title of the Website
     $scope.navigation = NavigationService.getNavigation();
     $scope.showdata = 'ba';
-
+    $scope.oneAtATime = true;
+    $scope.status = {
+        isCustomHeaderOpen: false,
+        isFirstOpen: true,
+        isFirstDisabled: false
+    };
     //tab
     $scope.changetab = function (data) {
         $scope.showdata = data;
@@ -31,6 +36,35 @@ myApp.controller('CareersCtrl', function ($scope, TemplateService, NavigationSer
             size: 'md'
         });
     };
+
+    
+//uib-accordian
+
+$scope.careerdetail = [
+                {
+                "list":"5+ Years of Hands on Experience as a Business Analyst.",
+                 },
+                 {
+                    "list":"Conception and implementation of ad hoc analyses and definition of use cases.",
+                 },
+                 {
+                    "list":"Preparation of requirements analyses with the departments regarding data structures.",
+                 },
+                 {
+                    "list":"Communication of the technical requirements to the developers of C4C.",
+                 },
+                 {
+                    "list":"Knowledge of C4C desirable.",
+                 },
+                 {
+                    "list":"Should be Scrum Certified.",
+                 },
+                 {
+                    "list":"Knowledge of C4C desirable.",
+                 }
+
+                ]
+
 
     $scope.userapply = function (data) {
         console.log("$$$$$$$$$",data)

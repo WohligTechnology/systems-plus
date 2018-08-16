@@ -20,8 +20,9 @@ myApp.controller('ServiceCtrl', function ($scope, TemplateService, NavigationSer
             size: 'md'
         });
     };
-    $scope.contactSubmit = function (data) {
+    $scope.connectpplsubmit = function (data) {
         console.log("contact data-----------", data);
-        $scope.data = null;
+        NavigationService. ConnectpplSave(data, function (data) {
+        });
     }
 });

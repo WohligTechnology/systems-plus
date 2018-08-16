@@ -1,3 +1,46 @@
 /* Breakpoint for medium viewport */
 
-@include media-breakpoint-down(md) {}
+@include media-breakpoint-down(md) {
+    // .home-swiper .swiper-slide {
+    //     height: 90vh;
+    // }
+    .w100 {
+        height: 100% !important;
+        width: auto !important;
+    }
+    .scroll-cont {
+        bottom: -6.5% !important;
+    }
+    .leader-name-bg {
+        height: 18rem;
+    }
+    .insight-height {
+        min-height: 16rem;
+    }
+    .navbar-toggler {
+        position: relative;
+        float: right!important;
+        margin-right: 15px;
+        padding: 9px 10px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        background-color: transparent;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+    .navbar-expand-md .navbar-toggler {
+        display: block!important;
+    }
+    .navbar-expand-md .navbar-collapse {
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+    }
+    .collapse:not(.show) {
+        display: none!important;
+    }
+    .navbar-nav {
+        width: 100%;
+        display: block!important;
+    }
+}

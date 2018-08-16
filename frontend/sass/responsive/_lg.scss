@@ -1,3 +1,27 @@
 /* Breakpoint for medium viewport */
 
-@include media-breakpoint-up(lg) {}
+@include media-breakpoint-down(lg) {
+    .w100 {
+        height: 100% !important;
+        width: auto !important;
+    }
+    .scroll-cont {
+        bottom: -4.5%;
+    }
+    .navbar-brand {
+        margin-right: -4rem !important;
+    }
+   
+    .insight-height {
+        min-height: 10rem;
+    }
+    .home-swiper .swiper-slide .position-absolute {
+        top: 23%;
+    }
+    .leader-name-bg {
+        height: 12rem;
+    }
+    .tab-link h5 {
+        line-height: 27px;
+    }
+}
