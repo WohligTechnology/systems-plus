@@ -22,12 +22,13 @@
                     required>
             </div>
             <div class="form-group">
-                <input type="text" id="edit-experience" name="experience" value="" class="form-control" ng-model="data.experience" placeholder="Experience*"
-                    required>
+                <textarea type="text" id="edit-description" name="description" value="" class="form-control" ng-model="data.description" placeholder="Description*"
+                    required></textarea>
             </div>
-            <div class="form-group">
-                <input type="text" id="edit-cv" name="cv" value="" class="form-control" placeholder="Upload CV*" required>
-                <upload-image ng-model="data.cv"></upload-image>
+            <div class="form-group upload-cv">
+                <!-- <input type="text" id="edit-cv" name="cv" value="" class="form-control" placeholder="Upload CV*" required> -->
+         <button type="button" class="btn btn-default btn-upload">Upload CV  <upload-image ng-model="data.cv"></upload-image></button>
+
             </div>
             <div class="text-center ">
                 <button type="submit" class="btn btn-outline-danger reminder-btn" ng-click="userapply(data)">Submit</button>

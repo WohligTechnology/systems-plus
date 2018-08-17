@@ -1,0 +1,36 @@
+
+<div class="dis-miss-btn">
+    <a class="modal-close-icon " ng-click="$dismiss()">
+        <i class="fas fa-times-circle dismis-btn"></i>
+    </a>
+</div>
+<section>
+    <div class="leader-bg"></div>
+    <div class="container">
+        <div class="text-center">
+            <div class="mt-120 ">
+                <div class="leader-profile">
+                    <img src="{{leaderdata.img}}" class="img-fluid">
+                </div>
+            </div>
+            <div class="leader-name">
+                <h4 class="Merriweather-Regular pb-2 d-inline">{{leaderdata.name}}</h4>
+                <a class="text-dark" ng-href="{{leaderdata.link}}" target="_blank"><i class="fab fa-linkedin ml-1"></i></a>
+                <h6 class="Merriweather-Regular">{{leaderdata.designation}}</h6>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="detail-sec-padd">
+    <div class="container">
+        <div class="px-4">
+            <p>{{leaderdata.desc1}}</p>
+            <p>{{leaderdata.desc2}}</p>
+            <p>{{leaderdata.desc3}}</p>
+            <p>{{leaderdata.desc4}}</p>
+            <p>{{leaderdata.desc5}}</p>
+            <p>{{leaderdata.desc6}}</p>
+            <p class="mb-0">{{leaderdata.desc7}}</p>
+        </div>
+    </div>
+</section>

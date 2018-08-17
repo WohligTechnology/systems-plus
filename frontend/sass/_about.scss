@@ -53,4 +53,14 @@
      color:$dark-blue;
  }
 
- 
+ .dismis-btn{
+    font-size: 20px;
+    color: $white;
+}
+.dis-miss-btn{
+    .modal-close-icon {
+        position: absolute;
+        right: -1% !important;
+        top: -1% !important;
+    }
+}

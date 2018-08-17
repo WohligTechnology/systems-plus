@@ -1,84 +1,74 @@
-<section class="text-white footer-bg" id="contact" ng-controller="headerCtrl">
-    <!-- <div class="container">
-        <div class="footer-data py-4">
-            <div class="row ">
-                <div class="col">
-                    <div>
-                        <img src="img/logo.png" class="img-fluid" width="100">
-                        
-                        <div class="social-icon">
-                            <ul class="list-inline m-0  pt-3 list-unstyled">
-                               
-                                <li class="list-inline-item m-0 p-0 text-center">
-                                      
-                                        <a href="https://www.facebook.com/sptr.co/" target="_blank " class="icon-font">
-                                            <img src="img/facebook.png" class="img-fluid  w-75">
-                                        </a>
-                                </li> 
-                                <li class="list-inline-item m-0 p-0">
-                                        <a href="https://www.linkedin.com/company/systems-plus-transformations-limited/" target="_blank " class="icon-font">
-                                            <img src="img/linkedin.jpg" class="img-fluid  w-34">
-                                        </a>
-                                      
-                                    </li>
-                             
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
+<section class="text-white footer-bg " id="contact" ng-controller="headerCtrl">
+    <div class="container">
+        <div class="footer-data py-5 px-2 m-none">
+            <div class="row">
+                <div class="col col-xs-6">
                     <div>
                         <h6>Who We are</h6>
-                        <ul class="m-0 p-0 list-unstyled">
+                        <ul class="m-0 p-0 pt-1  list-unstyled">
                             <li>
-                                <a class="text-dark" ng-click="goToAnchor('home')">Home</a>
+                                <a class="text-dark" ng-click="goToAnchor('about')">About</a>
                             </li>
-                            <li>
-                                <a class="text-dark" ng-click="goToAnchor('aboutus')">About Us</a>
-                            </li>
-                           
-                        </ul>
-                    </div>
-                </div>
-                <div class="col">
-                    <div>
-                        <h6>What We Do</h6>
-                        <ul class=" m-0 p-0 list-unstyled ">
-                            <li>
-                                <a class="text-dark" ng-click="goToAnchor('service')">Services</a>
-                            </li>
-                            <li>
-                                <a class="text-dark" ng-click="goToAnchor('product')">Products</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col ">
-                    <div>
-                        <h6>Knowledge</h6>
-                        <ul class=" m-0 p-0 list-unstyled ">
                             <li>
                                 <a class="text-dark" ng-click="goToAnchor('insight')">Insights</a>
                             </li>
+                            <li>
+                                    <a class="text-dark" ui-sref="privacy">Privacy Policy</a>
+                                </li>
+                            <!-- <li>
+                                <a class="text-dark" ng-click="goToAnchor('home')">Home</a>
+                            </li> -->
+
                         </ul>
                     </div>
                 </div>
-                <div class="col ">
+                <div class="col col-xs-6">
                     <div>
-                        <h6 class="d-inline-block">
-                            <span class="pr-1">Offices</span>
-                            <i class="fas fa-map-marker-alt"></i>
-                        </h6>
-                
-                        <ul class="m-0 p-0 list-unstyled text-dark  ">
+                        <h6>What We Do</h6>
+                        <ul class=" m-0 p-0 pt-1 list-unstyled ">
                             <li>
-                                Pune
+                                <a class="text-dark" ng-click="goToAnchor('service')">IRC</a>
                             </li>
                             <li>
-                                Mumbai
+                                <a class="text-dark" ng-click="goToAnchor('service')">BI &amp; Analytics</a>
                             </li>
                             <li>
-                                London
+                                <a class="text-dark" ng-click="goToAnchor('service')">ADM</a>
+                            </li>
+                            <li>
+                                <a class="text-dark" ng-click="goToAnchor('service')">Digital Services</a>
+                            </li>
+                            <li>
+                                <a class="text-dark" ng-click="goToAnchor('service')">Enterprise Solutions</a>
+                            </li>
+                            <li>
+                                <a class="text-dark" ng-click="goToAnchor('service')">Testing &amp; QA</a>
+                            </li>
+                            <!-- <li>
+                                <a class="text-dark" ng-click="goToAnchor('product')">Products</a>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="col col-xs-6">
+                    <div>
+                        <h6>Our Products</h6>
+                        <ul class=" m-0 p-0 pt-1 list-unstyled ">
+                            <li>
+                                <a class="text-dark" ng-click="goToAnchor('product')">ISee : Retail Solution</a>
+                            </li>
+                            <li>
+                                <a class="text-dark" ng-click="goToAnchor('product')">ShopMyWay</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col col-xs-6">
+                    <div>
+                        <h6 class="d-inline-block">Contact</h6>
+                        <ul class="m-0 p-0 pt-1 list-unstyled text-dark">
+                            <li>
+                                <a class="text-dark" ui-sref="careers">Career</a>
                             </li>
                         </ul>
                     </div>
@@ -88,18 +78,136 @@
                         </a>
                     </div>
                 </div>
+                <div class="col col-xs-6">
+                    <div class="">
+                        <div class="text-right">
+                            <h6 class="d-inline-block">
+                                Connect With Us </h6>
+                        </div>
+                        <div class="social-icon text-center">
+                            <ul class="list-inline m-0  pt-2 list-unstyled">
+                                <li class="list-inline-item m-0 p-0 text-center">
+                                    <a href="https://www.facebook.com/sptr.co/" target="_blank " class="">
+                                        <!-- <img src="img/facebook.png" class="img-fluid  w-75"> -->
+                                        <!-- <i class="fab fa-facebook-f icon-fb"></i> -->
+                                        <i class="fab fa-facebook  f-25  icon-fb"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item m-0 p-0">
+                                    <a href="https://www.linkedin.com/company/systems-plus-transformations-limited/" target="_blank " class="">
+                                        <!-- <img src="img/linkedin.jpg" class="img-fluid  w-34"> -->
+                                        <i class="fab fa-linkedin  ml-1 icon-fb f-25"></i>
+                                        <!-- <i class="fab fa-linkedin-in icon-fb"></i> -->
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div> -->
-  <div class="footer-strip p-2">
+        <div class="row py-3 d-sm-none ">
+            <div class="col-xs-12 footer-accordian">
+                <div class="contact-card career-card px-3 mt-3">
+                    <uib-accordion close-others="oneAtATime">
+                        <div uib-accordion-group class="mt-1" heading="Who We are" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
+                            <div class="cat-ul">
+                                <ul class="m-0 p-0 pt-1  list-unstyled">
+                                    <li>
+                                        <a class="text-dark" ng-click="goToAnchor('about')">About</a>
+                                    </li>
+                                    <li>
+                                        <a class="text-dark" ng-click="goToAnchor('insight')">Insights</a>
+                                    </li>
+                                    <li>
+                                            <a class="text-dark" ui-sref="privacy">Privacy Policy</a>
+                                        </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div uib-accordion-group class="mt-1" heading="What We Do">
+                            <div class="cat-ul">
+                                <ul class=" m-0 p-0 pt-1 list-unstyled ">
+                                    <li>
+                                        <a class="text-dark" ng-click="goToAnchor('service')">IRC</a>
+                                    </li>
+                                    <li>
+                                        <a class="text-dark" ng-click="goToAnchor('service')">BI &amp; Analytics</a>
+                                    </li>
+                                    <li>
+                                        <a class="text-dark" ng-click="goToAnchor('service')">ADM</a>
+                                    </li>
+                                    <li>
+                                        <a class="text-dark" ng-click="goToAnchor('service')">Digital Services</a>
+                                    </li>
+                                    <li>
+                                        <a class="text-dark" ng-click="goToAnchor('service')">Enterprise Solutions</a>
+                                    </li>
+                                    <li>
+                                        <a class="text-dark" ng-click="goToAnchor('service')">Testing &amp; QA</a>
+                                    </li>
+                                    <!-- <li>
+                                                    <a class="text-dark" ng-click="goToAnchor('product')">Products</a>
+                                                </li> -->
+                                </ul>
+                            </div>
+                        </div>
+                        <div uib-accordion-group class="mt-1" heading="Our Products">
+                            <div class="cat-ul">
+                                <ul class=" m-0 p-0 pt-1 list-unstyled ">
+                                    <li>
+                                        <a class="text-dark" ng-click="goToAnchor('product')">ISee : Retail Solution</a>
+                                    </li>
+                                    <li>
+                                        <a class="text-dark" ng-click="goToAnchor('product')">ShopMyWay</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div uib-accordion-group class="mt-1" heading="Contact">
+                            <div class="cat-ul">
+                                <ul class="m-0 p-0 pt-1 list-unstyled text-dark">
+                                    <li>
+                                        <a class="text-dark" ui-sref="careers">Career</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </uib-accordion>
+                </div>
+            </div>
+            <div class=" col-xs-12">
+                <div class="my-4 pl-4">
+                    <div class=" ">
+                        <h6 class="conncet-us ml-2"> Connect With Us </h6>
+                    </div>
+                    <div class="social-icon ml-2">
+                        <ul class="list-inline m-0  pt-2 list-unstyled">
+                            <li class="list-inline-item m-0 p-0 text-center">
+                                <a href="https://www.facebook.com/sptr.co/" target="_blank " class="">
+                                    <i class="fab fa-facebook  f-25  icon-fb"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item m-0 p-0">
+                                <a href="https://www.linkedin.com/company/systems-plus-transformations-limited/" target="_blank " class="">
+                                    <i class="fab fa-linkedin  ml-1 icon-fb f-25"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-strip p-2">
         <div class="container">
-         <div class="row text-white">
-                <div class="col-sm-4 text-sm-left  text-cen pl-4">
+            <div class="row text-white">
+                <div class="col-sm-6 text-sm-left  text-cen pl-4">
                     <p class="m-0 py-2">
                         2018 © Systems Plus Transformations
                     </p>
                 </div>
-                <div class="col-sm-4 text-center">
+                <!-- <div class="col-sm-4 text-center">
                     <p class="m-0 py-2">
                         <a href="https://www.facebook.com/sptr.co/" target="_blank">
                             <i class="fab fa-facebook text-white f-25 mr-1"></i>
@@ -108,19 +216,19 @@
                             <i class="fab fa-linkedin text-white ml-1 f-25"></i>
                         </a>
                     </p>
-                </div>
-                <div class="col-sm-4  text-sm-right text-cen">
+                </div> -->
+                <div class="col-sm-6  text-sm-right text-cen">
                     <p class=" m-0 py-2">
                         <a href="https://www.wohlig.com/" target="_blank" class="text-white"> Designed & Developed By Wohlig </a>
                     </p>
                 </div>
-         </div>
+            </div>
             <div class="">
-                    <a class="scrolltotop" ng-click="scrollTop()">
-                        <!-- <i class="far fa-arrow-alt-circle-up"></i> -->
-                        <i class="fas fa-long-arrow-alt-up"></i>
-                    </a>
-                </div>
+                <a class="scrolltotop" ng-click="scrollTop()">
+                    <!-- <i class="far fa-arrow-alt-circle-up"></i> -->
+                    <i class="fas fa-long-arrow-alt-up"></i>
+                </a>
+            </div>
         </div>
     </div>
 </section>

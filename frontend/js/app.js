@@ -58,6 +58,11 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             templateUrl: tempateURL,
             controller: 'LinksCtrl'
         })
+        .state('privacy', {
+            url: "/privacy",
+            templateUrl: tempateURL,
+            controller: 'PrivacyCtrl'
+        })
         .state('leadership', {
             url: "/leadership/:id",
             templateUrl: tempateURL,

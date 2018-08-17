@@ -272,6 +272,9 @@ footer {
     }
 
 } 
+.icon-fb{
+    color:$gray;
+}
 a:hover{
     text-decoration: none !important;
 }
@@ -559,10 +562,19 @@ h2 {
         padding-bottom: 0.5rem
     }
     h6 {
-        color: #043c77;
+        color: $gray;
+        font-weight: 600;
+        font-family: 'Merriweather-Regular';
     }
 }
-
+.conncet-us{
+    color: $gray-dark;
+ font-size: 1rem;
+    
+}
+.foo-social-icon{
+    margin-left: 70px;
+}
 .footer-strip {
     background: $dark-blue;
     font-size: 0.8rem;
@@ -571,7 +583,7 @@ h2 {
 .scrolltotop {
     padding: 5px 15px;
     background: $dark-blue;
-    bottom: 7%;
+    bottom: 6%;
     position: fixed;
     right: 20px;
     text-align: center;
@@ -581,7 +593,24 @@ h2 {
         color: $white;
     }
 }
-
+.footer-accordian{
+    h5{
+        font-size: 1rem;
+    }
+    .career-card .card-header {
+        padding: 0.75rem 13.25rem 0.75rem 1rem !important;
+    }
+    .cat-ul ul li {
+       
+        padding: 5px 5px 5px 0px;
+    }
+    .cat-ul ul li:before {
+        background: none;
+    }
+    .card-body {
+        padding: 0.3rem 1.25rem 0rem !important;
+    }
+}
 .contact-Address-bg {
     // background: #9999;
     p {

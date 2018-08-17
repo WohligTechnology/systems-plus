@@ -54,6 +54,7 @@ module.exports = [
   'frontend/views/content/product/product.js',
   'frontend/views/content/careers/careers.js',
   'frontend/views/content/leadership/leadership.js',
+  'frontend/views/content/privacy/privacy.js',
   'frontend/js/controllers/header-controller.js',
   'frontend/js/controllers/language-controller.js',
 ];

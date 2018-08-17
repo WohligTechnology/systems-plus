@@ -1,8 +1,10 @@
 myApp.controller('headerCtrl', function ($scope, TemplateService, $state, $timeout) {
     $scope.template = TemplateService;
+    $scope.oneAtATime = true;
     $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
         $(window).scrollTop(0);
     });
+
     $(window).scroll(function () {
         if ($(document).scrollTop() > 400) {
             // $(".logo").css("width", '12%');

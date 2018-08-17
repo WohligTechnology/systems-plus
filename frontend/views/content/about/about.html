@@ -42,7 +42,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-3 col-xs-12" ng-repeat="leader in leadership">
-                    <div class="bg-white  hover-anime-v position-relative whitepaper-main m-mr" ui-sref="leadership({id:leader.id})">
+                    <div class="bg-white  hover-anime-v position-relative whitepaper-main m-mr" ng-click="openVivekModal(leader.id)">
                         <img src="{{leader.img}}" width="100%">
                         <div class="leader-name-bg px-3 py-3 text-cen">
                             <h6 class="text-uppercase mb-1  whitepaper-color Merriweather-Regular">{{leader.name}}</h6>
@@ -56,7 +56,7 @@
             </div>
             <div class="row pt-sm-5">
                 <div class="col-sm-3 col-xs-12" ng-repeat="leader in leadership2">
-                    <div class="bg-white  hover-anime-v position-relative whitepaper-main m-mr" ui-sref="leadership({id:leader.id})">
+                    <div class="bg-white  hover-anime-v position-relative whitepaper-main m-mr" ng-click="openVivekModal(leader.id)">
                         <img src="{{leader.img}}" width="100%">
                         <div class="leader-name-bg px-3 py-3 text-cen">
                             <h6 class="text-uppercase mb-1  whitepaper-color Merriweather-Regular d-inline">{{leader.name}}</h6>
@@ -70,7 +70,7 @@
         </div>
     </div>
 </section>
-<section id="partners">
+<!-- <section id="partners">
     <div class="sister-bg position-relative">
         <div class="compy-overlay position-absolute">
         </div>
@@ -103,4 +103,4 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->

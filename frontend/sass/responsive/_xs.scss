@@ -3,7 +3,7 @@
 @include media-breakpoint-down(xs) {
     //footer
     .scrolltotop {
-        bottom: 19%;
+        bottom: 13%;
         right: 10px;
     }
     .navbar-toggler {
@@ -88,11 +88,11 @@
         padding: 15px 80px;
     }
     .hori-line {
-        top: 313px !important;
+        top: 286px !important;
         left: 39% !important;
     }
     .hori-line-left {
-        top: 290px !important;
+        top: 267px !important;
         left: 50% !important;
     }
     .cont-mar-top {
@@ -132,9 +132,13 @@
     .card-body {
         padding: 1rem 1.25rem 0rem !important;
     } //career
-    .career-card {
-        .card-header {
-            padding: 0.75rem 7.25rem 0.75rem 1rem !important;
+
+    .footer-accordian{
+        .career-card {
+            .card-header {
+                padding: 0.75rem 13.25rem 0.75rem 0.6rem !important;
+            }
         }
     }
+  
 }
