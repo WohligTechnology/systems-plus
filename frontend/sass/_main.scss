@@ -478,6 +478,21 @@ h2 {
     -webkit-box-shadow: rgba(0, 0, 0, 0.11) 0px 0px 12px;
     -moz-box-shadow: rgba(0, 0, 0, 0.11) 0px 0px 12px;
     -o-box-shadow: rgba(0, 0, 0, 0.11) 0px 0px 12px;
+
+   
+}
+.nav{
+    li:last-child{
+      
+        a{
+            color: $dark-blue !important;
+            border: 1px solid $dark-blue !important;
+            padding: 5px 15px !important;
+            margin: 10px 5px 10px 13px;
+          
+        }
+        
+    }
 }
 
 .navbar-expand-md .navbar-nav .nav-link {

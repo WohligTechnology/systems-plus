@@ -43,7 +43,7 @@
             <div class="row">
                 <div class="col-sm-3 col-xs-12" ng-repeat="leader in leadership">
                     <div class="bg-white  hover-anime-v position-relative whitepaper-main m-mr" ng-click="openVivekModal(leader.id)">
-                        <img src="{{leader.img}}" width="100%">
+                       <a> <img src="{{leader.img}}" width="100%"></a>
                         <div class="leader-name-bg px-3 py-3 text-cen">
                             <h6 class="text-uppercase mb-1  whitepaper-color Merriweather-Regular">{{leader.name}}</h6>
 
@@ -57,7 +57,7 @@
             <div class="row pt-sm-5">
                 <div class="col-sm-3 col-xs-12" ng-repeat="leader in leadership2">
                     <div class="bg-white  hover-anime-v position-relative whitepaper-main m-mr" ng-click="openVivekModal(leader.id)">
-                        <img src="{{leader.img}}" width="100%">
+                        <a><img src="{{leader.img}}" width="100%"></a>
                         <div class="leader-name-bg px-3 py-3 text-cen">
                             <h6 class="text-uppercase mb-1  whitepaper-color Merriweather-Regular d-inline">{{leader.name}}</h6>
                             <p class="mb-0 designation">{{leader.designation}}
