@@ -12,7 +12,7 @@ myApp.factory('NavigationService', function ($http) {
             ]
         },
         {
-            name: "about",
+            name: "about Us",
             classis: "active",
             anchor: "about",
             id: "about",
@@ -40,7 +40,7 @@ myApp.factory('NavigationService', function ($http) {
             subnav: []
         },
         {
-            name: "Career",
+            name: "Careers",
             classis: "active",
             anchor: "careers",
             id: "Careers",

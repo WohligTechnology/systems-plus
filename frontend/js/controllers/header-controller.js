@@ -38,4 +38,6 @@ myApp.controller('headerCtrl', function ($scope, TemplateService, $state, $timeo
             scrollTop: $('body,html').offset().top - 100
         }, 3000);
     }
+
+
 });

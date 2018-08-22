@@ -3,7 +3,10 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
     $scope.template = TemplateService.getHTML("content/home/home.html");
     TemplateService.title = "Home"; //This is the Title of the Website
     $scope.navigation = NavigationService.getNavigation();
-
+    
+     
+  
+    
     $scope.submitForm = function (data) {
         console.log("This is it");
         return new Promise(function (callback) {
@@ -97,4 +100,13 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         NavigationService.InsightSave(data, function (data) {
         });
     }
+    $scope.goTobottom = function (id) {
+        if (id) {
+            $timeout(function () {
+                $('html,body').animate({
+                    scrollTop: $('#' + id).offset().top - 70
+                }, "slow");
+            }, 500);
+        }
+    };
 })
