@@ -10,6 +10,10 @@
 <div class="modal-body p-4" id="modal-body">
     <form>
         <form class="text-dark" name="contact">
+             <div class="form-group">
+                        <input type="text" id="edit-fname" name="title" value="" class="form-control " placeholder="Title*" 
+                            ng-model="data.title" required>
+                    </div>
             <div class="form-group">
                 <input type="text" id="edit-fname" name="fname" value="" class="form-control " placeholder="First Name*" only-letters-input
                     ng-model="data.fname" required>
@@ -24,7 +28,9 @@
             <div class="form-group">
                 <input type="text" id="edit-company" name="company" value="" class="form-control " placeholder="Company *" required ng-model="data.company">
             </div>
-
+            <div class="form-group">
+                    <input type="tel" id="edit-businesscontact" name="businesscontact" value="" class="form-control " placeholder="Business Contact" ng-model="data.businesscontact">
+                </div>
             <div class="text-center ">
                 <button type="submit" class="btn btn-outline-danger reminder-btn" ng-click="insightSubmit(data)">Submit</button>
             </div>

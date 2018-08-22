@@ -17,11 +17,11 @@
                                 <a ng-if="s.link  && s.cat=='service'" role="button" class="btn btn-know-more  Lato-Light" ui-sref="service({serviceId:'{{s.link}}'})">Know More</a>
                             -->
                                 <button type="button" class="btn btn-know-more  Lato-Light" ui-sref="{{s.link}}" ng-if="s.link && s.cat!='service'">Know More</button>
-                                <button type="button" class="btn btn-know-more  Lato-Light" ui-sref="service({serviceId:'{{s.link}}'})" ng-if="s.link  && s.cat=='service'">Know More</button>
+                                <button type="button" class="btn btn-know-more  Lato-Light" ui-sref="solutions({serviceId:'{{s.link}}'})" ng-if="s.link  && s.cat=='service'">Know More</button>
                            </div>
                         </div>
-                        <div class="service-overlay">
-                        </div>
+                        <!-- <div class="service-overlay">
+                        </div> -->
                     </div>
                </div>
                 <div class="swiper-pagination"></div>

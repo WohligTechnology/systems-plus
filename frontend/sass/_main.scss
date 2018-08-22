@@ -273,7 +273,7 @@ footer {
 
 } 
 .icon-fb{
-    color:$gray;
+    color:$white;
 }
 a:hover{
     text-decoration: none !important;
@@ -535,7 +535,14 @@ h2 {
     -moz-box-shadow: rgba(0, 0, 0, 0.11) 0px 0px 12px;
     -o-box-shadow: rgba(0, 0, 0, 0.11) 0px 0px 12px;
 }
-
+.privacy-bor::after{
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 20px;
+      background: $white;
+      top:9px;
+}
 // .contact-bg {
 //     background-image: url("../img/home/contact-bg.png");
 //     background-position: center center;
@@ -598,7 +605,7 @@ h2 {
 .scrolltotop {
     padding: 5px 15px;
     background: $dark-blue;
-    bottom: 6%;
+    bottom: 14%;
     position: fixed;
     right: 20px;
     text-align: center;

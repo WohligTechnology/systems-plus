@@ -12,7 +12,8 @@ myApp.controller('ServiceCtrl', function ($scope, TemplateService, NavigationSer
     };
     //connect us modal
 
-    $scope.connectppl = function () {
+    $scope.connectppl = function (name) {
+        $scope.modaltitle = name;
         $uibModal.open({
             animation: true,
             templateUrl: "views/modal/connectppl.html",
@@ -25,4 +26,7 @@ myApp.controller('ServiceCtrl', function ($scope, TemplateService, NavigationSer
         NavigationService. ConnectpplSave(data, function (data) {
         });
     }
+
+    
+
 });

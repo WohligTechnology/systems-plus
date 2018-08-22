@@ -9274,7 +9274,7 @@ footer {
     margin: 0; }
 
 .icon-fb {
-  color: #464a4c; }
+  color: #fff; }
 
 a:hover {
   text-decoration: none !important; }
@@ -9492,6 +9492,14 @@ h2 {
   -moz-box-shadow: rgba(0, 0, 0, 0.11) 0px 0px 12px;
   -o-box-shadow: rgba(0, 0, 0, 0.11) 0px 0px 12px; }
 
+.privacy-bor::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 20px;
+  background: #fff;
+  top: 9px; }
+
 .contact-bg {
   background-image: url("../img/contact.jpg");
   background-position: 50% 80% !important; }
@@ -9541,7 +9549,7 @@ h2 {
 .scrolltotop {
   padding: 5px 15px;
   background: #053d78;
-  bottom: 6%;
+  bottom: 14%;
   position: fixed;
   right: 20px;
   text-align: center;
@@ -10110,7 +10118,7 @@ h1 {
   margin-bottom: 45px; }
 
 .w33 {
-  width: 30%;
+  width: 33%;
   background: #fff;
   padding-right: 37px;
   padding-left: 15px; }
@@ -10158,26 +10166,17 @@ h1 {
   border: 1px solid #db2147;
   background: #db2147; }
 
+.cat-ul {
+  height: 446px;
+  overflow-y: scroll; }
+
 .cat-ul ul li {
   padding: 7px 22px;
   color: #636c72;
-  padding: 10px 27px;
+  padding: 10px 0px;
   font-size: 1.2rem;
   font-family: 'OpenSans-Regular' !important;
   position: relative; }
-
-.cat-ul ul li:before {
-  content: '';
-  width: 12px;
-  height: 12px;
-  background: url(../img/tick.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  position: absolute;
-  color: #db1f45;
-  left: 0;
-  top: 19px; }
 
 .cat-left-content h5:hover:before,
 .cat-left-content h5.current:before {
@@ -10208,6 +10207,28 @@ h1 {
   color: #fff;
   background: #053d78;
   padding: 8px 0px !important; }
+
+.devops {
+  color: #636c72;
+  padding: 10px 27px;
+  font-size: 1.2rem;
+  font-family: 'OpenSans-Regular' !important;
+  position: relative; }
+
+.lead-mar {
+  margin: 0px 20px !important; }
+
+.lead-developer {
+  font-size: 1.2rem;
+  color: #636c72;
+  font-weight: 600;
+  font-family: 'OpenSans-Regular' !important; }
+
+.commn-para {
+  margin: 10px 40px;
+  font-size: 1.1rem;
+  color: #636c72;
+  font-family: 'OpenSans-Regular' !important; }
 
 .leader-bg {
   background: -webkit-gradient(linear, left top, right top, from(#053b73), color-stop(50%, #1774d0), to(#063e78));
@@ -10469,4 +10490,6 @@ h1 {
   .card-body {
     padding: 1rem 1.25rem 0rem !important; }
   .footer-accordian .career-card .card-header {
-    padding: 0.75rem 13.25rem 0.75rem 0.6rem !important; } }
+    padding: 0.75rem 13.25rem 0.75rem 0.6rem !important; }
+  .nav li:last-child a {
+    margin: 10px 115px 42px 114px; } }

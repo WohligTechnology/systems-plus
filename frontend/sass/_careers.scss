@@ -9,7 +9,7 @@
 
 .w33 {
     // width: 33%;
-    width: 30%;
+    width: 33%;
     background: $white;
     padding-right: 37px;
     padding-left: 15px;
@@ -67,29 +67,33 @@
         background: $dark-red;
     }
 }
-
+.cat-ul{
+    height: 446px;
+    overflow-y: scroll;
+}
 .cat-ul ul li {
     padding: 7px 22px;
     color: $gray-light;
-    padding: 10px 27px;
+    // padding: 10px 27px;
+    padding: 10px 0px;
     font-size: 1.2rem;
     font-family: 'OpenSans-Regular' !important;
     position: relative;
 }
 
-.cat-ul ul li:before {
-    content: '';
-    width: 12px;
-    height: 12px;
-    background: url(../img/tick.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    position: absolute;
-    color: #db1f45;
-    left: 0;
-    top: 19px;
-}
+// .cat-ul ul li:before {
+//     content: '';
+//     width: 12px;
+//     height: 12px;
+//     background: url(../img/tick.png);
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: cover;
+//     position: absolute;
+//     color: #db1f45;
+//     left: 0;
+//     top: 19px;
+// }
 
 .cat-left-content h5:hover:before,
 .cat-left-content h5.current:before {
@@ -145,4 +149,26 @@ opacity: 0;
     background: $dark-blue;
     padding: 8px 0px !important;
 }
- 
+ .devops{
+    color: #636c72;
+    padding: 10px 27px;
+    font-size: 1.2rem;
+    font-family: 'OpenSans-Regular' !important;
+    position: relative;
+ }
+ .lead-mar{
+       margin: 0px 20px !important;
+ }
+ .lead-developer{
+    //  margin: 0px 20px;
+    font-size: 1.2rem;
+    color: #636c72;
+    font-weight: 600;
+    font-family: 'OpenSans-Regular' !important;
+ }
+ .commn-para{
+    margin: 10px 40px;
+    font-size: 1.1rem;
+    color: #636c72;
+    font-family: 'OpenSans-Regular' !important;
+ }

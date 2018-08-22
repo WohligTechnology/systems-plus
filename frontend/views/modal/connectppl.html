@@ -4,14 +4,20 @@
         </a>
         <div class="text-center">
             <h6 class="Merriweather-Regular color-dark-red">Lets Talk</h6>
-            <p class="m-0 ">We are keen to know about your needs.</p>
+            <p class="m-0 ">
+                    We are keen to know about your <strong>{{modaltitle}}</strong> needs.
+            </p>
         </div>
     </div>
     <div class="modal-body p-4" id="modal-body">
         <form>
             <form class="text-dark" name="contact">
+                    <div class="form-group">
+                            <input type="text" id="edit-title" name="tilt" value="" class="form-control down-form_input" placeholder="Title*" only-letters-input
+                                ng-model="data.title" required>
+                        </div>
                 <div class="form-group">
-                    <input type="text" id="edit-fname" name="fname" value="" class="form-control down-form_input" placeholder="Name *" only-letters-input
+                    <input type="text" id="edit-fname" name="fname" value="" class="form-control down-form_input" placeholder="Name*" only-letters-input
                         ng-model="data.fname" required>
                 </div>
                 <div class="form-group">

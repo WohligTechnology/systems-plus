@@ -39,28 +39,37 @@
                 <div class="position-relative">
                     <div class="h-75 pl-3">
                         <div class="tab-link">
-                            <h5 ng-click="changetab('ba')" ng-class="{'current':showdata == 'ba' }">C4C Business Analyst
+                            <h5 ng-click="changetab('ba')" ng-class="{'current':showdata == 'ba' }">Senior Java Developer
                                 <span>
                                     <i class="fas fa-angle-right  f-15"></i>
                                 </span>
                             </h5>
-                            <h5 ng-click="changetab('php')" ng-class="{'current':showdata == 'php' }">C4C Business Analyst
+                            <h5 ng-click="changetab('php')" ng-class="{'current':showdata == 'php' }">DevOps Engineer
                                 <span>
                                     <i class="fas fa-angle-right  f-15"></i>
                                 </span>
                             </h5>
-                            <h5 ng-click="changetab('node')" ng-class="{'current':showdata == 'node' }">C4C Business Analyst
+                            <h5 ng-click="changetab('bigdata')" ng-class="{'current':showdata == 'bigdata' }">Big Data Developer
                                 <span>
                                     <i class="fas fa-angle-right f-15"></i>
                                 </span>
                             </h5>
-                            <h5 ng-click="changetab('mongo')" ng-class="{'current':showdata == 'mongo' }">C4C Business Analyst
+                            <h5 ng-click="changetab('cicd')" ng-class="{'current':showdata == 'cicd' }">CI/CD
+                                <span>
+                                    <i class="fas fa-angle-right  f-15"></i>
+                                </span>
+                            </h5>
+                            <h5 ng-click="changetab('aws')" ng-class="{'current':showdata == 'aws' }">AWS_Glue_Developer
+                                <span>
+                                    <i class="fas fa-angle-right  f-15"></i>
+                                </span>
+                            </h5>
+                            <h5 ng-click="changetab('dotnet')" ng-class="{'current':showdata == 'dotnet' }">Dot Net Developer
                                 <span>
                                     <i class="fas fa-angle-right  f-15"></i>
                                 </span>
                             </h5>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -69,34 +78,177 @@
                     <div class="content-hight">
                         <div ng-if="showdata == 'ba'">
                             <div class="cat-ul">
-                                <ul class="list-unstyled">
+                                <ul class="">
                                     <li ng-repeat="cardata in careerdetail">{{cardata.list}}
                                     </li>
                                 </ul>
+                                <!-- <h5 class="mt-3 ml-3"><strong>Kindly share profiles on </strong> <a>careers@sptr.co</a></h5> -->
                             </div>
                         </div>
                         <div ng-if="showdata == 'php'">
                             <div class="cat-ul">
-                                <ul class="list-unstyled">
-                                    <li ng-repeat="cardata in careerdetail">{{cardata.list}}
+                                <div class="lead-developer">
+                                    Lead Developer : 5-8 years Minimum Experience
+                                    <br> Mid/Junior Developer :  4-5 years of experience
+
+                                </div>
+                                <ul class="">
+                                    <li ng-repeat="cardata in devops">{{cardata.list}}
+                                    </li>
+                                </ul>
+                                <div>
+                                  <p class="lead-developer lead-mar">Preferable Candidate</p> 
+                                   <p class="commn-para">Containerisation platforms preferable</p> 
+                                    <p class="lead-developer lead-mar">Long term Onsite Opportunity
+                                    </p>
+                                    <p class="lead-developer mt-2 lead-mar">Highly Competitive Compensation
+                                    </p>
+                                    <h5 class="mt-2 lead-mar">
+                                     <span class="lead-developer">Kindly share profiles on</span>  
+                                        careers@sptr.co
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-if="showdata == 'bigdata'">
+                            <div class="cat-ul">
+                                <div class="lead-developer lead-mar">
+                                    Lead Developer : 5-8 years Minimum Experience
+                                    <br> Mid/Junior Developer :  4-5 years of experience
+                                </div>
+                                <div class="lead-developer lead-mar mt-2">
+                                    Mandatory Skills :
+                                </div>
+                                <ul class=" ">
+                                    <li ng-repeat="cardata in bigdata">{{cardata.list}}
+                                    </li>
+                                </ul>
+                                <div class="lead-developer lead-mar">
+                                    Preferable Candidate :
+                                </div>
+                                <ul class=" ">
+                                    <li ng-repeat="cardata in bigdata2">{{cardata.list}}
+                                    </li>
+                                </ul>
+                                <div class="commn-para font-weight-bold lead-mar">
+                                    Excellent Communication Skill.
+                                    <br> Long term Onsite Opportunity.
+                                    <br> Highly Competitive Compensation.
+                                </div>
+                                <div class="mt-3">
+                                        <h5 class="lead-mar">
+                                                <span class="lead-developer">Kindly share profiles on</span>  
+                                                   careers@sptr.co
+                                               </h5>
+                                </div>
+                              
+                            </div>
+                        </div>
+                        <div ng-if="showdata == 'cicd'">
+                            <div class="cat-ul">
+                                <div class="lead-developer lead-mar">
+                                    JD: Senior Software Delivery Manager –
+                                </div>
+                                <ul class=" ">
+                                    <li ng-repeat="cardata in cicd">{{cardata.list}}
+                                    </li>
+                                </ul>
+                                <div class="lead-developer lead-mar">
+                                    Senior Software Delivery Manager –
+                                </div>
+                                <ul class=" ">
+                                    <li ng-repeat="cardata in cicd">{{cardata.list}}
+                                    </li>
+                                </ul>
+                                <div class="lead-developer lead-mar">
+                                    Preferred Technology Platforms
+                                </div>
+                                <ul class=" ">
+                                    <li ng-repeat="cardata in cicd3">{{cardata.list}}
+                                    </li>
+                                </ul>
+                                <div class="lead-developer lead-mar">
+                                    Database
+                                </div>
+                                <ul class=" ">
+                                    <li ng-repeat="cardata in cicd4">{{cardata.list}}
+                                    </li>
+                                </ul>
+                                <div class="lead-developer lead-mar">
+                                    Tools
+                                </div>
+                                <ul class=" ">
+                                    <li ng-repeat="cardata in cicd5">{{cardata.list}}
+                                    </li>
+                                </ul>
+                                <div class="lead-developer lead-mar">
+                                    Desirable:
+                                </div>
+                                <ul class=" ">
+                                    <li ng-repeat="cardata in cicd6">{{cardata.list}}
+                                    </li>
+                                </ul>
+                                <div class="lead-developer lead-mar">
+                                     Software Delivery Engineer 
+                                </div>
+                                <div>
+                                   <p class="commn-para"> Strong software engineering background with experience in either .NET or Java technologies.</p> 
+                                   <p class="commn-para">Strong experience in toolset that supports automated software delivery (i.e. GitHub, Jenkins, Octopus Deploy, Packer, Terraform, Artifactory, Puppet and Ansible).</p>
+                                    <p class="commn-para">Strong analytical and design skills  </p>
+
+                                </div>
+                                <div class="lead-developer lead-mar">
+                                    Ability to communicate well
+                                </div>
+                                <ul class=" ">
+                                    <li ng-repeat="cardata in cicd7">{{cardata.list}}
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div ng-if="showdata == 'node'">
+                        <div ng-if="showdata == 'aws'">
                             <div class="cat-ul">
-                                <ul class=" list-unstyled">
-                                    <li ng-repeat="cardata in careerdetail">{{cardata.list}}
-                                    </li>
-                                </ul>
+                                <div class="lead-developer lead-mar">
+                                    AWS Glue Developer with 4-7 years’ experience.
+                                </div>
+                                <div class=" mt-2 lead-mar">
+                                       <span class="lead-developer ">Kindly share profiles on</span>  careers@sptr.co
+
+                                </div>
                             </div>
                         </div>
-                        <div ng-if="showdata == 'mongo'">
+                        <div ng-if="showdata == 'dotnet'">
                             <div class="cat-ul">
-                                <ul class="list-unstyled ">
-                                    <li ng-repeat="cardata in careerdetail">{{cardata.list}}
+                                <div class="lead-developer lead-mar">
+                                        Dot Net Developer
+                                </div>
+                                <div>
+                                    <p class="commn-para">We are looking for Dot Net Developer with relevant 2.5 years’ to 3.8 years’ experience:
+                                    </p>
+                                    <p  class="commn-para">We are looking for a dot net developer with the following technologies with immediate
+                                        joining.</p>
+                                </div>
+                                <div class="lead-developer lead-mar">
+                                    Skills :
+                                </div>
+                                <ul class=" ">
+                                    <li ng-repeat="cardata in dotnet">{{cardata.list}}
                                     </li>
                                 </ul>
+                                <div class="lead-developer lead-mar">
+                                    Preferable Candidate :
+                                </div>
+                                <ul class=" ">
+                                    <li ng-repeat="cardata in bigdata2">{{cardata.list}}
+                                    </li>
+                                </ul>
+                                <div>
+                                    <h5 class="mt-2 lead-mar">
+                                   <span class="lead-developer ">Kindly share profiles on </span>  
+                                       careers@sptr.co
+                                    </h5>
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -114,7 +266,7 @@
                     <uib-accordion close-others="oneAtATime">
                         <div uib-accordion-group class="mt-1" heading="C4C Business Analyst" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
                             <div class="cat-ul">
-                                <ul class="list-unstyled ">
+                                <ul class=" ">
                                     <li ng-repeat="cardata in careerdetail">{{cardata.list}}
                                     </li>
                                 </ul>
@@ -122,7 +274,7 @@
                         </div>
                         <div uib-accordion-group class="mt-1" heading="C4C Business Analyst">
                             <div class="cat-ul">
-                                <ul class="list-unstyled ">
+                                <ul class=" ">
                                     <li ng-repeat="cardata in careerdetail">{{cardata.list}}
                                     </li>
                                 </ul>
@@ -130,7 +282,7 @@
                         </div>
                         <div uib-accordion-group class="mt-1" heading="C4C Business Analyst">
                             <div class="cat-ul">
-                                <ul class="list-unstyled mb-0">
+                                <ul class=" mb-0">
                                     <li ng-repeat="cardata in careerdetail">{{cardata.list}}
                                     </li>
                                 </ul>
@@ -139,12 +291,12 @@
                     </uib-accordion>
                 </div>
                 <div class="text-center mt-5">
-                        <p>
-                            <a class="learn-more text-right p-2 no-underline px-4" role="button" ng-click="applymodal()">APPLY NOW</a>
-                        </p>
-                    </div>
+                    <p>
+                        <a class="learn-more text-right p-2 no-underline px-4" role="button" ng-click="applymodal()">APPLY NOW</a>
+                    </p>
+                </div>
             </div>
         </div>
-       
+
     </div>
 </section>
