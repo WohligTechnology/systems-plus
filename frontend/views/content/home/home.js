@@ -79,7 +79,15 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             subtitle: 'How a European customer saved 34% of cost through our unique custodian model ',
             link: 'IRC',
             cat: 'service'
+        },
+        {
+            img: 'img/home/banner/Current_Happenin.jpg',
+            title: 'Expand your team hassle free with our proven and unique custodian model',
+            subtitle: 'How a European customer saved 34% of cost through our unique custodian model ',
+            link: 'IRC',
+            cat: 'service'
         }
+       
     ];
     $timeout(function () {
         mySwiper = new Swiper('.swiper-container', {
